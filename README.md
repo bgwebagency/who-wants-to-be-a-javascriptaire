@@ -4,7 +4,9 @@
 
 ---
 
-Fun way to learn JavaScript for your coding interviews.</span>
+Fun way to learn JavaScript for your coding interviews.
+All the questions are answered here in text and also have a video on our YouTube channel.
+Click the ▶️ icon next to the questions if you prefer to watch the video explanation.</span>
 
 Feel free to reach us on our social platforms! 😊 <br />
 <a href="https://discord.com/invite/62VR3MMCVm">Discord</a> || <a href="https://www.instagram.com/bgwebagency">Instagram</a> || <a href="https://www.twitter.com/kirankdash">Twitter</a> || <a href="https://www.tiktok.com/@bgwebagency">TikTok</a> || <a href="https://www.bgwebagency.in">Blog</a> || <a href="https://www.facebook.com/bgwebagency">Facebook</a>
@@ -65,5 +67,46 @@ But we can not declare the same variable multiple times using `let` or `const`
 
 </p>
 </details>
+
+.
+.
+.
+.
+
+---
+
+###### 3. What will this code output?
+
+```javascript
+const user = {
+  username: "kirandash",
+  updateUsername: (newName) => {
+    this.username = newName;
+  },
+};
+
+user.updateUsername("bgwebagency");
+console.log(user.username);
+```
+
+- A: `bgwebagency`
+- B: `ReferenceError`
+- C: `kirandash`
+- D: `undefined`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: C
+
+The `updateUsername` function is an arrow function, and is not bound to the `user` object. This means that the `this` keyword is not referring to the `user` object, but refers to the global scope in this case. The value of `email` within the `user` object does not get updated. When logging the value of `user.email`, the original value of `my@email.com` gets returned.
+
+</p>
+</details>
+
+.
+.
+.
+.
 
 ---
