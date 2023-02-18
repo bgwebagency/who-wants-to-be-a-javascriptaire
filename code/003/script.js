@@ -1,9 +1,3 @@
-//
-//
-//
-//
-//
-//
 // update username for user with arrow function
 const user = {
   username: "kirandash",

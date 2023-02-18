@@ -68,14 +68,9 @@ But we can not declare the same variable multiple times using `let` or `const`
 </p>
 </details>
 
-.
-.
-.
-.
-
 ---
 
-###### 3. What will this code output?
+###### 3. What will this code output? [▶️](https://www.youtube.com/shorts/l07LPzBQqTM)
 
 ```javascript
 const user = {
@@ -106,10 +101,5 @@ To fix this issue, we should change the arrow function to a normal function.
 
 </p>
 </details>
-
-.
-.
-.
-.
 
 ---
