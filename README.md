@@ -11,7 +11,7 @@ Feel free to reach us on our social platforms! 😊 <br />
 
 </div>
 
-###### 1. What will this code return? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
+###### 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
 ```javascript
 console.log(new Date(2023, 1, 31));
@@ -27,7 +27,41 @@ console.log(new Date(2023, 1, 31));
 
 #### Answer: C
 
-In JavaScript, while constructing dates using Date objects months are 0 based. Which means 0 is for January and 1 is for February. So, in this case we are asking JavaScript to set a date of 2023 February 31st. Which does not exist. But instead of throwing error JavaScript will overflow it to the next month which is March. And since February in 2023 has only 28 days, the code will overflow by 3 days making the result to be 3rd March 2023.
+In JavaScript, while constructing dates using Date objects months are 0 based. Which means 0 is for January and 1 is for February.
+
+So, in this case we are asking JavaScript to set a date of 2023 February 31st which does not exist.
+
+But instead of throwing error JavaScript will overflow it to the next month which is March.
+
+And since February in 2023 has only 28 days, the code will overflow by 3 days making the result to be 3rd March 2023.
+
+</p>
+</details>
+
+---
+
+###### 2. What will this code output?
+
+```javascript
+var username = "kirandash";
+var username = "bgwebagency";
+
+console.log(username);
+```
+
+- A: `bgwebagency`
+- B: `kirandash`
+- C: `ReferenceError`
+- D: `SyntaxError`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+We can declare the same variable multiple times using the `var` keyword. And the variable will hold the value which it was assigned in the end.
+
+But we can not declare the same variable multiple times using `let` or `const`
 
 </p>
 </details>
