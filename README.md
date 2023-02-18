@@ -1,6 +1,6 @@
 <div align="center">
   
-  <h1>Who Wants to be a JavaScriptaire</h1>
+  <h1>Who Wants to be a JavaScriptaire?</h1>
 
 ---
 
@@ -11,7 +11,7 @@ Feel free to reach us on our social platforms! 😊 <br />
 
 </div>
 
-###### 1. What will this code return?
+###### 1. What will this code return? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
 ```javascript
 console.log(new Date(2023, 1, 31));
@@ -27,7 +27,7 @@ console.log(new Date(2023, 1, 31));
 
 #### Answer: C
 
-In JavaScript, while constructing dates using Date objects are 0 based. Which means 0 is for January and 1 is for February. So, in this case we are asking JavaScript to set a date of 2023 February 31st. Which does not exist. But instead of throwing error JavaScript will overflow it to the next month which is March. And since February in 2023 has only 28 days, the code will overflow by 3 days making the result to be 3rd March 2023.
+In JavaScript, while constructing dates using Date objects months are 0 based. Which means 0 is for January and 1 is for February. So, in this case we are asking JavaScript to set a date of 2023 February 31st. Which does not exist. But instead of throwing error JavaScript will overflow it to the next month which is March. And since February in 2023 has only 28 days, the code will overflow by 3 days making the result to be 3rd March 2023.
 
 </p>
 </details>
