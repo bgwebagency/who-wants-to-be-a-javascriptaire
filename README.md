@@ -40,7 +40,7 @@ And since February in 2023 has only 28 days, the code will overflow by 3 days ma
 
 ---
 
-###### 2. What will this code output?
+###### 2. What will this code output? [▶️](https://www.youtube.com/shorts/s6khiRq6EoE)
 
 ```javascript
 var username = "kirandash";
