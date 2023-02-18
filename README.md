@@ -101,7 +101,7 @@ console.log(user.username);
 
 Because the `updateUsername` function is not working properly and is failing to update the `username` of the `user`.
 The `updateUsername` function in user `object` is an arrow function, and is not bound to the `user` object.
-So, the `this` keyword is not referring to the `user` object, but refers to the global scope.
+So, the `this` keyword inside updateUsername function is not referring to the `user` object, but refers to the global scope.
 To fix this issue, we should change the arrow function to a normal function.
 
 </p>
