@@ -95,8 +95,11 @@ console.log(user.username);
 #### Answer: C
 
 Because the `updateUsername` function is not working properly and is failing to update the `username` of the `user`.
+
 The `updateUsername` function in user `object` is an arrow function, and is not bound to the `user` object.
+
 So, the `this` keyword inside updateUsername function is not referring to the `user` object, but refers to the global scope.
+
 To fix this issue, we should change the arrow function to a normal function.
 
 </p>
@@ -124,7 +127,9 @@ console.log(len1, len2);
 #### Answer: A
 
 In JavaScript, the string length property returns the number of bytes and not the number of characters like we expect.
+
 An emoji is a unicode character which is encoded in two bytes. Therefore the answer is 2 for this question.
+
 The string length for `kiran` returns `5` because in a string each character is 1 byte.
 
 </p>
@@ -138,7 +143,7 @@ The string length for `kiran` returns `5` because in a string each character is 
 .
 .
 
-###### 4. Difference between undefined and null
+###### 5. Difference between undefined and null
 
 ```javascript
 console.log(undefined == null, undefined === null);
@@ -155,10 +160,15 @@ console.log(undefined == null, undefined === null);
 #### Answer: B
 
 First let me explain the difference between equal and strict equal operator.
+
 The equal operator only checks if both the values are equal. The strict equal operator checks if both value and type are equal.
+
 So in this code, the first statement `undefined == null` returns `true` since both `undefined` and `null` have the same value which is empty.
+
 But the second statement `undefined === null` returns `false`. Since `typeof undefined` is `undefined`.
+
 Whereas `typeof null` is an `object`. You might be wondering, why `typeof null` is an `object` when `null` is basically a primitive data type. This basically is a mistake in JavaScript since the beginning.
+
 Now, one more tip for you: when you want to set an empty value for a variable use `null` instead of `undefined`. Since `undefined` is mainly used to check if a variable has no value assigned to it.
 
 </p>
