@@ -104,12 +104,7 @@ To fix this issue, we should change the arrow function to a normal function.
 
 ---
 
-.
-.
-.
-.
-
-###### 4. What will this code output?
+###### 4. What will this code output? [▶️](https://www.youtube.com/shorts/CL53e5FucAM)
 
 ```javascript
 const len1 = "kiran".length;
@@ -136,8 +131,3 @@ The string length for `kiran` returns `5` because in a string each character is 
 </details>
 
 ---
-
-.
-.
-.
-.
