@@ -169,3 +169,46 @@ Now, one more tip for you: when you want to set an empty value for a variable us
 </details>
 
 ---
+
+. https://github.com/bgwebagency/who-wants-to-be-a-javascriptaire
+.
+.
+.
+.
+
+###### 6. Rest Operator
+
+```javascript
+function getFruits(x, ...multi, y) {
+  console.log(x, y, multi);
+}
+getFruits("🍎", "🍌", "🍇", "🍊", "🍍")
+```
+
+- A: `🍎 🍍 ["🍌", "🍇", "🍊"]`
+- B: `SyntaxError`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+Rest operators were added as a part of ES6 feature.
+
+It takes all the arguments passed to a function and puts it in an array.
+
+If multiple arguments are passed to a function then rest operator must come at the end. That's why this code snippet will throw an error.
+
+To fix this issue, please move the rest operator to the end and then it should work.
+
+</p>
+</details>
+
+---
+
+.
+.
+.
+.
+.
+.
