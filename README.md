@@ -137,13 +137,7 @@ The string length for `kiran` returns `5` because in a string each character is 
 
 ---
 
-. https://github.com/bgwebagency/who-wants-to-be-a-javascriptaire
-.
-.
-.
-.
-
-###### 5. Difference between undefined and null
+###### 5. Difference between undefined and null [▶️](https://www.youtube.com/shorts/tQwec4ELIg8)
 
 ```javascript
 console.log(undefined == null, undefined === null);
@@ -175,12 +169,3 @@ Now, one more tip for you: when you want to set an empty value for a variable us
 </details>
 
 ---
-
-.
-.
-.
-.
-.
-.
-.
-.
