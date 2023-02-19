@@ -131,3 +131,46 @@ The string length for `kiran` returns `5` because in a string each character is 
 </details>
 
 ---
+
+. https://github.com/bgwebagency/who-wants-to-be-a-javascriptaire
+.
+.
+.
+.
+
+###### 4. Difference between undefined and null
+
+```javascript
+console.log(undefined == null, undefined === null);
+```
+
+- A: `true, true`
+- B: `true, false`
+- C: `false, false`
+- D: `false, true`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+First let me explain the difference between equal and strict equal operator.
+The equal operator only checks if both the values are equal. The strict equal operator checks if both value and type are equal.
+So in this code, the first statement `undefined == null` returns `true` since both `undefined` and `null` have the same value which is empty.
+But the second statement `undefined === null` returns `false`. Since `typeof undefined` is `undefined`.
+Whereas `typeof null` is an `object`. You might be wondering, why `typeof null` is an `object` when `null` is basically a primitive data type. This basically is a mistake in JavaScript since the beginning.
+Now, one more tip for you: when you want to set an empty value for a variable use `null` instead of `undefined`. Since `undefined` is mainly used to check if a variable has no value assigned to it.
+
+</p>
+</details>
+
+---
+
+.
+.
+.
+.
+.
+.
+.
+.
