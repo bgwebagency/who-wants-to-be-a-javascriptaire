@@ -103,3 +103,41 @@ To fix this issue, we should change the arrow function to a normal function.
 </details>
 
 ---
+
+.
+.
+.
+.
+
+###### 4. What will this code output?
+
+```javascript
+const len1 = "kiran".length;
+const len2 = "👻".length;
+
+console.log(len1, len2);
+```
+
+- A: `5, 2`
+- B: `5, 1`
+- C: `5, undefined`
+- D: `5, SyntaxError`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+In JavaScript, the string length property returns the number of bytes and not the number of characters like we expect.
+An emoji is a unicode character which is encoded in two bytes. Therefore the answer is 2 for this question.
+The string length for `kiran` returns `5` because in a string each character is 1 byte.
+
+</p>
+</details>
+
+---
+
+.
+.
+.
+.
