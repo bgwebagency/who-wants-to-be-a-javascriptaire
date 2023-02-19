@@ -170,13 +170,7 @@ Now, one more tip for you: when you want to set an empty value for a variable us
 
 ---
 
-. https://github.com/bgwebagency/who-wants-to-be-a-javascriptaire
-.
-.
-.
-.
-
-###### 6. Rest Operator
+###### 6. Rest Operator [▶️](https://www.youtube.com/shorts/7jLCMwhe2VA)
 
 ```javascript
 function getFruits(x, ...multi, y) {
@@ -205,10 +199,3 @@ To fix this issue, please move the rest operator to the end and then it should w
 </details>
 
 ---
-
-.
-.
-.
-.
-.
-.
