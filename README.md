@@ -297,3 +297,47 @@ Therefore always use `isFinite` function instead of `isNaN` function when you wa
 </details>
 
 ---
+
+###### 10. Arrow function [▶️](https://youtube.com/shorts/P8zFS3w-wzw)
+
+```javascript
+const user = {
+  name: "John",
+  age: 30,
+  getName: () => {
+    return this.name;
+  },
+  getAge: function () {
+    return this.age;
+  },
+};
+
+const getName = user.getName;
+const getAge = user.getAge;
+
+console.log(getName());
+console.log(getAge());
+```
+
+- A: undefined, undefined
+- B: undefined, 30
+- C: SyntaxError
+- D: John, 30
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The `getName` arrow function uses `this` keyword to refer to the object's name property, but because arrow functions have a lexical `this` binding, the value of `this` keyword inside the arrow function will be the global object which is `window` in a browser, or `global` in Node.js.
+
+Since there is no name property on the `global` object, the function returns `undefined`.
+
+The `getAge` function uses a regular function expression and correctly refers to the age property of the `user` object using `this` keyword.
+
+But when `getAge` is assigned to the `getAge` variable, it loses the reference to the `user` object, so when the function is called using `getAge()`, this will refer to the global object again, and since there is no age property on the global object, the function returns undefined.
+
+</p>
+</details>
+
+---
