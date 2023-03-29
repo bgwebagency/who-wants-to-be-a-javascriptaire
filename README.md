@@ -199,3 +199,37 @@ To fix this issue, please move the rest operator to the end and then it should w
 </details>
 
 ---
+
+###### 7. Infinity and -Infinity [▶️](https://youtube.com/shorts/J3-ab21VMKA)
+
+```javascript
+let x = Number.NEGATIVE_INFINITY;
+let y = Number.POSITIVE_INFINITY;
+let z = x + y;
+console.log(z);
+```
+
+- A: `0`
+- B: `undefined`
+- C: `NaN`
+- D: `TypeError`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: C
+
+NEGATIVE_INFINITY and POSITIVE_INFINITY are properties of the Number object in JavaScript that represents the mathematical concept of negative infinity and positive infinity.
+
+When you add Number.NEGATIVE_INFINITY and Number.POSITIVE_INFINITY, the result is NaN.
+
+Adding a positive infinite value to a negative infinite value does not result in a meaningful numerical value.
+
+So in this case, z will be NaN.
+
+Note that the code will not throw a TypeError, as JavaScript is able to perform the addition operation between Number.NEGATIVE_INFINITY and Number.POSITIVE_INFINITY.
+
+</p>
+</details>
+
+---
