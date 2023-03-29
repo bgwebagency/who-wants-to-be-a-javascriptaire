@@ -233,3 +233,32 @@ Note that the code will not throw a TypeError, as JavaScript is able to perform 
 </details>
 
 ---
+
+###### 8. isNaN() function [▶️](https://youtube.com/shorts/IyQ5Gr1jtQI)
+
+```javascript
+console.log("BG Web Agency" === NaN, isNaN("BG Web Agency"));
+```
+
+- A: `true, true`
+- B: `false, true`
+- C: `true, false`
+- D: `false, false`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+Using ` === NaN` to check if a value is a number will not work.
+
+In JavaScript, `NaN` (Not a Number) is a special value that represents an invalid number.
+
+NaN is not equal to anything, including itself, so the expression `"BG Web Agency" === NaN` will always return `false`.
+
+To check if a value is a number in JavaScript, you can use the `isNaN()` function. This function returns `true` if the argument passed to it is `NaN`, or if it cannot be converted to a number.
+
+</p>
+</details>
+
+---
