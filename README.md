@@ -262,3 +262,38 @@ To check if a value is a number in JavaScript, you can use the `isNaN()` functio
 </details>
 
 ---
+
+###### 9. isFinite() function [▶️](https://youtube.com/shorts/8P0VB4DQFWw)
+
+```javascript
+console.log(isFinite(Infinity), isNaN(Infinity));
+```
+
+- A: `false, false`
+- B: `false, true`
+- C: `true, false`
+- D: `false, false`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The `isFinite()` function is used to determine whether a given value is a finite number.
+
+It returns false if the value is NaN, Infinity, or -Infinity, and true if the value is a finite number.
+
+So, in this example `isFinite(Infinity)` will return false because Infinity is not a finite number.
+
+On the other hand, the isNaN() function is used to determine whether a given value is not a number (NaN).
+
+It returns true if the value is NaN, and false if the value is a number or any other data type.
+
+So, in this example `isNaN(Infinity)` will also return false because Infinity is not NaN.
+
+Therefore always use `isFinite` function instead of `isNaN` function when you want to validate if a number is finite
+
+</p>
+</details>
+
+---
