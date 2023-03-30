@@ -498,3 +498,49 @@ Iterables are commonly used in many real-time applications while working with la
 </details>
 
 ---
+
+###### 15. Generator Functions [▶️](https://youtu.be/4fIKcIMo7w4)
+
+```javascript
+function* counter() {
+  let i = 0;
+  while (true) {
+    yield i++;
+  }
+}
+
+const gen = counter();
+
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+```
+
+What does the above code snippet output?
+
+- A: This code snippet will result in an infinite loop.
+- B: 1 2 3
+- C: 0 0 0
+- D: 0 1 2
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: D
+
+The correct answer is D.
+
+The `counter` function is a generator function that creates an infinite loop that yields incrementing values of `i`.
+
+The `gen` variable is set to the generator function, and each call to `gen.next()` returns an object with the value property set to the next yielded value.
+
+The `console.log` statements then print the values returned by `gen.next()`.
+
+A generator function is a special type of function that can be used to control the iteration over a sequence of values.
+
+Unlike traditional functions, generator functions allow you to pause and resume their execution, and yield multiple values over time.
+
+</p>
+</details>
+
+---
