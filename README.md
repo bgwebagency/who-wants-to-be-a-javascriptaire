@@ -637,6 +637,8 @@ When the `main()` function is called, it returns a promise because it is an asyn
 
 Therefore, when `console.log(main())` is called, `"Finally block executed."` and `"Finally block value"` will be logged to the console.
 
+Try, catch, and finally are keywords used in JavaScript to handle runtime errors.
+
 </p>
 </details>
 
