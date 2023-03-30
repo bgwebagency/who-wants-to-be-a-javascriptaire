@@ -380,3 +380,51 @@ When the callback function passed to setTimeout is executed, it has access to th
 </details>
 
 ---
+
+###### 12. Curry (Level: Difficult) [▶️](https://youtu.be/mVX9Duy17qo)
+
+```javascript
+function add(x) {
+  return function (y) {
+    if (y !== undefined) {
+      x += y;
+      return arguments.callee;
+    } else {
+      return x;
+    }
+  };
+}
+
+console.log(add(1)(2)(3)());
+```
+
+- A: 6
+- B: undefined
+- C: ReferenceError
+- D: TypeError
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The correct answer is A. The code defines a add function that takes a single argument x and returns another function that takes a single argument y.
+
+This inner function checks if y is defined. If it is defined, it adds y to x and returns a reference to itself using the arguments.callee property, which allows the function to be called recursively with the next argument.
+
+If y is not defined, it returns the current value of x.
+
+Then, the code calls add(1)(2)(3)(). This first calls add(1) with 1 as its argument, which returns a function that takes a single argument y.
+
+Then, it calls this function with 2 as its argument, which adds 2 to 1 and returns a reference to the function.
+
+Finally, it calls this function with 3 as its argument, which adds 3 to 3 and returns a reference to the function.
+
+Since no argument is passed in the last call, it returns the current value of x, which is 6.
+
+This code demonstrates a more complex example of currying in JavaScript, where the curried function returns a reference to itself, allowing it to be called recursively with the next argument.
+
+</p>
+</details>
+
+---
