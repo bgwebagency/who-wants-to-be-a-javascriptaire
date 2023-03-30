@@ -341,3 +341,42 @@ But when `getAge` is assigned to the `getAge` variable, it loses the reference t
 </details>
 
 ---
+
+###### 11. Closure [▶️](https://youtube.com/shorts/PCc7icrQw8Y)
+
+```javascript
+for (var i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 0);
+}
+```
+
+- A: 0, 1, 2
+- B: 3, 3, 3
+- C: undefined, undefined, undefined
+- D: TypeError: console is not defined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+A closure is a function that retains access to variables in its outer scope, even after the outer function has returned.
+
+In this example, the answer is B, because the setTimeout function is asynchronous and does not execute immediately.
+
+By the time the callback function passed to setTimeout is executed, the loop has already completed and the i variable has a value of 3.
+
+Therefore, each call to console.log(i) inside the callback function will print 3.
+
+To solve this problem and print 0, 1, 2, we can use an IIFE (Immediately Invoked Function Expression) to create a new scope for each iteration of the loop.
+
+This creates a new variable j inside each IIFE, with its own copy of the current value of i at that iteration of the loop.
+
+When the callback function passed to setTimeout is executed, it has access to the j variable in its closure, which has the expected value of 0, 1, or 2 for each iteration of the loop.
+
+</p>
+</details>
+
+---
