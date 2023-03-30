@@ -428,3 +428,40 @@ This code demonstrates a more complex example of currying in JavaScript, where t
 </details>
 
 ---
+
+###### 13. Curry (Level: Easy) [▶️](https://youtu.be/mVX9Duy17qo)
+
+```javascript
+function multiply(x) {
+  return function (y) {
+    return x * y;
+  };
+}
+
+const double = multiply(2);
+
+console.log(double(5));
+```
+
+- A: 25
+- B: 10
+- C: undefined
+- D: An error will occur
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The correct answer is B. The code defines a multiply function that takes a single argument x and returns another function that takes a single argument y. This inner function multiplies x and y and returns the result.
+
+Then, the code creates a new function double by calling multiply with 2 as its argument. The double function is now a curried function that can be called with a single argument to double its value.
+
+Finally, the code calls double with 5 as its argument, which results in 10 being logged to the console.
+
+This code demonstrates the concept of currying in JavaScript, where a function returns another function that can be partially applied with some arguments.
+
+</p>
+</details>
+
+---
