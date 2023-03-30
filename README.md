@@ -381,7 +381,7 @@ When the callback function passed to setTimeout is executed, it has access to th
 
 ---
 
-###### 12. Curry (Level: Difficult) [▶️](https://youtu.be/mVX9Duy17qo)
+###### 12. Curry (Level: Hard) [▶️](https://youtu.be/KYIJVlbevkg)
 
 ```javascript
 function add(x) {
@@ -429,7 +429,7 @@ This code demonstrates a more complex example of currying in JavaScript, where t
 
 ---
 
-###### 13. Curry (Level: Easy) [▶️](https://youtu.be/mVX9Duy17qo)
+###### 13. Curry (Level: Easy) [▶️](https://youtu.be/0FLxIj0TRgU)
 
 ```javascript
 function multiply(x) {
@@ -460,6 +460,39 @@ Then, the code creates a new function double by calling multiply with 2 as its a
 Finally, the code calls double with 5 as its argument, which results in 10 being logged to the console.
 
 This code demonstrates the concept of currying in JavaScript, where a function returns another function that can be partially applied with some arguments.
+
+</p>
+</details>
+
+---
+
+###### 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
+
+Which of the following statements is true about
+the `next()` method of an iterator in JavaScript?
+
+- A: The next() method returns an object with properties value and done.
+- B: The next() method returns a boolean value indicating
+  whether there are more items to iterate over.
+- C: The next() method is used to define how to access the next item in the iterable.
+- D: The next() method is not used in JavaScript iterators.
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The correct answer is A.
+
+In JavaScript, an iterable is an object that defines a sequence and can be iterated over using a loop.
+
+An iterator is an object that knows how to access the elements of an iterable one at a time.
+
+An iterable object has a method with the key `Symbol.iterator`, which returns an iterator object.
+
+The iterator object has a `next()` method, which returns an object with two properties: `value`, which is the next element in the sequence, and `done`, which is a boolean indicating whether the iterator has reached the end of the sequence.
+
+Iterables are commonly used in many real-time applications while working with large datasets, or while implementing custom data structures
 
 </p>
 </details>
