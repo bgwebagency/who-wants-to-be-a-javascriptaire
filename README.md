@@ -573,3 +573,77 @@ This algorithm works by first marking all objects in memory that are still being
 </details>
 
 ---
+
+###### 17. try, catch, finally [▶️](https://youtu.be/QCmqefzwWlg)
+
+```javascript
+function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Data retrieved successfully");
+    }, 1000);
+  });
+}
+
+async function main() {
+  try {
+    const data = await getData();
+    console.log(data);
+    throw new Error("Something went wrong");
+  } catch (err) {
+    console.log("Caught an error:", err.message);
+    return "Error occurred";
+  } finally {
+    console.log("Finally block executed.");
+    return "Finally block value";
+  }
+}
+
+(async () => {
+  console.log(await main());
+})();
+```
+
+What does the above code snippet output?
+
+- A: "Data retrieved successfully",
+  "Caught an error: Something went wrong",
+  "Finally block executed."
+- B: "Data retrieved successfully",
+  "Caught an error: Something went wrong".
+- C: "Data retrieved successfully",
+  "Caught an error: Something went wrong",
+  "Finally block executed.",
+  "Finally block value"
+- D: "Caught an error: Something went wrong", "Finally block executed."
+- E: "Finally block executed.", "Finally block value".
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: C
+
+When the code is executed, the main() function is called, which is an async function that uses await to get data from the `getData()` function.
+
+Once the data is retrieved, the `console.log(data)` statement logs "Data retrieved successfully" to the console.
+
+After that, the `throw new Error("Something went wrong")` statement throws an error.
+
+The `catch` block catches the error and logs `"Caught an error: Something went wrong"` to the console, and then returns the string `"Error occurred"`.
+
+Finally, the finally block is executed and logs `"Finally block executed."` to the console, and then returns the string `"Finally block value"`.
+
+When the `main()` function is called, it returns a promise because it is an async function. Since the `finally` block also returns a value, that value will be the final resolved value of the promise.
+
+Therefore, when `console.log(main())` is called, `"Finally block executed."` and `"Finally block value"` will be logged to the console.
+
+</p>
+</details>
+
+---
+
+.
+.
+.
+.
+.
