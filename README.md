@@ -468,12 +468,10 @@ This code demonstrates the concept of currying in JavaScript, where a function r
 
 ###### 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
 
-Which of the following statements is true about
-the `next()` method of an iterator in JavaScript?
+Which of the following statements is true about the `next()` method of an iterator in JavaScript?
 
 - A: The next() method returns an object with properties value and done.
-- B: The next() method returns a boolean value indicating
-  whether there are more items to iterate over.
+- B: The next() method returns a boolean value indicating whether there are more items to iterate over.
 - C: The next() method is used to define how to access the next item in the iterable.
 - D: The next() method is not used in JavaScript iterators.
 
@@ -539,6 +537,37 @@ The `console.log` statements then print the values returned by `gen.next()`.
 A generator function is a special type of function that can be used to control the iteration over a sequence of values.
 
 Unlike traditional functions, generator functions allow you to pause and resume their execution, and yield multiple values over time.
+
+</p>
+</details>
+
+---
+
+###### 16. Garbage Collection, Mark and Sweep Algorithm [▶️](https://youtu.be/QCmqefzwWlg)
+
+Which of the following scenarios could potentially cause a memory leak in JavaScript?
+
+- A: Using the Array.from() method to convert a large array into a new array.
+- B: Creating a circular reference between two objects that are still in use.
+- C: Assigning a value of null to a variable that is still in use.
+- D: Calling the delete operator on an object property.
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+Circular references occur when two or more objects reference each other, creating a loop that prevents the objects from being garbage collected.
+
+This can cause a memory leak if the objects are no longer needed but cannot be freed because of the circular reference.
+
+Options A, C, and D do not typically cause memory leaks in JavaScript.
+
+Garbage collection is the process of automatically freeing up memory that is no longer being used by a program.
+
+In JavaScript, the mark and sweep algorithm is commonly used for garbage collection.
+
+This algorithm works by first marking all objects in memory that are still being referenced by the program, then sweeping through and freeing up any memory that is not marked as in use.
 
 </p>
 </details>
