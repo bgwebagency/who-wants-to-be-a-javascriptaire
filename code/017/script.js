@@ -20,6 +20,4 @@ async function main() {
   }
 }
 
-(async () => {
-  console.log(await main());
-})();
+console.log(main());

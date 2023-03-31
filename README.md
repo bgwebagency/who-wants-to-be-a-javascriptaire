@@ -574,7 +574,7 @@ This algorithm works by first marking all objects in memory that are still being
 
 ---
 
-###### 17. try, catch, finally [▶️](https://youtu.be/QCmqefzwWlg)
+###### 17. try, catch, finally [▶️](https://youtu.be/uPhf3OjPwSU)
 
 ```javascript
 function getData() {
@@ -644,8 +644,49 @@ Try, catch, and finally are keywords used in JavaScript to handle runtime errors
 
 ---
 
-.
-.
-.
-.
-.
+###### 18. Array and Traversal in array [▶️](https://youtu.be/Mefj0GDslts)
+
+```javascript
+const arr = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let num of arr) {
+  sum += num;
+  if(sum >= 6) break;
+}
+console.log(sum);
+
+const arr2 = [1, 2, 3, 4, 5];
+let sum2 = 0;
+arr.forEach((num) => {
+  sum2 += num;
+  if(sum2 >= 6) break;
+});
+console.log(sum2);
+```
+
+What does the above code snippet output?
+
+- A: 6, 15
+- B: SyntaxError: Illegal break statement
+- C: 15, 15
+- D: 15, 15
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+Because `break` statement is not valid inside the callback function passed to `forEach`.
+
+`forEach` does not support early termination using the `break` statement. Therefore, an error is thrown: `"Uncaught SyntaxError: Illegal break statement".`
+
+In case of for of loop, `break` statement is allowed.
+
+To fix the issue, remove the `break` statement from forEach and it should work.
+
+In general, `for of` is recommended over `for in` or `forEach`
+
+</p>
+</details>
+
+---
