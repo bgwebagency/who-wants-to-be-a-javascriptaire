@@ -751,7 +751,7 @@ The `unshift()` method returns the new length of the array after the addition of
 
 ---
 
-##### 20. Array Manipulation: Understanding array.pop() Method in JavaScript
+##### 21. Array Manipulation: Understanding array.pop() Method in JavaScript
 
 ```javascript
 const myArray = [1, 2, 3, 4, 5];
