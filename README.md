@@ -777,3 +777,33 @@ The `Array.pop()` method in JavaScript removes the last element from an array an
 </details>
 
 ---
+
+---
+
+##### 22. Array Manipulation: Understanding array.shift() Method in JavaScript
+
+```javascript
+const arr = [10, 20, 30, 40, 50];
+const removedElement = arr.shift();
+console.log(removedElement);
+console.log(arr);
+```
+
+What does the above code snippet output?
+
+- A: 'removedElement' is 10 and 'arr' is [20, 30, 40, 50]
+- B: 'removedElement' is 50 and 'arr' is [10, 20, 30, 40]
+- C: 'removedElement' is 10 and 'arr' is [10, 20, 30, 40, 50]
+- D: 'removedElement' is 50 and 'arr' is [10, 20, 30, 40, 50]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The `Array.shift()` method removes the first element from the arr array, which is `10`, and returns it. The resulting arr array will then be `[20, 30, 40, 50]`. So, option A is the correct answer as it reflects the correct value of removedElement and the updated state of arr after `Array.shift()` is called. Option B is incorrect as it states that removedElement will be 50, which is not true. Option C and D are also incorrect as they state that arr remains unchanged, which is not accurate.
+
+</p>
+</details>
+
+---
