@@ -696,23 +696,24 @@ In general, `for of` is recommended over `for in` or `forEach`
 ```javascript
 let arr = [1, 2, 3, 4];
 let result = arr.push(5);
-console.log(result);
-console.log(arr);
+console.log("result: ", result, "arr: ", arr);
 ```
 
 What does the above code snippet output?
 
-- A: 'result' will be 5 and 'arr' will be [1, 2, 3, 4, 5]
-- B: 'result' will be 5 and 'arr' will be [5, 1, 2, 3, 4]
-- C: 'result' will be 4 and 'arr' will be [2, 3, 4, 5]
-- D: 'result' will be 4 and 'arr' will be [5, 2, 3, 4]
+- A: result: 5 arr: [1, 2, 3, 4, 5]
+- B: result: 5 arr: [5, 1, 2, 3, 4]
+- C: result: [1, 2, 3, 4, 5] arr: [1, 2, 3, 4, 5]
+- D: result: [5, 1, 2, 3, 4] arr: [5, 1, 2, 3, 4]
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: A
 
-The `array.push()` method in JavaScript adds one or more elements to the end of an array and returns the new length of the array. In the given code, arr is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds `5` to the end of the arr array.
+The `array.push()` method in JavaScript adds one or more elements to the end of an array and returns the new length of the array.
+
+In the given code, `arr` is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds `5` to the end of the arr array.
 
 The `push()` method returns the new length of the array after the addition of the element(s). In this case, the new length of arr will be 5 because `5` is added to the end of the array.
 
@@ -726,25 +727,26 @@ The `push()` method returns the new length of the array after the addition of th
 ```javascript
 let arr = [3, 5, 7, 9];
 let result = arr.unshift(1, 2);
-console.log(result);
-console.log(arr);
+console.log("result: ", result, "arr: ", arr);
 ```
 
 What does the above code snippet output?
 
-- A: 'result' will be 6 and 'arr' will be [3, 5, 7, 9, 1, 2]
-- B: 'result' will be 6 and 'arr' will be [1, 2, 3, 5, 7, 9]
-- C: 'result' will be 4 and 'arr' will be [1, 2, 3, 5]
-- D: 'result' will be 4 and 'arr' will be [7, 9, 1, 2]
+- A: result: 6 arr: [3, 5, 7, 9, 1, 2]
+- B: result: 6 arr: [1, 2, 3, 5, 7, 9]
+- C: result: 4 arr: [1, 2, 3, 5]
+- D: result: [1, 2, 3, 5, 7, 9] arr: [1, 2, 3, 5, 7, 9]
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: B
 
-The `array.unshift()` method in JavaScript adds one or more elements to the beginning of an array and returns the new length of the array. In the given code, arr is an array with the values `[3, 5, 7, 9]`. The `unshift()` method is called with the arguments 1 and 2, which adds 1 and 2 to the beginning of the arr array.
+The `array.unshift()` method in JavaScript adds one or more elements to the beginning of an array and returns the new length of the array.
 
-The `unshift()` method returns the new length of the array after the addition of the element(s). In this case, the new length of arr will be 6 because 1 and 2 are added to the beginning of the array, shifting the existing elements to the right.
+In the given code, `arr` is an array with the values `[3, 5, 7, 9]`. The `unshift()` method is called with the arguments 1 and 2, which adds 1 and 2 to the beginning of the `arr` array.
+
+The `unshift()` method returns the new length of the array after the addition of the element(s). In this case, the new length of `arr` will be 6 because 1 and 2 are added to the beginning of the array, shifting the existing elements to the right.
 
 </p>
 </details>
@@ -771,7 +773,9 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The `Array.pop()` method in JavaScript removes the last element from an array and returns that element. In this case, myArray is an array with elements `[1, 2, 3, 4, 5]`, and `myArray.pop()` is called, which removes the element 5 from the array and returns it.
+The `Array.pop()` method in JavaScript removes the last element from an array and returns that element.
+
+In this case, `myArray` is an array with elements `[1, 2, 3, 4, 5]`, and `myArray.pop()` is called, which removes the element 5 from the array and returns it.
 
 </p>
 </details>
@@ -783,23 +787,24 @@ The `Array.pop()` method in JavaScript removes the last element from an array an
 ```javascript
 const arr = [10, 20, 30, 40, 50];
 const removedElement = arr.shift();
-console.log(removedElement);
-console.log(arr);
+console.log("removedElement: ", removedElement, "arr: ", arr);
 ```
 
 What does the above code snippet output?
 
-- A: 'removedElement' will be 10 and 'arr' will be [20, 30, 40, 50]
-- B: 'removedElement' will be 50 and 'arr' will be [10, 20, 30, 40]
-- C: 'removedElement' will be 10 and 'arr' will be [10, 20, 30, 40, 50]
-- D: 'removedElement' will be 50 and 'arr' will be [10, 20, 30, 40, 50]
+- A: removedElement: 10 arr: [20, 30, 40, 50]
+- B: removedElement: 50 arr: [10, 20, 30, 40]
+- C: removedElement: 10 arr: [10, 20, 30, 40, 50]
+- D: removedElement: [20, 30, 40, 50] arr: [20, 30, 40, 50]
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: A
 
-The `Array.shift()` method removes the first element from the arr array, which is `10`, and returns it. The resulting arr array will then be `[20, 30, 40, 50]`. So, option A is the correct answer as it reflects the correct value of removedElement and the updated state of arr after `Array.shift()` is called. Option B is incorrect as it states that removedElement will be 50, which is not true. Option C and D are also incorrect as they state that arr remains unchanged, which is not accurate.
+The `Array.shift()` method removes the first element from the `arr` array, which is `10`, and returns it. The resulting `arr` array will then be `[20, 30, 40, 50]`.
+
+So, option A is the correct answer as it reflects the correct value of `removedElement` and the updated state of `arr` after `Array.shift()` is called. Option B is incorrect as it states that `removedElement` will be 50, which is not true. Option C is also incorrect as it state that `arr` remains unchanged, which is not accurate. Option D is slightly confusing as it states that `Array.shift()` returns the array, which is not true.
 
 </p>
 </details>
@@ -811,23 +816,24 @@ The `Array.shift()` method removes the first element from the arr array, which i
 ```javascript
 let arr = [1, 2, 3, 4, 5];
 let removed = arr.splice(1, 2, "a", "b");
-console.log(removed);
-console.log(arr);
+onsole.log("removed:", removed, "arr: ", arr);
 ```
 
 What does the above code snippet output?
 
-- A: 'removed' will be [2, 3] and 'arr' will be [1, 'a', 'b', 4, 5]
-- B: 'removed' will be [2, 3] and 'arr' will be [1, 'a', 'b', 4, 5]
-- C: 'removed' will be [2, 3, 'a', 'b'] and 'arr' will be [1, 4, 5]
-- D: 'removed' will be [1, 2] and 'arr' will be [3, 4, 5]
+- A: removed: [1, 2] arr: [a, b, 3, 4, 5]
+- B: removed: [2, 3] arr: [1, 'a', 'b', 4, 5]
+- C: removed: [2, 3, 'a', 'b'] arr: [1, 4, 5]
+- D: removed: [1, 2] arr: [3, 4, 5]
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: B
 
-The `Array.splice()` method is used to modify an array by adding, removing, or replacing elements. In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts from index 1 (removing 2 elements) and inserts the elements `a` and `b` in their place. The elements that are removed (i.e., 2 and 3) are returned and assigned to the variable removed. After execution, removed will be `[2, 3]` and arr will be `[1, 'a', 'b', 4, 5]`. Option C is incorrect as it includes the inserted elements in the removed array, which is not accurate. Option D is also incorrect as it mentions the incorrect elements that are removed from the array.
+The `Array.splice()` method is used to modify an array by adding, removing, or replacing elements.
+
+In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts from index 1 (removing 2 elements) and inserts the elements `a` and `b` in their place. The elements that are removed (i.e., 2 and 3) are returned and assigned to the variable removed. After execution, removed will be `[2, 3]` and `arr` will be `[1, 'a', 'b', 4, 5]`. Option C is incorrect as it includes the inserted elements in the removed array, which is not accurate. Option D is also incorrect as it mentions the incorrect elements that are removed from the array.
 
 </p>
 </details>
