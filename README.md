@@ -702,19 +702,19 @@ console.log(arr);
 
 What does the above code snippet output?
 
-- A: result will be 5 and the new length of arr will be 5
-- B: result will be 5 and the new length of arr will be 6
-- C: result will be 6 and the new length of arr will be 5
-- D: result will be 6 and the new length of arr will be 6
+- A: 'result' will be 5 and 'arr' will be [1, 2, 3, 4, 5]
+- B: 'result' will be 5 and 'arr' will be [5, 1, 2, 3, 4]
+- C: 'result' will be 4 and 'arr' will be [2, 3, 4, 5]
+- D: 'result' will be 4 and 'arr' will be [5, 2, 3, 4]
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: A
 
-The `array.push()` method in JavaScript adds one or more elements to the end of an array and returns the new length of the array. In the given code, arr is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds 5 to the end of the arr array.
+The `array.push()` method in JavaScript adds one or more elements to the end of an array and returns the new length of the array. In the given code, arr is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds `5` to the end of the arr array.
 
-The `push()` method returns the new length of the array after the addition of the element(s). In this case, result will be the new length of arr after adding 5, which is 5. The new length of arr will be 5 because 5 is added to the end of the array.
+The `push()` method returns the new length of the array after the addition of the element(s). In this case, the new length of arr will be 5 because `5` is added to the end of the array.
 
 </p>
 </details>
