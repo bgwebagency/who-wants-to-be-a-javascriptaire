@@ -789,10 +789,10 @@ console.log(arr);
 
 What does the above code snippet output?
 
-- A: 'removedElement' is 10 and 'arr' is [20, 30, 40, 50]
-- B: 'removedElement' is 50 and 'arr' is [10, 20, 30, 40]
-- C: 'removedElement' is 10 and 'arr' is [10, 20, 30, 40, 50]
-- D: 'removedElement' is 50 and 'arr' is [10, 20, 30, 40, 50]
+- A: 'removedElement' will be 10 and 'arr' will be [20, 30, 40, 50]
+- B: 'removedElement' will be 50 and 'arr' will be [10, 20, 30, 40]
+- C: 'removedElement' will be 10 and 'arr' will be [10, 20, 30, 40, 50]
+- D: 'removedElement' will be 50 and 'arr' will be [10, 20, 30, 40, 50]
 
 <details><summary><b>Answer</b></summary>
 <p>
