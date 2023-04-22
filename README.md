@@ -720,3 +720,33 @@ The `push()` method returns the new length of the array after the addition of th
 </details>
 
 ---
+
+##### 20. Array Manipulation: Understanding array.unshift() Method in JavaScript
+
+```javascript
+let arr = [3, 5, 7, 9];
+let result = arr.unshift(1, 2);
+console.log(result);
+console.log(arr);
+```
+
+What does the above code snippet output?
+
+- A: 'result' will be 6 and 'arr' will be [3, 5, 7, 9, 1, 2]
+- B: 'result' will be 6 and 'arr' will be [1, 2, 3, 5, 7, 9]
+- C: 'result' will be 4 and 'arr' will be [1, 2, 3, 5]
+- D: 'result' will be 4 and 'arr' will be [7, 9, 1, 2]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The `array.unshift()` method in JavaScript adds one or more elements to the beginning of an array and returns the new length of the array. In the given code, arr is an array with the values `[3, 5, 7, 9]`. The `unshift()` method is called with the arguments 1 and 2, which adds 1 and 2 to the beginning of the arr array.
+
+The `unshift()` method returns the new length of the array after the addition of the element(s). In this case, the new length of arr will be 6 because 1 and 2 are added to the beginning of the array, shifting the existing elements to the right.
+
+</p>
+</details>
+
+---
