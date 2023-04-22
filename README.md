@@ -750,3 +750,30 @@ The `unshift()` method returns the new length of the array after the addition of
 </details>
 
 ---
+
+##### 20. Array Manipulation: Understanding array.pop() Method in JavaScript
+
+```javascript
+const myArray = [1, 2, 3, 4, 5];
+const poppedValue = myArray.pop();
+console.log(poppedValue);
+```
+
+What does the above code snippet output?
+
+- A: 1
+- B: 5
+- C: 'undefined'
+- D: An error will occur
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The `Array.pop()` method in JavaScript removes the last element from an array and returns that element. In this case, myArray is an array with elements `[1, 2, 3, 4, 5]`, and `myArray.pop()` is called, which removes the element 5 from the array and returns it.
+
+</p>
+</details>
+
+---
