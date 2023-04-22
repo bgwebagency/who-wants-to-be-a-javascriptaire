@@ -778,8 +778,6 @@ The `Array.pop()` method in JavaScript removes the last element from an array an
 
 ---
 
----
-
 ##### 22. Array Manipulation: Understanding array.shift() Method in JavaScript
 
 ```javascript
@@ -802,6 +800,34 @@ What does the above code snippet output?
 #### Answer: A
 
 The `Array.shift()` method removes the first element from the arr array, which is `10`, and returns it. The resulting arr array will then be `[20, 30, 40, 50]`. So, option A is the correct answer as it reflects the correct value of removedElement and the updated state of arr after `Array.shift()` is called. Option B is incorrect as it states that removedElement will be 50, which is not true. Option C and D are also incorrect as they state that arr remains unchanged, which is not accurate.
+
+</p>
+</details>
+
+---
+
+##### 23. Array Manipulation: Understanding array.splice() Method in JavaScript
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+let removed = arr.splice(1, 2, "a", "b");
+console.log(removed);
+console.log(arr);
+```
+
+What does the above code snippet output?
+
+- A: 'removed' will be [2, 3] and 'arr' will be [1, 'a', 'b', 4, 5]
+- B: 'removed' will be [2, 3] and 'arr' will be [1, 'a', 'b', 4, 5]
+- C: 'removed' will be [2, 3, 'a', 'b'] and 'arr' will be [1, 4, 5]
+- D: 'removed' will be [1, 2] and 'arr' will be [3, 4, 5]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The `Array.splice()` method is used to modify an array by adding, removing, or replacing elements. In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts from index 1 (removing 2 elements) and inserts the elements `a` and `b` in their place. The elements that are removed (i.e., 2 and 3) are returned and assigned to the variable removed. After execution, removed will be `[2, 3]` and arr will be `[1, 'a', 'b', 4, 5]`. Option C is incorrect as it includes the inserted elements in the removed array, which is not accurate. Option D is also incorrect as it mentions the incorrect elements that are removed from the array.
 
 </p>
 </details>
