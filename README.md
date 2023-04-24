@@ -864,7 +864,7 @@ What does the above code snippet output?
 
 The `Array.map()` method in JavaScript creates a new array by applying a provided function to each element of the original array.
 
-In this case, the provided function `num => num \* 2` multiplies each number in the numbers array by 2, resulting in a new array `[2, 4, 6, 8, 10]`.
+In this case, the provided function `num => num * 2` multiplies each number in the numbers array by 2, resulting in a new array `[2, 4, 6, 8, 10]`.
 
 </p>
 </details>
