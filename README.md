@@ -839,3 +839,34 @@ In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts f
 </details>
 
 ---
+
+---
+
+##### 26. Array.map() Method in JavaScript
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map((num) => num * 2);
+console.log(doubledNumbers);
+```
+
+What does the above code snippet output?
+
+- A: [1, 2, 3, 4, 5]
+- B: [2, 4, 6, 8, 10]
+- C: [2, 4, 6, 8, 10, 12]
+- D: [1, 4, 9, 16, 25]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The `Array.map()` method in JavaScript creates a new array by applying a provided function to each element of the original array.
+
+In this case, the provided function `num => num * 2` multiplies each number in the numbers array by 2, resulting in a new array `[2, 4, 6, 8, 10]`.
+
+</p>
+</details>
+
+---
