@@ -903,3 +903,33 @@ In this case, the provided function `num => num * 2` multiplies each number in t
 </details>
 
 ---
+
+##### 27. Array.reduce() Method in JavaScript
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, val) => acc + val);
+console.log(sum);
+```
+
+What does the above code snippet output?
+
+- A: 1
+- B: 15
+- C: NaN
+- D: undefined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: C
+
+`Array.reduce()` takes an array and "reduces" it to a single value by repeatedly applying a function to each element and keeping track of the accumulated result. It's commonly used for tasks such as summing up an array of numbers, finding the maximum value, or concatenating an array of strings into a single string.
+
+In this case, the callback function `(acc, val) => acc + val` is used to accumulate the sum of all elements in the array. However, the `Array.reduce()` method requires an initial value for the accumulator as the first argument, which is missing in this case.
+As a result, the accumulator starts with the first element of the array (`1`), and the remaining elements (`2`, `3`, `4`, and `5`) are added to it. But since the initial value of the accumulator is undefined, the addition operation results in `NaN` (Not a Number), as `undefined + 1` is `NaN`. Therefore, the correct answer is option C, `NaN`.
+
+</p>
+</details>
+
+---
