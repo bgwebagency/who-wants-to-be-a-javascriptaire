@@ -840,6 +840,39 @@ In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts f
 
 ---
 
+##### 24. JavaScript Array Search Methods - Array.indexOf(), Array.lastIndexOf(), and Array.includes()
+
+```javascript
+const fruits = ["apple", "banana", "orange", "grape", "apple", "kiwi"];
+const index = fruits.indexOf("orange");
+const lastIndex = fruits.lastIndexOf("apple");
+const result = fruits.includes("grape");
+console.log("index: ", index, "lastIndex: ", lastIndex, "result: ", result);
+```
+
+What does the above code snippet output?
+
+- A: index: 2, lastIndex: 4, result: true
+- B: index: 3, lastIndex: 0, result: false
+- C: index: 2, lastIndex: 4, result: false
+- D: index: -1, lastIndex: 4, result: true
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The `Array.indexOf()` method searches for the index of the first occurrence of the specified value in the array fruits.
+In this case, "orange" is found at index 2, so `index` will be 2.
+
+The `Array.lastIndexOf()` method searches for the index of the last occurrence of the specified value in the array fruits.
+In this case, "apple" appears twice in the array and its last occurrence is at index 4, so `lastIndex` will be 4.
+
+On the other hand, the `Array.includes()` method checks if the specified value "grape" exists in the array fruits, and since "grape" is present in the array, `result` will be true.
+
+</p>
+</details>
+
 ---
 
 ##### 26. Array.map() Method in JavaScript
