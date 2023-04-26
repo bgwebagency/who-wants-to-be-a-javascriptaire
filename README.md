@@ -922,12 +922,15 @@ What does the above code snippet output?
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: C
+#### Answer: B
 
 `Array.reduce()` takes an array and "reduces" it to a single value by repeatedly applying a function to each element and keeping track of the accumulated result. It's commonly used for tasks such as summing up an array of numbers, finding the maximum value, or concatenating an array of strings into a single string.
 
-In this case, the callback function `(acc, val) => acc + val` is used to accumulate the sum of all elements in the array. However, the `Array.reduce()` method requires an initial value for the accumulator as the first argument, which is missing in this case.
-As a result, the accumulator starts with the first element of the array (`1`), and the remaining elements (`2`, `3`, `4`, and `5`) are added to it. But since the initial value of the accumulator is undefined, the addition operation results in `NaN` (Not a Number), as `undefined + 1` is `NaN`. Therefore, the correct answer is option C, `NaN`.
+In this case, the reduce() method takes a callback function that is executed for each element of the array. The callback function takes two parameters, `acc` and `val`, which represent the accumulator and the current value of the array, respectively.
+
+Inside the callback function, the current value of the array is added to the accumulator and the result is returned. The `reduce()` method updates the value of the accumulator with each iteration until it has iterated over all the elements of the array.
+
+Finally, the `reduce()` method returns the final value of the accumulator, which is the sum of all the numbers in the array, that is 15.
 
 </p>
 </details>
