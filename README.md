@@ -903,3 +903,36 @@ In this case, the provided function `num => num * 2` multiplies each number in t
 </details>
 
 ---
+
+##### 27. Array.reduce() Method in JavaScript
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, val) => acc + val);
+console.log(sum);
+```
+
+What does the above code snippet output?
+
+- A: 1
+- B: 15
+- C: NaN
+- D: undefined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+`Array.reduce()` takes an array and "reduces" it to a single value by repeatedly applying a function to each element and keeping track of the accumulated result. It's commonly used for tasks such as summing up an array of numbers, finding the maximum value, or concatenating an array of strings into a single string.
+
+In this case, the reduce() method takes a callback function that is executed for each element of the array. The callback function takes two parameters, `acc` and `val`, which represent the accumulator and the current value of the array, respectively.
+
+Inside the callback function, the current value of the array is added to the accumulator and the result is returned. The `reduce()` method updates the value of the accumulator with each iteration until it has iterated over all the elements of the array.
+
+Finally, the `reduce()` method returns the final value of the accumulator, which is the sum of all the numbers in the array, that is 15.
+
+</p>
+</details>
+
+---
