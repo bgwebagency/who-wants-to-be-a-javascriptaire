@@ -936,3 +936,42 @@ Finally, the `reduce()` method returns the final value of the accumulator, which
 </details>
 
 ---
+
+##### 28. Array.reduceRight() Method in JavaScript
+
+```javascript
+const arr = [1, 2, 3, 4];
+const result = arr.reduceRight((acc, curr) => acc + curr);
+console.log(result);
+```
+
+What does the above code snippet output?
+
+- A: 10
+- B: 11
+- C: 12
+- D: 13
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The `reduceRight()` method is similar to the `reduce()` method, except that it starts reducing the array from the rightmost element to the leftmost element. The `reduceRight()` method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
+
+In the given code snippet, the `arr` array contains the values `[1, 2, 3, 4]`. The `reduceRight()` method is called on this array with a callback function that adds the accumulator `acc` with the current element `curr`.
+
+In the first iteration, the `curr` value will be `4`, and the acc value will be `undefined`, since no initial value is provided. Therefore, the result of the first iteration will be `4`.
+
+In the second iteration, the `curr` value will be `3`, and the `acc` value will be the result of the previous iteration, which is `4`. Therefore, the result of the second iteration will be `7`.
+
+In the third iteration, the `curr` value will be `2`, and the `acc` value will be the result of the previous iteration, which is `7`. Therefore, the result of the third iteration will be `9`.
+
+In the fourth and final iteration, the `curr` value will be `1`, and the `acc` value will be the result of the previous iteration, which is `9`. Therefore, the result of the fourth iteration will be `10`.
+
+Therefore, the final output of the code will be `10`. Hence, the correct option is A.
+
+</p>
+</details>
+
+---
