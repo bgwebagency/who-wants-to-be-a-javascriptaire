@@ -975,3 +975,31 @@ Therefore, the final output of the code will be `10`. Hence, the correct option 
 </details>
 
 ---
+
+##### 29. Array.sort() Method in JavaScript
+
+```javascript
+const arr = ["Centauri", 3.14159, "canine", 11235, undefined];
+const result = arr.sort();
+console.log(result);
+```
+
+What does the above code snippet output?
+
+- A: [ 3.14159, 11235, 'Centauri', 'canine', undefined ]
+- B: [ undefined, 11235, 3.14159, 'Centauri', 'canine' ]
+- C: [ 11235, 3.14159, 'canine', 'Centauri', undefined ]
+- D: [ 11235, 3.14159, 'Centauri', 'canine', undefined ]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: D
+
+By default the `sort()` method sorts elements by character so 11235 comes before 3.14159 because 1 comes before 3. 
+
+Words and letters are sorted alphabetically by ASCII code so "Centauri" which starts with an uppercase C (ASCII code 67) sorts before "canine" which starts with a lowercase c (ASCII code 99). 
+
+Undefined elements always sort to the end of an array.
+
+Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine', undefined ] which is option D.
