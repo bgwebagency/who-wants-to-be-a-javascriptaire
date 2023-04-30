@@ -875,6 +875,47 @@ On the other hand, the `Array.includes()` method checks if the specified value "
 
 ---
 
+##### 25. JavaScript Advanced Array Search Methods - .find(), .findIndex(), and .filter()
+
+```javascript
+function isDivisibleBy7(num) {
+    return num % 7 == 0;
+}
+
+const nums = [28, 7, 3, 29, 15, 1, 2, 23];
+const filterResult = nums.filter(isDivisibleBy7);
+const findResult = nums.find((num) => num < 10);
+const findIndexResult = nums.findIndex((num) => num / 2 == 14);
+
+console.log("filterResult:", filterResult, "findResult:", findResult, "findIndexResult:", findIndexResult);
+```
+
+What does the above code snippet output?
+
+- A: filterResult: 28, findResult: 2, findIndexResult: 1
+- B: filterResult: [28, 7], findResult: 2, findIndexResult: 28
+- C: filterResult: 7, findResult: [1, 2, 3, 7], findIndexResult: 0
+- D: filterResult: [28, 7], findResult: 7, findIndexResult: 0
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: D
+
+The `Array.filter()` method returns an array containing all elements for which the function passed to it returns true.
+In this case, the function `isDivisibleBy7` returns true for any number that is divisible by 7. In the `nums` array, 7 and 28 are divisible by 7, so `nums.filter(isDivisibleBy7)` returns [7, 28].
+
+The `Array.find()` method returns the first element in the array for which the function passed to it returns true.
+In this case, the function passed to it returns true for any number less than 10. There are multiple numbers in `nums` that are less than 10, but since `Array.find()` only returns the first for which it is true, `nums.find((num) => num < 10)` returns 7.
+
+The `Array.findIndex()` method is similar to the `Array.find()` method, but returns the index of the first element in the array for which the function passed to it returns true, rather than the element itself.
+In this case, the function passed to it returns true for 28, since the 28 / 2 == 14. 28 is in the array `nums` and is at index 0, so `nums.find((num) => num / 2 == 14)` returns 0.
+
+</p>
+</details>
+
+---
+
 ##### 26. Array.map() Method in JavaScript
 
 ```javascript
