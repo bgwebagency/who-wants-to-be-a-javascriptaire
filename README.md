@@ -875,7 +875,7 @@ On the other hand, the `Array.includes()` method checks if the specified value "
 
 ---
 
-##### 25. JavaScript Advanced Array Search Methods - .find(), .findIndex(), and .filter()
+##### 25. JavaScript Advanced Array Search Methods - Array.find(), Array.findIndex(), and Array.filter()
 
 ```javascript
 function isDivisibleBy7(num) {
@@ -903,7 +903,7 @@ What does the above code snippet output?
 #### Answer: D
 
 The `Array.filter()` method returns an array containing all elements for which the function passed to it returns true.
-In this case, the function `isDivisibleBy7` returns true for any number that is divisible by 7. In the `nums` array, 7 and 28 are divisible by 7, so `nums.filter(isDivisibleBy7)` returns [7, 28].
+In this case, the function `isDivisibleBy7` returns true for any number that is divisible by 7. In the `nums` array, 7 and 28 are divisible by 7, so `nums.filter(isDivisibleBy7)` returns [28, 7].
 
 The `Array.find()` method returns the first element in the array for which the function passed to it returns true.
 In this case, the function passed to it returns true for any number less than 10. There are multiple numbers in `nums` that are less than 10, but since `Array.find()` only returns the first for which it is true, `nums.find((num) => num < 10)` returns 7.
