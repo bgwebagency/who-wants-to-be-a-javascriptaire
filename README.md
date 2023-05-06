@@ -700,7 +700,7 @@ In general, `for of` is recommended over `for in` or `forEach`
 
 ---
 
-###### 19. Array Manipulation: Understanding array.push() Method in JavaScript
+###### 19. Array Manipulation: Understanding array.push() Method in JavaScript [▶️](https://www.youtube.com/shorts/ZkaIxib4IxI)
 
 ```javascript
 let arr = [1, 2, 3, 4];
@@ -722,7 +722,7 @@ What does the above code snippet output?
 
 The `array.push()` method in JavaScript adds one or more elements to the end of an array and returns the new length of the array.
 
-In the given code, `arr` is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds `5` to the end of the arr array.
+In the given code, `arr` is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds `5` to the end of the `arr` array.
 
 The `push()` method returns the new length of the array after the addition of the element(s). In this case, the new length of arr will be 5 because `5` is added to the end of the array.
 
