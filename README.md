@@ -18,6 +18,10 @@ Don't forget to leave a star ⭐️
 ---
 </div>
 
+## Table of Contents
+
+[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F)
+
 ###### 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
 ```javascript
