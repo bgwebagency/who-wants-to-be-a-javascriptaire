@@ -2,8 +2,6 @@
   
   <h1>Who Wants to be a JavaScriptaire?</h1>
 
----
-
 Fun way to learn JavaScript for your coding interviews.
 All the questions are answered here in text and also have a video on our YouTube channel.
 Click the ▶️ icon next to the questions if you prefer to watch the video explanation.</span>
@@ -21,6 +19,8 @@ Don't forget to leave a star ⭐️
 ## Table of Contents
 
 [Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F)
+
+---
 
 ###### 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
