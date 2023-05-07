@@ -892,10 +892,10 @@ console.log("filterResult:", filterResult, "findResult:", findResult, "findIndex
 
 What does the above code snippet output?
 
-- A: filterResult: 28, findResult: 2, findIndexResult: 1
-- B: filterResult: [28, 7], findResult: 2, findIndexResult: 28
-- C: filterResult: 7, findResult: [1, 2, 3, 7], findIndexResult: 0
-- D: filterResult: [28, 7], findResult: 7, findIndexResult: 0
+- A: filterResult: 28 findResult: 2 findIndexResult: 1
+- B: filterResult: [28, 7] findResult: 2 findIndexResult: 28
+- C: filterResult: 7 findResult: [1, 2, 3, 7] findIndexResult: 0
+- D: filterResult: [28, 7] findResult: 7 findIndexResult: 0
 
 <details><summary><b>Answer</b></summary>
 <p>
