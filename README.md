@@ -1053,3 +1053,27 @@ Words and letters are sorted alphabetically by ASCII code so "Centauri" which st
 Undefined elements always sort to the end of an array.
 
 Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine', undefined ] which is option D.
+
+</p>
+</details>
+
+--- 
+
+#### 33. Time Methods in Javascript
+
+How many days are between today and the next US President Election ?
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### 
+```javascript
+const date1 = new Date(Date.now())
+const us_election = new Date("2024-11-5")
+const difference_in_time =us_election.getTime()-date1.getTime()
+const difference_in_days = difference_in_time  / (1000 * 3600 * 24);
+console.log(parseInt(difference_in_days,10)+ " Days")
+```
+
+</p>
+</details>
