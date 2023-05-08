@@ -1088,27 +1088,19 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The Date() class produces an output of the current date. The year, month, day, hours, minutes, seconds and milliseconds are noted here.
+`new Date()` will return the current date and time followed by the two specified dates in the format "YYYY-MM-DDTHH:MM:SS.sssZ", where "Z" represents the UTC time zone offset.
 
-The format to be used is "YYYY-MM-DDTHH:mm:ss.sssZ". The format calls ISO 8601.
+`YYYY-MM-DDTHH:mm:ss.sssZ` is a format used to represent dates and times in the ISO 8601 standard. It consists of the following components:
 
-YYYY is the year, with four digits (0000 to 9999), or as an expanded year of + or - followed by six digits. The sign is required for expanded years. -000000 is explicitly disallowed as a valid year.
-
-MM is the month, with two digits (01 to 12). Defaults to 01.
-
-DD is the day of the month, with two digits (01 to 31). Defaults to 01.
-
-T is a literal character, which indicates the beginning of the time part of the string. The T is required when specifying the time part.
-
-HH is the hour, with two digits (00 to 23). As a special case, 24:00:00 is allowed, and is interpreted as midnight at the beginning of the next day. Defaults to 00.
-
-mm is the minute, with two digits (00 to 59). Defaults to 00.
-
-ss is the second, with two digits (00 to 59). Defaults to 00.
-
-sss is the millisecond, with three digits (000 to 999). Defaults to 000.
-
-Z is the timezone offset, which can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and minutes from UTC.
+- `YYYY`: Four-digit year (0000 to 9999), or as an expanded year with + or - followed by six digits. The sign is required for expanded years. -000000 is explicitly disallowed as a valid year.
+- `MM`: Two-digit month (01 = January, 02 = February, and so on). It defaults to 01.
+- `DD`: Two-digit day of the month (01 to 31)
+- `T`: A separator indicating the start of the time component
+- `HH`: Two-digit hour of the day in 24-hour format (00 to 23). As a special case, 24:00:00 is allowed, and is interpreted as midnight at the beginning of the next day. Defaults to 00.
+- `mm`: Two-digit minute of the hour (00 to 59). Defaults to 00.
+- `ss`: Two-digit second of the minute (00 to 59). Defaults to 00.
+- `.sss`: Millisecond component (000 to 999). Defaults to 000.
+- `Z`: A suffix indicating that the time is in UTC (Coordinated Universal Time), with no offset. It can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and minutes from UTC.
 
 </p>
 </details>
