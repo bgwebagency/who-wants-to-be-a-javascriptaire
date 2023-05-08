@@ -14,6 +14,7 @@ Feel free to reach us on our social platforms! 😊 <br />
 Don't forget to leave a star ⭐️
 
 ---
+
 </div>
 
 ## Table of Contents
@@ -825,7 +826,7 @@ So, option A is the correct answer as it reflects the correct value of `removedE
 ```javascript
 let arr = [1, 2, 3, 4, 5];
 let removed = arr.splice(1, 2, "a", "b");
-onsole.log("removed:", removed, "arr: ", arr);
+console.log("removed:", removed, "arr: ", arr);
 ```
 
 What does the above code snippet output?
@@ -888,7 +889,7 @@ On the other hand, the `Array.includes()` method checks if the specified value "
 
 ```javascript
 function isDivisibleBy7(num) {
-    return num % 7 == 0;
+  return num % 7 == 0;
 }
 
 const nums = [28, 7, 3, 29, 15, 1, 2, 23];
@@ -896,7 +897,14 @@ const filterResult = nums.filter(isDivisibleBy7);
 const findResult = nums.find((num) => num < 10);
 const findIndexResult = nums.findIndex((num) => num / 2 == 14);
 
-console.log("filterResult:", filterResult, "findResult:", findResult, "findIndexResult:", findIndexResult);
+console.log(
+  "filterResult:",
+  filterResult,
+  "findResult:",
+  findResult,
+  "findIndexResult:",
+  findIndexResult
+);
 ```
 
 What does the above code snippet output?
@@ -1046,36 +1054,41 @@ What does the above code snippet output?
 
 #### Answer: D
 
-By default the `sort()` method sorts elements by character so 11235 comes before 3.14159 because 1 comes before 3. 
+By default the `sort()` method sorts elements by character so 11235 comes before 3.14159 because 1 comes before 3.
 
-Words and letters are sorted alphabetically by ASCII code so "Centauri" which starts with an uppercase C (ASCII code 67) sorts before "canine" which starts with a lowercase c (ASCII code 99). 
+Words and letters are sorted alphabetically by ASCII code so "Centauri" which starts with an uppercase C (ASCII code 67) sorts before "canine" which starts with a lowercase c (ASCII code 99).
 
 Undefined elements always sort to the end of an array.
 
 Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine', undefined ] which is option D.
 
-##### 31. Date() in JavaScript 
+</p>
+</details>
+
+---
+
+##### 31. Date() in JavaScript
+
 ```javascript
 const date1 = new Date();
-const date2 = new Date("1995-12-17T05:10:00"); 
+const date2 = new Date("1995-12-17T05:10:00");
 const date3 = new Date("1995-10-15T08:12:15+02:00");
 
-console.log(date1,"",date2,"",date3);
-
+console.log(date1, "", date2, "", date3);
 ```
 
 What does the above code snippet output?
 
-- A: [ current date, 1995-10-17T04:10:00.000Z, 1994-10-15T06:12:15.000Z ] 
-- B: [ current date, 1995-12-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ] 
-- C: [ current date, 1995-08-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ] 
+- A: [ current date, 1995-10-17T04:10:00.000Z, 1994-10-15T06:12:15.000Z ]
+- B: [ current date, 1995-12-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
+- C: [ current date, 1995-08-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: B
 
-The Date() class produces an output of the current date. The year, month, day, hours, minutes, seconds and milliseconds are noted here. 
+The Date() class produces an output of the current date. The year, month, day, hours, minutes, seconds and milliseconds are noted here.
 
 The format to be used is "YYYY-MM-DDTHH:mm:ss.sssZ". The format calls ISO 8601.
 
@@ -1095,9 +1108,9 @@ ss is the second, with two digits (00 to 59). Defaults to 00.
 
 sss is the millisecond, with three digits (000 to 999). Defaults to 000.
 
-Z is the timezone offset, which can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and    minutes from UTC.
+Z is the timezone offset, which can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and minutes from UTC.
 
+</p>
+</details>
 
-
-
-
+---
