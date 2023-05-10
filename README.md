@@ -1095,3 +1095,44 @@ console.log(parseInt(difference_in_days,10)+ " Days")
 =======
 ---
 
+=======
+##### 31. Date() in JavaScript
+
+```javascript
+const date1 = new Date();
+const date2 = new Date("1995-12-17T05:10:00");
+const date3 = new Date("1995-10-15T08:12:15+02:00");
+
+console.log(date1, "", date2, "", date3);
+```
+
+What does the above code snippet output?
+
+- A: [ current date, 1995-10-17T04:10:00.000Z, 1994-10-15T06:12:15.000Z ]
+- B: [ current date, 1995-12-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
+- C: [ current date, 1995-08-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+`new Date()` will return the current date and time followed by the two specified dates in the format "YYYY-MM-DDTHH:MM:SS.sssZ", where "Z" represents the UTC time zone offset.
+
+`YYYY-MM-DDTHH:mm:ss.sssZ` is a format used to represent dates and times in the ISO 8601 standard. It consists of the following components:
+
+- `YYYY`: Four-digit year (0000 to 9999), or as an expanded year with + or - followed by six digits. The sign is required for expanded years. -000000 is explicitly disallowed as a valid year.
+- `MM`: Two-digit month (01 = January, 02 = February, and so on). It defaults to 01.
+- `DD`: Two-digit day of the month (01 to 31)
+- `T`: A separator indicating the start of the time component
+- `HH`: Two-digit hour of the day in 24-hour format (00 to 23). As a special case, 24:00:00 is allowed, and is interpreted as midnight at the beginning of the next day. Defaults to 00.
+- `mm`: Two-digit minute of the hour (00 to 59). Defaults to 00.
+- `ss`: Two-digit second of the minute (00 to 59). Defaults to 00.
+- `.sss`: Millisecond component (000 to 999). Defaults to 000.
+- `Z`: A suffix indicating that the time is in UTC (Coordinated Universal Time), with no offset. It can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and minutes from UTC.
+
+</p>
+</details>
+
+---
+
