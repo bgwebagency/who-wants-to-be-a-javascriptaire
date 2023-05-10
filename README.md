@@ -1106,3 +1106,38 @@ What does the above code snippet output?
 </details>
 
 ---
+
+##### 33. Time Methods in Javascript
+
+```javascript
+const date1 = new Date("2023-5-1");
+const next_us_election = new Date("2024-11-5");
+const difference_in_time = next_us_election.getTime() - date1.getTime();
+const difference_in_days = difference_in_time / (1000 * 3600 * 24);
+console.log(parseInt(difference_in_days, 10) + " Days");
+```
+
+What does the above code snippet output?
+
+- A: 490 Days
+- B: 554 Days
+- C: 560 Days
+- D: 530 Days
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### ANSWER: B
+
+The code calculates the difference in days between the date "2023-5-1" and the next US election date "2024-11-5". It uses the `Date` object to create two dates: `date1` represents May 1, 2023, and `next_us_election` represents November 5, 2024.
+
+The `getTime()` method is used to get the time value in milliseconds for each date. By subtracting the time value of `date1` from `next_us_election`, we get the time difference in milliseconds.
+
+To convert the time difference from milliseconds to days, we divide it by the number of milliseconds in a day (1000 _ 3600 _ 24). The result is stored in the variable `difference_in_days`.
+
+Finally, the `parseInt()` function is used to convert the difference_in_days value to an integer, and the result is logged to the console along with the "Days" string. The output will be "554 Days".
+
+</p>
+</details>
+
+---
