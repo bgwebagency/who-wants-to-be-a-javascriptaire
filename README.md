@@ -1141,3 +1141,50 @@ Finally, the `parseInt()` function is used to convert the difference_in_days val
 </details>
 
 ---
+
+##### 34. Object Literals in Javascript
+
+```javascript
+let person = {
+    name: "John",
+    age: 30,
+    hobbies: ["reading", "traveling", "cooking"],
+    address: {
+      street: "123 Main St",
+      city: "New York",
+      state: "NY"
+    },
+    sayHello: function() {
+      console.log("Hello, my name is " + this.name);
+    }
+  };
+  
+  console.log(person.name); 
+  console.log(person.hobbies[1]); 
+  console.log(person.address.city); 
+  person.sayHello(); 
+```
+
+What does the above code snippet output?
+
+- A: John, traveling, New York, Hello my name is John
+- B: John, cooking, New York, Hello my name is John
+- C: John, reading, New York, Hello my name is John
+- D: John, traveling, New York, NY
+
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### ANSWER: A
+
+The code defines an object literal person with properties such as name, age, hobbies, and address, and a method sayHello.
+
+The console.log() statements print the value of name, the second element of the hobbies array (which is "traveling"), and the value of the city property in the address object (which is "New York").
+
+Finally, the method sayHello is called on the person object using dot notation, which outputs the string "Hello, my name is John" to the console.
+
+</p>
+</details>
+
+---
