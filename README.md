@@ -1178,11 +1178,11 @@ What does the above code snippet output?
 
 #### ANSWER: A
 
-The code defines an object literal person with properties such as name, age, hobbies, and address, and a method sayHello.
-
-The console.log() statements print the value of name, the second element of the hobbies array (which is "traveling"), and the value of the city property in the address object (which is "New York").
-
-Finally, the method sayHello is called on the person object using dot notation, which outputs the string "Hello, my name is John" to the console.
+ The code defines an object literal `person` with properties such as `name`, `age`, `hobbies`, and `address`, and a method `sayHello`.
+ 
+ The `console.log()` statements print the value of `name`, the second element of the `hobbies` array (which is "traveling"), and the value of the `city` property in the `address` object (which is "New York").
+ 
+ Finally, the method `sayHello` is called on the `person` object using dot notation, which outputs the string "Hello, my name is John" to the console.
 
 </p>
 </details>
