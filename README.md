@@ -1081,7 +1081,7 @@ How many days are between 01 May 2023 and the next US President Election ?
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### 
+#### ANSWER: B
 ```javascript
 const date1 = new Date(Date.now())
 const us_election = new Date("2024-11-5")
