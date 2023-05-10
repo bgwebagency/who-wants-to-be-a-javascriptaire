@@ -14,6 +14,7 @@ Feel free to reach us on our social platforms! 😊 <br />
 Don't forget to leave a star ⭐️
 
 ---
+
 </div>
 
 ## Table of Contents
@@ -825,7 +826,7 @@ So, option A is the correct answer as it reflects the correct value of `removedE
 ```javascript
 let arr = [1, 2, 3, 4, 5];
 let removed = arr.splice(1, 2, "a", "b");
-onsole.log("removed:", removed, "arr: ", arr);
+console.log("removed:", removed, "arr: ", arr);
 ```
 
 What does the above code snippet output?
@@ -888,7 +889,7 @@ On the other hand, the `Array.includes()` method checks if the specified value "
 
 ```javascript
 function isDivisibleBy7(num) {
-    return num % 7 == 0;
+  return num % 7 == 0;
 }
 
 const nums = [28, 7, 3, 29, 15, 1, 2, 23];
@@ -896,7 +897,14 @@ const filterResult = nums.filter(isDivisibleBy7);
 const findResult = nums.find((num) => num < 10);
 const findIndexResult = nums.findIndex((num) => num / 2 == 14);
 
-console.log("filterResult:", filterResult, "findResult:", findResult, "findIndexResult:", findIndexResult);
+console.log(
+  "filterResult:",
+  filterResult,
+  "findResult:",
+  findResult,
+  "findIndexResult:",
+  findIndexResult
+);
 ```
 
 What does the above code snippet output?
@@ -1046,9 +1054,9 @@ What does the above code snippet output?
 
 #### Answer: D
 
-By default the `sort()` method sorts elements by character so 11235 comes before 3.14159 because 1 comes before 3. 
+By default the `sort()` method sorts elements by character so 11235 comes before 3.14159 because 1 comes before 3.
 
-Words and letters are sorted alphabetically by ASCII code so "Centauri" which starts with an uppercase C (ASCII code 67) sorts before "canine" which starts with a lowercase c (ASCII code 99). 
+Words and letters are sorted alphabetically by ASCII code so "Centauri" which starts with an uppercase C (ASCII code 67) sorts before "canine" which starts with a lowercase c (ASCII code 99).
 
 Undefined elements always sort to the end of an array.
 
@@ -1056,6 +1064,7 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 
 </p>
 </details>
+
 
 --- 
 
@@ -1083,3 +1092,6 @@ console.log(parseInt(difference_in_days,10)+ " Days")
 
 </p>
 </details>
+=======
+---
+
