@@ -1061,7 +1061,13 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 
 #### 33. Time Methods in Javascript
 
-How many days are between today and the next US President Election ?
+How many days are between 01 May 2023 and the next US President Election ?
+
+- A: 490
+- B: 554
+- C: 560
+- D: 530
+
 
 <details><summary><b>Answer</b></summary>
 <p>
