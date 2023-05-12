@@ -1066,3 +1066,49 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 </details>
 
 ---
+
+##### 37. Create MCQA for class, class expression and static members
+
+```javascript
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    static makeSound() {
+        console.log("Generic animal sound");
+    }
+    sayName() {
+        console.log(`My name is ${this.name}`);
+    }
+}
+
+const a1 = new Animal("Lion");
+const a2 = new Animal("Time");
+
+Animal.makeSound();
+a1.makeSound();
+a2.makeSound();
+
+```
+
+What does the above code snippet output?
+
+- A. "Generic animal sound", "TypeError", "TypeError"
+- B. "Generic animal sound", "Generic animal sound", "Generic animal sound"
+- C. "TypeError", "TypeError", "TypeError"
+- D. "TypeError", "Generic animal sound", "Generic animal sound"
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+The static method `makeSound()` is defined on the `Animal` class, and is accessible directly through the class itself, i.e., `Animal.makeSound()`. This will output `"Generic animal sound"` to the console.
+
+However, when we try to call `makeSound()` on an instance of the Animal class `(a1.makeSound() and a2.makeSound())`, we get a TypeError, because static methods can only be accessed through the class itself and not through its instances.
+
+
+</p>
+</details>
+
+---
