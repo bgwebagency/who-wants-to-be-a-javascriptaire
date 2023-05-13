@@ -1079,9 +1079,9 @@ console.log(date1, '', date2, '', date3)
 
 What does the above code snippet output?
 
-- A: [ current date, 1995-10-17T04:10:00.000Z, 1994-10-15T06:12:15.000Z ]
-- B: [ current date, 1995-12-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
-- C: [ current date, 1995-08-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
+- A: current date, 1995-10-17T04:10:00.000Z, 1994-10-15T06:12:15.000Z
+- B: current date, 1995-12-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z
+- C: current date, 1995-08-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z
 
 <details><summary><b>Answer</b></summary>
 <p>
