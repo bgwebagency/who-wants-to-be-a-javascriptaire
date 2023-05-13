@@ -19,14 +19,14 @@ Don't forget to leave a star ⭐️
 
 ## Table of Contents
 
-[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F)
+[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F) - [Date and Time](#31-date-in-javascript) - [Object Oriented JavaScript](#34-object-literals-in-javascript)
 
 ---
 
 ###### 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
 ```javascript
-console.log(new Date(2023, 1, 31));
+console.log(new Date(2023, 1, 31))
 ```
 
 - A: `Tue Jan 31 2024`
@@ -55,10 +55,10 @@ And since February in 2023 has only 28 days, the code will overflow by 3 days ma
 ###### 2. What will this code output? [▶️](https://www.youtube.com/shorts/s6khiRq6EoE)
 
 ```javascript
-var username = "kirandash";
-var username = "bgwebagency";
+var username = 'kirandash'
+var username = 'bgwebagency'
 
-console.log(username);
+console.log(username)
 ```
 
 - A: `bgwebagency`
@@ -84,14 +84,14 @@ But we can not declare the same variable multiple times using `let` or `const`
 
 ```javascript
 const user = {
-  username: "kirandash",
+  username: 'kirandash',
   updateUsername: (newName) => {
-    this.username = newName;
+    this.username = newName
   },
-};
+}
 
-user.updateUsername("bgwebagency");
-console.log(user.username);
+user.updateUsername('bgwebagency')
+console.log(user.username)
 ```
 
 - A: `bgwebagency`
@@ -120,10 +120,10 @@ To fix this issue, we should change the arrow function to a normal function.
 ###### 4. What will this code output? [▶️](https://www.youtube.com/shorts/CL53e5FucAM)
 
 ```javascript
-const len1 = "kiran".length;
-const len2 = "👻".length;
+const len1 = 'kiran'.length
+const len2 = '👻'.length
 
-console.log(len1, len2);
+console.log(len1, len2)
 ```
 
 - A: `5, 2`
@@ -150,7 +150,7 @@ The string length for `kiran` returns `5` because in a string each character is 
 ###### 5. Difference between undefined and null [▶️](https://www.youtube.com/shorts/tQwec4ELIg8)
 
 ```javascript
-console.log(undefined == null, undefined === null);
+console.log(undefined == null, undefined === null)
 ```
 
 - A: `true, true`
@@ -213,10 +213,10 @@ To fix this issue, please move the rest operator to the end and then it should w
 ###### 7. Infinity and -Infinity [▶️](https://youtube.com/shorts/J3-ab21VMKA)
 
 ```javascript
-let x = Number.NEGATIVE_INFINITY;
-let y = Number.POSITIVE_INFINITY;
-let z = x + y;
-console.log(z);
+let x = Number.NEGATIVE_INFINITY
+let y = Number.POSITIVE_INFINITY
+let z = x + y
+console.log(z)
 ```
 
 - A: `0`
@@ -247,7 +247,7 @@ Note that the code will not throw a TypeError, as JavaScript is able to perform 
 ###### 8. isNaN() function [▶️](https://youtube.com/shorts/IyQ5Gr1jtQI)
 
 ```javascript
-console.log("BG Web Agency" === NaN, isNaN("BG Web Agency"));
+console.log('BG Web Agency' === NaN, isNaN('BG Web Agency'))
 ```
 
 - A: `true, true`
@@ -276,7 +276,7 @@ To check if a value is a number in JavaScript, you can use the `isNaN()` functio
 ###### 9. isFinite() function [▶️](https://youtube.com/shorts/8P0VB4DQFWw)
 
 ```javascript
-console.log(isFinite(Infinity), isNaN(Infinity));
+console.log(isFinite(Infinity), isNaN(Infinity))
 ```
 
 - A: `false, false`
@@ -312,21 +312,21 @@ Therefore always use `isFinite` function instead of `isNaN` function when you wa
 
 ```javascript
 const user = {
-  name: "John",
+  name: 'John',
   age: 30,
   getName: () => {
-    return this.name;
+    return this.name
   },
   getAge: function () {
-    return this.age;
+    return this.age
   },
-};
+}
 
-const getName = user.getName;
-const getAge = user.getAge;
+const getName = user.getName
+const getAge = user.getAge
 
-console.log(getName());
-console.log(getAge());
+console.log(getName())
+console.log(getAge())
 ```
 
 - A: undefined, undefined
@@ -357,8 +357,8 @@ But when `getAge` is assigned to the `getAge` variable, it loses the reference t
 ```javascript
 for (var i = 0; i < 3; i++) {
   setTimeout(function () {
-    console.log(i);
-  }, 0);
+    console.log(i)
+  }, 0)
 }
 ```
 
@@ -397,15 +397,15 @@ When the callback function passed to setTimeout is executed, it has access to th
 function add(x) {
   return function (y) {
     if (y !== undefined) {
-      x += y;
-      return arguments.callee;
+      x += y
+      return arguments.callee
     } else {
-      return x;
+      return x
     }
-  };
+  }
 }
 
-console.log(add(1)(2)(3)());
+console.log(add(1)(2)(3)())
 ```
 
 - A: 6
@@ -444,13 +444,13 @@ This code demonstrates a more complex example of currying in JavaScript, where t
 ```javascript
 function multiply(x) {
   return function (y) {
-    return x * y;
-  };
+    return x * y
+  }
 }
 
-const double = multiply(2);
+const double = multiply(2)
 
-console.log(double(5));
+console.log(double(5))
 ```
 
 - A: 25
@@ -511,17 +511,17 @@ Iterables are commonly used in many real-time applications while working with la
 
 ```javascript
 function* counter() {
-  let i = 0;
+  let i = 0
   while (true) {
-    yield i++;
+    yield i++
   }
 }
 
-const gen = counter();
+const gen = counter()
 
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
 ```
 
 What does the above code snippet output?
@@ -590,28 +590,28 @@ This algorithm works by first marking all objects in memory that are still being
 function getData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Data retrieved successfully");
-    }, 1000);
-  });
+      resolve('Data retrieved successfully')
+    }, 1000)
+  })
 }
 
 async function main() {
   try {
-    const data = await getData();
-    console.log(data);
-    throw new Error("Something went wrong");
+    const data = await getData()
+    console.log(data)
+    throw new Error('Something went wrong')
   } catch (err) {
-    console.log("Caught an error:", err.message);
-    return "Error occurred";
+    console.log('Caught an error:', err.message)
+    return 'Error occurred'
   } finally {
-    console.log("Finally block executed.");
-    return "Finally block value";
+    console.log('Finally block executed.')
+    return 'Finally block value'
   }
 }
 
-(async () => {
-  console.log(await main());
-})();
+;(async () => {
+  console.log(await main())
+})()
 ```
 
 What does the above code snippet output?
@@ -704,9 +704,9 @@ In general, `for of` is recommended over `for in` or `forEach`
 ###### 19. Array Manipulation: Understanding array.push() Method in JavaScript [▶️](https://www.youtube.com/shorts/ZkaIxib4IxI)
 
 ```javascript
-let arr = [1, 2, 3, 4];
-let result = arr.push(5);
-console.log("result: ", result, "arr: ", arr);
+let arr = [1, 2, 3, 4]
+let result = arr.push(5)
+console.log('result: ', result, 'arr: ', arr)
 ```
 
 What does the above code snippet output?
@@ -735,9 +735,9 @@ The `push()` method returns the new length of the array after the addition of th
 ##### 20. Array Manipulation: Understanding array.unshift() Method in JavaScript
 
 ```javascript
-let arr = [3, 5, 7, 9];
-let result = arr.unshift(1, 2);
-console.log("result: ", result, "arr: ", arr);
+let arr = [3, 5, 7, 9]
+let result = arr.unshift(1, 2)
+console.log('result: ', result, 'arr: ', arr)
 ```
 
 What does the above code snippet output?
@@ -766,9 +766,9 @@ The `unshift()` method returns the new length of the array after the addition of
 ##### 21. Array Manipulation: Understanding array.pop() Method in JavaScript
 
 ```javascript
-const myArray = [1, 2, 3, 4, 5];
-const poppedValue = myArray.pop();
-console.log(poppedValue);
+const myArray = [1, 2, 3, 4, 5]
+const poppedValue = myArray.pop()
+console.log(poppedValue)
 ```
 
 What does the above code snippet output?
@@ -795,9 +795,9 @@ In this case, `myArray` is an array with elements `[1, 2, 3, 4, 5]`, and `myArra
 ##### 22. Array Manipulation: Understanding array.shift() Method in JavaScript
 
 ```javascript
-const arr = [10, 20, 30, 40, 50];
-const removedElement = arr.shift();
-console.log("removedElement: ", removedElement, "arr: ", arr);
+const arr = [10, 20, 30, 40, 50]
+const removedElement = arr.shift()
+console.log('removedElement: ', removedElement, 'arr: ', arr)
 ```
 
 What does the above code snippet output?
@@ -824,9 +824,9 @@ So, option A is the correct answer as it reflects the correct value of `removedE
 ##### 23. Array Manipulation: Understanding array.splice() Method in JavaScript
 
 ```javascript
-let arr = [1, 2, 3, 4, 5];
-let removed = arr.splice(1, 2, "a", "b");
-console.log("removed:", removed, "arr: ", arr);
+let arr = [1, 2, 3, 4, 5]
+let removed = arr.splice(1, 2, 'a', 'b')
+console.log('removed:', removed, 'arr: ', arr)
 ```
 
 What does the above code snippet output?
@@ -853,11 +853,11 @@ In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts f
 ##### 24. JavaScript Array Search Methods - Array.indexOf(), Array.lastIndexOf(), and Array.includes()
 
 ```javascript
-const fruits = ["apple", "banana", "orange", "grape", "apple", "kiwi"];
-const index = fruits.indexOf("orange");
-const lastIndex = fruits.lastIndexOf("apple");
-const result = fruits.includes("grape");
-console.log("index: ", index, "lastIndex: ", lastIndex, "result: ", result);
+const fruits = ['apple', 'banana', 'orange', 'grape', 'apple', 'kiwi']
+const index = fruits.indexOf('orange')
+const lastIndex = fruits.lastIndexOf('apple')
+const result = fruits.includes('grape')
+console.log('index: ', index, 'lastIndex: ', lastIndex, 'result: ', result)
 ```
 
 What does the above code snippet output?
@@ -889,22 +889,22 @@ On the other hand, the `Array.includes()` method checks if the specified value "
 
 ```javascript
 function isDivisibleBy7(num) {
-  return num % 7 == 0;
+  return num % 7 == 0
 }
 
-const nums = [28, 7, 3, 29, 15, 1, 2, 23];
-const filterResult = nums.filter(isDivisibleBy7);
-const findResult = nums.find((num) => num < 10);
-const findIndexResult = nums.findIndex((num) => num / 2 == 14);
+const nums = [28, 7, 3, 29, 15, 1, 2, 23]
+const filterResult = nums.filter(isDivisibleBy7)
+const findResult = nums.find((num) => num < 10)
+const findIndexResult = nums.findIndex((num) => num / 2 == 14)
 
 console.log(
-  "filterResult:",
+  'filterResult:',
   filterResult,
-  "findResult:",
+  'findResult:',
   findResult,
-  "findIndexResult:",
+  'findIndexResult:',
   findIndexResult
-);
+)
 ```
 
 What does the above code snippet output?
@@ -936,9 +936,9 @@ In this case, the function passed to it returns true for 28, since the 28 / 2 ==
 ##### 26. Array.map() Method in JavaScript
 
 ```javascript
-const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map((num) => num * 2);
-console.log(doubledNumbers);
+const numbers = [1, 2, 3, 4, 5]
+const doubledNumbers = numbers.map((num) => num * 2)
+console.log(doubledNumbers)
 ```
 
 What does the above code snippet output?
@@ -965,9 +965,9 @@ In this case, the provided function `num => num * 2` multiplies each number in t
 ##### 27. Array.reduce() Method in JavaScript
 
 ```javascript
-const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce((acc, val) => acc + val);
-console.log(sum);
+const numbers = [1, 2, 3, 4, 5]
+const sum = numbers.reduce((acc, val) => acc + val)
+console.log(sum)
 ```
 
 What does the above code snippet output?
@@ -998,9 +998,9 @@ Finally, the `reduce()` method returns the final value of the accumulator, which
 ##### 28. Array.reduceRight() Method in JavaScript
 
 ```javascript
-const arr = [1, 2, 3, 4];
-const result = arr.reduceRight((acc, curr) => acc + curr);
-console.log(result);
+const arr = [1, 2, 3, 4]
+const result = arr.reduceRight((acc, curr) => acc + curr)
+console.log(result)
 ```
 
 What does the above code snippet output?
@@ -1037,9 +1037,9 @@ Therefore, the final output of the code will be `10`. Hence, the correct option 
 ##### 29. Array.sort() Method in JavaScript
 
 ```javascript
-const arr = ["Centauri", 3.14159, "canine", 11235, undefined];
-const result = arr.sort();
-console.log(result);
+const arr = ['Centauri', 3.14159, 'canine', 11235, undefined]
+const result = arr.sort()
+console.log(result)
 ```
 
 What does the above code snippet output?
@@ -1070,11 +1070,11 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 ##### 31. Date() in JavaScript
 
 ```javascript
-const date1 = new Date();
-const date2 = new Date("1995-12-17T05:10:00");
-const date3 = new Date("1995-10-15T08:12:15+02:00");
+const date1 = new Date()
+const date2 = new Date('1995-12-17T05:10:00')
+const date3 = new Date('1995-10-15T08:12:15+02:00')
 
-console.log(date1, "", date2, "", date3);
+console.log(date1, '', date2, '', date3)
 ```
 
 What does the above code snippet output?
@@ -1110,32 +1110,42 @@ What does the above code snippet output?
 ##### 32. Date methods in JavaScript
 
 ```javascript
-const date = new Date('Mart 15, 1975 23:15:30');
-date.setMinutes(10);
-date.setUTCDate(5);
+const date = new Date('Mart 15, 1975 23:15:30')
+date.setMinutes(10)
+date.setUTCDate(5)
 
-console.log("Minutes:" + date.getMinutes() + "," ,"", "Year:" + date.getFullYear() + ",","", "UTCDate:"+ date.getUTCDate());
-
+console.log(
+  'Minutes:' + date.getMinutes() + ',',
+  '',
+  'Year:' + date.getFullYear() + ',',
+  '',
+  'UTCDate:' + date.getUTCDate()
+)
 ```
 
 What does the above code snippet output?
 
-- A: [ Minutes:10,  Year:1975,  UTCDate:5  ]
-- B: [ Minutes:15,  Year:1975,  UTCDate:5  ]
-- C: [ Minutes:15,  Year:1975,  UTCDate:15 ]
-- D: [ Minutes:10,  Year:1975,  UTCDate:15 ]
+- A: Minutes:10, Year:1975, UTCDate:5
+- B: Minutes:15, Year:1975, UTCDate:5
+- C: Minutes:15, Year:1975, UTCDate:15
+- D: Minutes:10, Year:1975, UTCDate:15
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: A
 
-- `Date object`: JavaScript Date objects represent a single moment in time in a platform-independent format.
-- `setMinutes()`: The setMinutes() method of Date instances changes the minutes for this date according to local time.
-- `setUTCDate()`: The setUTCDate() method of Date instances changes the day of the month for this date according to universal time.
-- `getMinutes()`: The getMinutes() method of Date instances returns the minutes for this date according to local time.
-- `getFullYear()`: The getFullYear() method of Date instances returns the year for this date according to local time.
-- `getUTCDate()`: The getUTCDate() method of Date instances returns the day of the month for this date according to universal time.
+The provided code creates a Date object initialized with the date and time of "March 15, 1975 23:15:30".
+
+Then, it modifies the minutes and UTC date of the date object using the `setMinutes()` and `setUTCDate()` methods, respectively.
+
+Finally, it logs the updated values of minutes, year, and UTC date using `console.log()`.
+
+After modifying the minutes to 10 using `setMinutes(10)`, the `getMinutes()` method returns the updated value of 10.
+
+After modifying the UTC date to 5 using `setUTCDate(5)`, the `getUTCDate()` method returns the updated value of 5.
+
+The `getFullYear()` method returns the unchanged year, which is 1975.
 
 </p>
 </details>
@@ -1145,11 +1155,11 @@ What does the above code snippet output?
 ##### 33. Time Methods in Javascript
 
 ```javascript
-const date1 = new Date("2023-5-1");
-const next_us_election = new Date("2024-11-5");
-const difference_in_time = next_us_election.getTime() - date1.getTime();
-const difference_in_days = difference_in_time / (1000 * 3600 * 24);
-console.log(parseInt(difference_in_days, 10) + " Days");
+const date1 = new Date('2023-5-1')
+const next_us_election = new Date('2024-11-5')
+const difference_in_time = next_us_election.getTime() - date1.getTime()
+const difference_in_days = difference_in_time / (1000 * 3600 * 24)
+console.log(parseInt(difference_in_days, 10) + ' Days')
 ```
 
 What does the above code snippet output?
@@ -1181,23 +1191,23 @@ Finally, the `parseInt()` function is used to convert the difference_in_days val
 
 ```javascript
 let person = {
-  name: "John",
+  name: 'John',
   age: 30,
-  hobbies: ["reading", "traveling", "cooking"],
+  hobbies: ['reading', 'traveling', 'cooking'],
   address: {
-    street: "123 Main St",
-    city: "New York",
-    state: "NY",
+    street: '123 Main St',
+    city: 'New York',
+    state: 'NY',
   },
   sayHello: function () {
-    console.log("Hello, my name is " + this.name);
+    console.log('Hello, my name is ' + this.name)
   },
-};
+}
 
-console.log(person.name);
-console.log(person.hobbies[1]);
-console.log(person.address.city);
-person.sayHello();
+console.log(person.name)
+console.log(person.hobbies[1])
+console.log(person.address.city)
+person.sayHello()
 ```
 
 What does the above code snippet output?
@@ -1228,22 +1238,22 @@ Finally, the method `sayHello` is called on the `person` object using dot notati
 ```javascript
 class Animal {
   constructor(name) {
-    this.name = name;
+    this.name = name
   }
   static makeSound() {
-    console.log("Generic animal sound");
+    console.log('Generic animal sound')
   }
   sayName() {
-    console.log(`My name is ${this.name}`);
+    console.log(`My name is ${this.name}`)
   }
 }
 
-const a1 = new Animal("Lion");
-const a2 = new Animal("Time");
+const a1 = new Animal('Lion')
+const a2 = new Animal('Time')
 
-Animal.makeSound();
-a1.makeSound();
-a2.makeSound();
+Animal.makeSound()
+a1.makeSound()
+a2.makeSound()
 ```
 
 What does the above code snippet output?
