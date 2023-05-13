@@ -1067,19 +1067,140 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 
 ---
 
-##### 37. Create MCQA for class, class expression and static members
+##### 31. Date() in JavaScript
+
+```javascript
+const date1 = new Date();
+const date2 = new Date("1995-12-17T05:10:00");
+const date3 = new Date("1995-10-15T08:12:15+02:00");
+
+console.log(date1, "", date2, "", date3);
+```
+
+What does the above code snippet output?
+
+- A: [ current date, 1995-10-17T04:10:00.000Z, 1994-10-15T06:12:15.000Z ]
+- B: [ current date, 1995-12-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
+- C: [ current date, 1995-08-17T04:10:00.000Z, 1995-10-15T06:12:15.000Z ]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+`new Date()` will return the current date and time followed by the two specified dates in the format "YYYY-MM-DDTHH:MM:SS.sssZ", where "Z" represents the UTC time zone offset.
+
+`YYYY-MM-DDTHH:mm:ss.sssZ` is a format used to represent dates and times in the ISO 8601 standard. It consists of the following components:
+
+- `YYYY`: Four-digit year (0000 to 9999), or as an expanded year with + or - followed by six digits. The sign is required for expanded years. -000000 is explicitly disallowed as a valid year.
+- `MM`: Two-digit month (01 = January, 02 = February, and so on). It defaults to 01.
+- `DD`: Two-digit day of the month (01 to 31)
+- `T`: A separator indicating the start of the time component
+- `HH`: Two-digit hour of the day in 24-hour format (00 to 23). As a special case, 24:00:00 is allowed, and is interpreted as midnight at the beginning of the next day. Defaults to 00.
+- `mm`: Two-digit minute of the hour (00 to 59). Defaults to 00.
+- `ss`: Two-digit second of the minute (00 to 59). Defaults to 00.
+- `.sss`: Millisecond component (000 to 999). Defaults to 000.
+- `Z`: A suffix indicating that the time is in UTC (Coordinated Universal Time), with no offset. It can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and minutes from UTC.
+
+</p>
+</details>
+
+---
+
+##### 33. Time Methods in Javascript
+
+```javascript
+const date1 = new Date("2023-5-1");
+const next_us_election = new Date("2024-11-5");
+const difference_in_time = next_us_election.getTime() - date1.getTime();
+const difference_in_days = difference_in_time / (1000 * 3600 * 24);
+console.log(parseInt(difference_in_days, 10) + " Days");
+```
+
+What does the above code snippet output?
+
+- A: 490 Days
+- B: 554 Days
+- C: 560 Days
+- D: 530 Days
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### ANSWER: B
+
+The code calculates the difference in days between the date "2023-5-1" and the next US election date "2024-11-5". It uses the `Date` object to create two dates: `date1` represents May 1, 2023, and `next_us_election` represents November 5, 2024.
+
+The `getTime()` method is used to get the time value in milliseconds for each date. By subtracting the time value of `date1` from `next_us_election`, we get the time difference in milliseconds.
+
+To convert the time difference from milliseconds to days, we divide it by the number of milliseconds in a day (1000 _ 3600 _ 24). The result is stored in the variable `difference_in_days`.
+
+Finally, the `parseInt()` function is used to convert the difference_in_days value to an integer, and the result is logged to the console along with the "Days" string. The output will be "554 Days".
+
+</p>
+</details>
+
+---
+
+##### 34. Object Literals in Javascript
+
+```javascript
+let person = {
+  name: "John",
+  age: 30,
+  hobbies: ["reading", "traveling", "cooking"],
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+  },
+  sayHello: function () {
+    console.log("Hello, my name is " + this.name);
+  },
+};
+
+console.log(person.name);
+console.log(person.hobbies[1]);
+console.log(person.address.city);
+person.sayHello();
+```
+
+What does the above code snippet output?
+
+- A: John, traveling, New York, Hello my name is John
+- B: John, cooking, New York, Hello my name is John
+- C: John, reading, New York, Hello my name is John
+- D: John, traveling, New York, NY
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### ANSWER: A
+
+The code defines an object literal `person` with properties such as `name`, `age`, `hobbies`, and `address`, and a method `sayHello`.
+
+The `console.log()` statements print the value of `name`, the second element of the `hobbies` array (which is "traveling"), and the value of the `city` property in the `address` object (which is "New York").
+
+Finally, the method `sayHello` is called on the `person` object using dot notation, which outputs the string "Hello, my name is John" to the console.
+
+</p>
+</details>
+
+---
+
+##### 37. class, class expression and static members
 
 ```javascript
 class Animal {
-    constructor(name) {
-        this.name = name;
-    }
-    static makeSound() {
-        console.log("Generic animal sound");
-    }
-    sayName() {
-        console.log(`My name is ${this.name}`);
-    }
+  constructor(name) {
+    this.name = name;
+  }
+  static makeSound() {
+    console.log("Generic animal sound");
+  }
+  sayName() {
+    console.log(`My name is ${this.name}`);
+  }
 }
 
 const a1 = new Animal("Lion");
@@ -1088,7 +1209,6 @@ const a2 = new Animal("Time");
 Animal.makeSound();
 a1.makeSound();
 a2.makeSound();
-
 ```
 
 What does the above code snippet output?
@@ -1106,7 +1226,6 @@ What does the above code snippet output?
 The static method `makeSound()` is defined on the `Animal` class, and is accessible directly through the class itself, i.e., `Animal.makeSound()`. This will output `"Generic animal sound"` to the console.
 
 However, when we try to call `makeSound()` on an instance of the Animal class `(a1.makeSound() and a2.makeSound())`, we get a TypeError, because static methods can only be accessed through the class itself and not through its instances.
-
 
 </p>
 </details>
