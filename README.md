@@ -1107,6 +1107,41 @@ What does the above code snippet output?
 
 ---
 
+##### 32. Date methods in JavaScript
+
+```javascript
+const date = new Date('Mart 15, 1975 23:15:30');
+date.setMinutes(10);
+date.setUTCDate(5);
+
+console.log("Minutes:" + date.getMinutes() + "," ,"", "Year:" + date.getFullYear() + ",","", "UTCDate:"+ date.getUTCDate());
+
+```
+
+What does the above code snippet output?
+
+- A: [ Minutes:10,  Year:1975,  UTCDate:5  ]
+- B: [ Minutes:15,  Year:1975,  UTCDate:5  ]
+- C: [ Minutes:15,  Year:1975,  UTCDate:15 ]
+- D: [ Minutes:10,  Year:1975,  UTCDate:15 ]
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+- `Date object`: JavaScript Date objects represent a single moment in time in a platform-independent format.
+- `setMinutes()`: The setMinutes() method of Date instances changes the minutes for this date according to local time.
+- `setUTCDate()`: The setUTCDate() method of Date instances changes the day of the month for this date according to universal time.
+- `getMinutes()`: The getMinutes() method of Date instances returns the minutes for this date according to local time.
+- `getFullYear()`: The getFullYear() method of Date instances returns the year for this date according to local time.
+- `getUTCDate()`: The getUTCDate() method of Date instances returns the day of the month for this date according to universal time.
+
+</p>
+</details>
+
+---
+
 ##### 33. Time Methods in Javascript
 
 ```javascript
