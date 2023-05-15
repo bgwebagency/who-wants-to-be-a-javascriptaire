@@ -1067,6 +1067,47 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 
 ---
 
+##### 30. Destructuring an array in JavaScript
+
+```javascript
+let numbers = [1, 2, 3, undefined, 6, 7, 8, 9];
+
+let [a, , b, c = 2, ...rest] = numbers;
+
+console.log(a, b, c, rest);
+```
+
+What does the above code snippet output?
+
+- A. 1 undefined 2 [ 6, 7, 8, 9 ] 
+- B. 1 3 2 [ 6, 7, 8, 9 ]
+- C. 1 undefined 3 [ 6, 7, 8, 9 ]
+- D. 1 3 2 undefined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+With Array Destructuring it is possible to unpack certain values from an array into individual variables. The values we created in the left hand side (`a, b, c, rest`) correspond to the values and the order of the array we assigned in the right hand side (`numbers`).
+
+- The variable `a` corresponds to the first element of the array, which is `1`.
+
+- Since we did not specify a variable for the next value `2`, the value is not taken into account in the evaluation and is skipped.
+
+- The variable `b` corresponds to the third element of the array, which is `3`.
+
+- It is possible to set default values for the variables if the element in the array is `undefined`. Since the fourth element in the array is `undefined`, the variable `c` has the default value `2`.
+
+- With the spread operator (`...`) we can assign the remaining values of the array to a variable. Since the values `[ 6, 7, 8, 9 ]` are the remaining values of the array, they are assigned to the variable `rest`.
+
+Therefore, the final result is: `1 3 2 [ 6, 7, 8, 9 ]`, which is option B.
+
+</p>
+</details>
+
+---
+
 ##### 31. Date() in JavaScript
 
 ```javascript
