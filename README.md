@@ -1339,6 +1339,8 @@ a1.makeSound()
 a2.makeSound()
 ```
 
+What does the above code snippet output?
+
 - A. "Generic animal sound", "TypeError", "TypeError"
 - B. "Generic animal sound", "Generic animal sound", "Generic animal sound"
 - C. "TypeError", "TypeError", "TypeError"
