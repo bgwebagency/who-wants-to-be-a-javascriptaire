@@ -1188,3 +1188,46 @@ What does the above code snippet output?
 </details>
 
 ---
+
+
+##### 34. call(), apply() and bind() Functions Of Javascript
+
+```javascript
+function greet(name) {
+    console.log(`Hello, ${name}! Welcome to ${this.location}.`);
+}
+
+const person1 = {
+    location: 'New York'
+};
+
+greet.call(person, 'John');
+greet.apply(person, ['Alex']);
+const greetPerson = greet.bind(person);
+greetPerson('Thomas');
+```
+
+What does the above code snippet output?
+
+- A: Hello, Thomas! Welcome to New York , Hello, Alex! Welcome to New York , Hello, Alex! Welcome to New York.
+- B: Hello, John! Welcome to New York , Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York.
+- C: Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York , Hello, John! Welcome to New York.
+- D: None Of The Above
+
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### ANSWER: B
+
+ The `call` function is used to invoke the `greet` function with the `person` object as the context (the value of `this`) and `'John'` as the argument.
+ 
+ The `apply` function is used to invoke the `greet` function with the `person` object as the context (the value of `this`) and an array ['Alex'] as the arguments.
+ 
+ The `bind` function is used to create a new function `greetPerson` with the `person` object as the bound context (the value of `this`).
+ 
+ In summary, the code demonstrates how `call`, `apply`, and `bind` can be used to invoke a function with a specific context and arguments
+</p>
+</details>
+
+---
