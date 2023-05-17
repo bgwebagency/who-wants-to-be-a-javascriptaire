@@ -1070,16 +1070,16 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine
 ##### 30. Destructuring an array in JavaScript
 
 ```javascript
-let numbers = [1, 2, 3, undefined, 6, 7, 8, 9];
+let numbers = [1, 2, 3, undefined, 6, 7, 8, 9]
 
-let [a, , b, c = 2, ...rest] = numbers;
+let [a, , b, c = 2, ...rest] = numbers
 
-console.log(a, b, c, rest);
+console.log(a, b, c, rest)
 ```
 
 What does the above code snippet output?
 
-- A. 1 undefined 2 [ 6, 7, 8, 9 ] 
+- A. 1 undefined 2 [ 6, 7, 8, 9 ]
 - B. 1 3 2 [ 6, 7, 8, 9 ]
 - C. 1 undefined 3 [ 6, 7, 8, 9 ]
 - D. 1 3 2 undefined
@@ -1268,6 +1268,48 @@ The code defines an object literal `person` with properties such as `name`, `age
 The `console.log()` statements print the value of `name`, the second element of the `hobbies` array (which is "traveling"), and the value of the `city` property in the `address` object (which is "New York").
 
 Finally, the method `sayHello` is called on the `person` object using dot notation, which outputs the string "Hello, my name is John" to the console.
+
+</p>
+</details>
+
+---
+
+##### 36. call(), apply() and bind() Functions Of Javascript
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}! Welcome to ${this.location}.`)
+}
+
+const person = {
+  location: 'New York',
+}
+
+greet.call(person, 'John')
+greet.apply(person, ['Alex'])
+const greetPerson = greet.bind(person)
+greetPerson('Thomas')
+```
+
+What does the above code snippet output?
+
+- A: Hello, Thomas! Welcome to New York , Hello, Alex! Welcome to New York , Hello, Alex! Welcome to New York.
+- B: Hello, John! Welcome to New York , Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York.
+- C: Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York , Hello, John! Welcome to New York.
+- D: None Of The Above
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### ANSWER: B
+
+The `call` function is used to invoke the `greet` function with the `person` object as the context (the value of `this`) and `'John'` as the argument.
+
+The `apply` function is used to invoke the `greet` function with the `person` object as the context (the value of `this`) and an array ['Alex'] as the arguments.
+
+The `bind` function is used to create a new function `greetPerson` with the `person` object as the bound context (the value of `this`).
+
+In summary, the code demonstrates how `call`, `apply`, and `bind` can be used to invoke a function with a specific context and arguments
 
 </p>
 </details>
