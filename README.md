@@ -1274,6 +1274,49 @@ Finally, the method `sayHello` is called on the `person` object using dot notati
 
 ---
 
+##### 35. this Object
+
+```javascript
+function User(username) {
+  this.username = username
+
+  this.updateUsername = (newName) => {
+    this.username = newName
+  }
+}
+
+const user1 = new User('kirandash')
+const user2 = new User('bgwebagency')
+
+user1.updateUsername('kirandash-website')
+user2.updateUsername('bgwebagency-app')
+
+console.log(user1.username, user2.username)
+```
+
+What does the above code snippet output?
+
+- A:"kirandash bgwebagency"
+- B:"kirandash-website bgwebagency-app"
+- C:"kirandash kirandash"
+- D:"bgwebagency-app bgwebagency-app"
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The code defines a constructor function `User` that creates `user` objects with a `username` property and an `updateUsername` method. Two `user` objects, `user1` and `user2`, are created with initial usernames 'kirandash' and 'bgwebagency' respectively.
+
+The `updateUsername` method is called on both `user1` and `user2` objects to update their usernames. `user1`'s username is updated to 'kirandash-website', and `user2`'s username is updated to 'bgwebagency-app'.
+
+Finally, the code logs the concatenation of `user1.username` and `user2.username`, which results in the output 'kirandash-website bgwebagency-app'.
+
+</p>
+</details>
+
+---
+
 ##### 36. call(), apply() and bind() Functions Of Javascript
 
 ```javascript
