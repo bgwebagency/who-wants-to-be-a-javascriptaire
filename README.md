@@ -1297,10 +1297,10 @@ console.log(user1.username + user2.username);
 
 What does the above code snippet output?
 
-- A: "-websitebgwebagency"
-- B: "kirandash-app"
-- C: "website-app"
-- D: "bgwebagency-website"
+- A:"-websitebgwebagency"
+- B:"kirandash-app"
+- C:"website-app"
+- D:"bgwebagency-website"
 
 <details><summary><b>Answer</b></summary>
 <p>
