@@ -1365,7 +1365,7 @@ However, when we try to call `makeSound()` on an instance of the Animal class `(
 Consider the following code snippet:
 
 ```javascript
-// module.js
+// module.mjs
 export const PI = 3.14159;
 
 export function calculateArea(radius) {
@@ -1376,9 +1376,8 @@ export default function calculateCircumference(radius) {
   return 2 * PI * radius;
 }
 
-// main.js
-import { PI, calculateArea } from './module.js';
-import calculateCircumference from './module.js';
+// script.mjs
+import calculateCircumference, { PI, calculateArea } from './module.mjs';
 
 console.log(PI); // Output: ________
 console.log(calculateArea(5)); // Output: ________
