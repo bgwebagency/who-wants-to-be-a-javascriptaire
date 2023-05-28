@@ -1402,3 +1402,26 @@ However, when we try to call `makeSound()` on an instance of the Animal class `(
 </details>
 
 ---
+###### 42. Default Import Export (Level: Medium)
+
+In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
+
+- A: import { myAlias as default } from 'module';
+- B: import default as myAlias from 'module';
+- C: import myAlias as default from 'module';
+- D: import { default as myAlias } from 'module';
+
+
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: D
+
+The correct answer is D.
+
+Explanation: When importing a default export from a module in JavaScript and assigning it the alias "myAlias," the correct syntax is import { default as myAlias } from 'module';. This syntax allows you to import the default export from the module and assign it the specified alias, which in this case is "myAlias." By using the "default as" syntax, you can create a new identifier (alias) for the default export within your code to avoid naming conflicts or provide a more descriptive name for the imported entity.
+</p>
+</details>
+
+---
