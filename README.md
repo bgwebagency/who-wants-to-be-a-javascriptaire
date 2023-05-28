@@ -1420,7 +1420,7 @@ In JavaScript, when importing a default export from a module, which syntax corre
 
 The correct answer is D.
 
-Explanation: When importing a default export from a module in JavaScript and assigning it the alias "myAlias," the correct syntax is 'import { default as myAlias }' from 'module';.<br/> This syntax allows you to import the default export from the module and assign it the specified alias, which in this case is "myAlias.<br/>" By using the 'default as' syntax, you can create a new identifier (alias) for the default export within your code to avoid naming conflicts or provide a more descriptive name for the imported entity.
+Explanation: When importing a default export from a module in JavaScript and assigning it the alias "myAlias," the correct syntax is `import { default as myAlias }` from 'module'; This syntax allows you to import the default export from the module and assign it the specified alias, which in this case is "myAlias.<br/>" By using the `default as` syntax, you can create a new identifier (alias) for the default export within your code to avoid naming conflicts or provide a more descriptive name for the imported entity.
 </p>
 </details>
 
