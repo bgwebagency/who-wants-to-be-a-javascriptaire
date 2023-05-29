@@ -1409,31 +1409,35 @@ Consider the following code snippet:
 
 ```javascript
 // module.mjs
-export const PI = 3.14159;
+export const PI = 3.14159
 
 export function calculateArea(radius) {
-  return PI * radius * radius;
+  return PI * radius * radius
 }
 
 export default function calculateCircumference(radius) {
-  return 2 * PI * radius;
+  return 2 * PI * radius
 }
 
 // script.mjs
-import calculateCircumference, { PI, calculateArea } from './module.mjs';
+import calculateCircumference, { PI, calculateArea } from './module.mjs'
 
-console.log(PI); // Output: ________
-console.log(calculateArea(5)); // Output: ________
-console.log(calculateCircumference(5)); // Output: ________
+console.log(PI) // Output: ________
+console.log(calculateArea(5)) // Output: ________
+console.log(calculateCircumference(5)) // Output: ________
 ```
 
 What will be the output of the console.log statements in the code above?
 
 Options:
+
 - A. Output: `3.14159`, `78.53975`, `31.4159`
 - B. Output: `3.14159`, `78.53975`, `62.8318`
 - C. Output: `3.14159`, `78.53975`, `NaN`
 - D. Output: `3.14159`, `NaN`, `62.8318`
+
+<details><summary><b>Answer</b></summary>
+<p>
 
 #### Answer: B
 
@@ -1450,3 +1454,7 @@ The outputs of the `console.log` statements will be:
 - `console.log(PI)` will output `3.14159` since we imported the named export `PI`.
 - `console.log(calculateArea(5))` will output `78.53975` since we imported the named export `calculateArea` and called the function with a radius of 5.
 - `console.log(calculateCircumference(5))` will output `62.8318` since we imported the default export `calculateCircumference` and called the function with a radius of 5.
+</p>
+</details>
+
+---
