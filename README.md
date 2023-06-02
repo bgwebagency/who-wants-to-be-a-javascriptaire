@@ -1458,3 +1458,36 @@ The outputs of the `console.log` statements will be:
 </details>
 
 ---
+
+##### 41. Named Import and Export
+
+Consider the following code snippet:
+
+```javascript
+// foo.js
+function foo() {
+  console.log(`Foo`);
+}
+
+export { foo };
+```
+
+What is the correct Syntax to import the function `foo`?
+
+Options:
+
+- A. `import foo from "./foo"`
+- B. `import foo as FooFunction from "./foo"`
+- C. `import { foo } from "./foo"`
+- D. `import { foo } from "./bar"`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: C
+
+Named exports are imported into different files with braces and must be imported with the name of the object, function or variable that was exported.
+In this example, a function with the name `foo` is exported from the file `foo.js`. Accordingly, the correct expression is: `import { foo } from "./foo"`.
+
+</p>
+</details>
