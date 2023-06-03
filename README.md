@@ -1491,3 +1491,26 @@ In this example, a function with the name `foo` is exported from the file `foo.j
 
 </p>
 </details>
+##### 42. Default Import Export (Level: Medium)
+
+In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
+
+- A: import default as myAlias from 'module';
+- B: import myAlias from 'module';
+- C: import { default as myAlias } from 'module';
+- D: Both option B and C
+
+<details><summary><b>Answer</b></summary>
+<p>
+ 
+#### Answer:  D: Both option B and C.
+  
+Explanation: Both option B and C are valid syntaxes for importing a default export from a module and assigning it an alias. The difference between the two syntaxes is that option B does not use the { default as myAlias } syntax. This means that the default export will be imported under the name myAlias, rather than the name default.
+  
+Here is an example of how to use the option B syntax:{import myAlias from 'module';},This will import the default export from the module module and assign it the name myAlias. You can then use the myAlias variable to access the default export from the module module.
+Here is an example of how to use the option C syntax:{import { default as myAlias } from 'module';},This will import the default export from the module module and assign it the alias myAlias. You can then use the myAlias alias to access the default export from the module module.
+
+ The choice of which syntax to use is up to you. The option B syntax is simpler, but it can lead to collisions if there is already a variable named myAlias in the current scope. The option C syntax is more verbose, but it avoids collisions.
+
+</p>
+</details>
