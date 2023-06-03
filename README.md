@@ -1406,21 +1406,23 @@ However, when we try to call `makeSound()` on an instance of the Animal class `(
 
 In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
 
-- A: import { myAlias as default } from 'module';
-- B: import default as myAlias from 'module';
-- C: import myAlias as default from 'module';
-- D: import { default as myAlias } from 'module';
-
+- A: import default as myAlias from 'module';
+- B: import myAlias from 'module';
+- C: import { default as myAlias } from 'module';
+- D: Both option B and C
 
 
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: D
+#### Answer:  D: Both option B and C.
+  
+Explanation: Both option B and C are valid syntaxes for importing a default export from a module and assigning it an alias. The difference between the two syntaxes is that option B does not use the { default as myAlias } syntax. This means that the default export will be imported under the name myAlias, rather than the name default.
+  
+Here is an example of how to use the option B syntax:{import myAlias from 'module';},This will import the default export from the module module and assign it the name myAlias. You can then use the myAlias variable to access the default export from the module module.
+Here is an example of how to use the option C syntax:{import { default as myAlias } from 'module';},This will import the default export from the module module and assign it the alias myAlias. You can then use the myAlias alias to access the default export from the module module.
 
-The correct answer is D.
-
-Explanation: When importing a default export from a module in JavaScript and assigning it the alias "myAlias," the correct syntax is `import { default as myAlias }` from 'module'; This syntax allows you to import the default export from the module and assign it the specified alias, which in this case is "myAlias.<br/>" By using the `default as` syntax, you can create a new identifier (alias) for the default export within your code to avoid naming conflicts or provide a more descriptive name for the imported entity.
+ The choice of which syntax to use is up to you. The option B syntax is simpler, but it can lead to collisions if there is already a variable named myAlias in the current scope. The option C syntax is more verbose, but it avoids collisions.
 </p>
 </details>
 
