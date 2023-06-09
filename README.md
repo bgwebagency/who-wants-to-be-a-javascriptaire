@@ -1585,3 +1585,50 @@ This example showcases inheritance, subclassing, and extending a built-in class 
 </p>
 </details>
 
+##### 39.  for Destructuring Object Literal
+
+```javascript
+const person = {
+    name: 'John Doe',
+    age: 30,
+    address: {
+      street: '123 Main St',
+      city: 'New York',
+      country: 'USA'
+    }
+  };
+
+  const { name, age, address: { city } } = person;
+  
+
+  console.log(name); 
+  console.log(age); 
+  console.log(city); 
+  
+```
+
+What will be the output of the following code
+
+- A: John Doe , 30 , New York 
+- B: John     , 30 ,  New York 
+- C: New York , 30 , John Doe
+- D: None of the above
+
+<details><summary><b>Answer</b></summary>
+<p>
+ 
+#### Answer:  B
+  
+Explanation: In this example, we have an object literal `person` that contains properties like `name`, `age`, and `address`.
+
+To destructure the object literal, we use curly braces `{}` and provide the names of the properties we want to extract. In this case, we destructure `name`, `age`, and `address.city` from the `person` object.
+
+After destructuring, we can use these variables (`name`, `age`, and `city`) as separate variables to access the corresponding values from the `person` object.
+
+In the usage section, we log the values of `name`, `age`, and `city` variables to the console, which will output "John Doe" for `name`, 30 for `age`, and "New York" for `city`.
+
+Object literal destructuring provides a convenient way to extract values from an object and assign them to variables, making it easier to work with the properties of an object in a concise manner.
+
+</p>
+</details>
+
