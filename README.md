@@ -1585,3 +1585,37 @@ This example showcases inheritance, subclassing, and extending a built-in class 
 </p>
 </details>
 
+##### 39.  Destructuring Object Literal
+
+```javascript
+const person = {
+    name: 'John',
+    age: 30,
+    city: 'New York'
+  };
+  
+  const { name, age, city } = person;
+  
+  console.log(name); 
+  console.log(age); 
+  console.log(city); 
+  
+```
+
+What will be the output of the following code
+
+- A: John 30 New York
+- B: John 30 John
+- C: New York 30 John
+- D: None of the above
+
+<details><summary><b>Answer</b></summary>
+<p>
+ 
+#### Answer:  A
+  
+In the code above, we have an object literal called `person` with properties `name`, `age`, and `city`. We then use object destructuring to extract those properties into separate variables (`name`, `age`, and `city`). After destructuring, we can use these variables to access the corresponding values from the object.
+
+</p>
+</details>
+
