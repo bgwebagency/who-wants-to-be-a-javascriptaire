@@ -1514,3 +1514,74 @@ Here is an example of how to use the option C syntax:{import { default as myAlia
 
 </p>
 </details>
+
+##### 38.  for Inheritance, Subclassing and Extending built in class (Level: Hard)
+
+```javascript
+function Animal(name) {
+    this.name = name;
+  }
+  
+  Animal.prototype.eat = function() {
+    console.log(this.name + " is eating.");
+  };
+  
+
+  function Dog(name) {
+    Animal.call(this, name); 
+  }
+  
+  Dog.prototype = Object.create(Animal.prototype); 
+  Dog.prototype.constructor = Dog; 
+  
+  Dog.prototype.bark = function() {
+    console.log(this.name + " is barking.");
+  };
+  
+
+  function CustomArray() {
+    Array.call(this);
+  }
+  
+  CustomArray.prototype = Object.create(Array.prototype);
+  CustomArray.prototype.constructor = CustomArray;
+  
+  CustomArray.prototype.sum = function() {
+    return this.reduce((acc, val) => acc + val, 0);
+  };
+  
+  var dog = new Dog("Buddy");
+  dog.eat();
+  dog.bark();
+  
+  var numbers = new CustomArray();
+  numbers.push(1, 2, 3, 4, 5);
+  console.log(numbers.sum()); 
+  
+```
+
+What will be the output of the following code
+
+- A: Buddy is eating  Buddy is barking   15
+- B: Buddy is eating  Buddy is eating    12
+- C: Buddy is barking  Buddy is eating   9
+- D: Buddy is barking  Buddy is barking  10
+
+<details><summary><b>Answer</b></summary>
+<p>
+ 
+#### Answer:  A
+  
+Explanation: In this example, we have a base class called `Animal` that defines a constructor and an `eat()` method. The subclass `Dog` extends the `Animal` class and adds its own constructor, `bark()` method, and a specific property `breed`.
+
+Furthermore, we extend the built-in `Array` class using the `class` syntax to create a `CustomArray` class. The `CustomArray` class adds a custom method called `sum()` that calculates the sum of the array elements.
+
+In the usage section, we create an instance of `Dog` named `dog` with the name "Buddy" . We can call the inherited `eat()` method from the `Animal` class, the `bark()` method defined in the `Dog` class.
+
+Additionally, we create an instance of `CustomArray` called `numbers` and add some numbers to it. We can call the custom `sum()` method, which is added to the built-in `Array` class through subclassing.
+
+This example showcases inheritance, subclassing, and extending a built-in class in JavaScript, illustrating how classes can be extended and customized to add additional functionality.
+
+</p>
+</details>
+
