@@ -1562,10 +1562,10 @@ function Animal(name) {
 
 What will be the output of the following code
 
-- A: Buddy is eating , Buddy is barking ,  15
-- B: Buddy is eating , Buddy is eating ,   12
-- C: Buddy is barking , Buddy is eating  , 9
-- D: Buddy is barking , Buddy is barking , 10
+- A: Buddy is eating  Buddy is barking   15
+- B: Buddy is eating  Buddy is eating    12
+- C: Buddy is barking  Buddy is eating   9
+- D: Buddy is barking  Buddy is barking  10
 
 <details><summary><b>Answer</b></summary>
 <p>
@@ -1576,7 +1576,7 @@ Explanation: In this example, we have a base class called `Animal` that defines 
 
 Furthermore, we extend the built-in `Array` class using the `class` syntax to create a `CustomArray` class. The `CustomArray` class adds a custom method called `sum()` that calculates the sum of the array elements.
 
-In the usage section, we create an instance of `Dog` named `dog` with the name "Buddy" and breed "Labrador". We can call the inherited `eat()` method from the `Animal` class, the `bark()` method defined in the `Dog` class, and access the `breed` property specific to the `Dog` subclass.
+In the usage section, we create an instance of `Dog` named `dog` with the name "Buddy" . We can call the inherited `eat()` method from the `Animal` class, the `bark()` method defined in the `Dog` class.
 
 Additionally, we create an instance of `CustomArray` called `numbers` and add some numbers to it. We can call the custom `sum()` method, which is added to the built-in `Array` class through subclassing.
 
