@@ -2,7 +2,7 @@
   
   <h1>Who Wants to be a JavaScriptaire?</h1>
 
-Fun way to learn JavaScript for your coding interviews.
+Fun way to learn JavaScript for your Frontend/Web coding interviews.
 All the questions are answered here in text and also have a video on our YouTube channel.
 Click the ▶️ icon next to the questions if you prefer to watch the video explanation.</span>
 
