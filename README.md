@@ -1473,6 +1473,7 @@ This example showcases inheritance, subclassing, and extending a built-in class 
 </p>
 </details>
 
+---
 ##### 39.  Destructuring Object Literal
 
 ```javascript
@@ -1507,6 +1508,7 @@ In the code above, we have an object literal called `person` with properties `na
 </p>
 </details>
 
+---
 
 ##### 40. JavaScript Modules, Import, and Export in ES6
 
@@ -1597,6 +1599,8 @@ In this example, a function with the name `foo` is exported from the file `foo.j
 </p>
 </details>
 
+---
+
 ##### 42. Default Import Export (Level: Medium)
 
 In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
@@ -1620,3 +1624,5 @@ Here is an example of how to use the option C syntax:{import { default as myAlia
 
 </p>
 </details>
+
+---
