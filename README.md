@@ -1403,118 +1403,6 @@ However, when we try to call `makeSound()` on an instance of the Animal class `(
 
 ---
 
-##### 40. JavaScript Modules, Import, and Export in ES6
-
-Consider the following code snippet:
-
-```javascript
-// module.mjs
-export const PI = 3.14159
-
-export function calculateArea(radius) {
-  return PI * radius * radius
-}
-
-export default function calculateCircumference(radius) {
-  return 2 * PI * radius
-}
-
-// script.mjs
-import calculateCircumference, { PI, calculateArea } from './module.mjs'
-
-console.log(PI) // Output: ________
-console.log(calculateArea(5)) // Output: ________
-console.log(calculateCircumference(5)) // Output: ________
-```
-
-What will be the output of the console.log statements in the code above?
-
-Options:
-
-- A. Output: `3.14159`, `78.53975`, `31.4159`
-- B. Output: `3.14159`, `78.53975`, `62.8318`
-- C. Output: `3.14159`, `78.53975`, `NaN`
-- D. Output: `3.14159`, `NaN`, `62.8318`
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-#### Answer: B
-
-The `module.js` file exports three entities:
-
-1. `PI` is a named export, exported using the `export` keyword.
-2. `calculateArea` is a named export, exported using the `export` keyword.
-3. `calculateCircumference` is the default export, exported using the `export default` syntax.
-
-In the `main.js` file, we import `PI` and `calculateArea` as named exports using the destructuring assignment syntax. We also import `calculateCircumference` as the default export. The import statements reference the `module.js` file using the relative file path `./module.js`.
-
-The outputs of the `console.log` statements will be:
-
-- `console.log(PI)` will output `3.14159` since we imported the named export `PI`.
-- `console.log(calculateArea(5))` will output `78.53975` since we imported the named export `calculateArea` and called the function with a radius of 5.
-- `console.log(calculateCircumference(5))` will output `62.8318` since we imported the default export `calculateCircumference` and called the function with a radius of 5.
-</p>
-</details>
-
----
-
-##### 41. Named Import and Export
-
-Consider the following code snippet:
-
-```javascript
-// foo.js
-function foo() {
-  console.log(`Foo`);
-}
-
-export { foo };
-```
-
-What is the correct Syntax to import the function `foo`?
-
-Options:
-
-- A. `import foo from "./foo"`
-- B. `import foo as FooFunction from "./foo"`
-- C. `import { foo } from "./foo"`
-- D. `import { foo } from "./bar"`
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-#### Answer: C
-
-Named exports are imported into different files with braces and must be imported with the name of the object, function or variable that was exported.
-In this example, a function with the name `foo` is exported from the file `foo.js`. Accordingly, the correct expression is: `import { foo } from "./foo"`.
-
-</p>
-</details>
-##### 42. Default Import Export (Level: Medium)
-
-In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
-
-- A: import default as myAlias from 'module';
-- B: import myAlias from 'module';
-- C: import { default as myAlias } from 'module';
-- D: Both option B and C
-
-<details><summary><b>Answer</b></summary>
-<p>
- 
-#### Answer:  D: Both option B and C.
-  
-Explanation: Both option B and C are valid syntaxes for importing a default export from a module and assigning it an alias. The difference between the two syntaxes is that option B does not use the { default as myAlias } syntax. This means that the default export will be imported under the name myAlias, rather than the name default.
-  
-Here is an example of how to use the option B syntax:{import myAlias from 'module';},This will import the default export from the module module and assign it the name myAlias. You can then use the myAlias variable to access the default export from the module module.
-Here is an example of how to use the option C syntax:{import { default as myAlias } from 'module';},This will import the default export from the module module and assign it the alias myAlias. You can then use the myAlias alias to access the default export from the module module.
-
- The choice of which syntax to use is up to you. The option B syntax is simpler, but it can lead to collisions if there is already a variable named myAlias in the current scope. The option C syntax is more verbose, but it avoids collisions.
-
-</p>
-</details>
-
 ##### 38.  for Inheritance, Subclassing and Extending built in class (Level: Hard)
 
 ```javascript
@@ -1619,3 +1507,116 @@ In the code above, we have an object literal called `person` with properties `na
 </p>
 </details>
 
+
+##### 40. JavaScript Modules, Import, and Export in ES6
+
+Consider the following code snippet:
+
+```javascript
+// module.mjs
+export const PI = 3.14159
+
+export function calculateArea(radius) {
+  return PI * radius * radius
+}
+
+export default function calculateCircumference(radius) {
+  return 2 * PI * radius
+}
+
+// script.mjs
+import calculateCircumference, { PI, calculateArea } from './module.mjs'
+
+console.log(PI) // Output: ________
+console.log(calculateArea(5)) // Output: ________
+console.log(calculateCircumference(5)) // Output: ________
+```
+
+What will be the output of the console.log statements in the code above?
+
+Options:
+
+- A. Output: `3.14159`, `78.53975`, `31.4159`
+- B. Output: `3.14159`, `78.53975`, `62.8318`
+- C. Output: `3.14159`, `78.53975`, `NaN`
+- D. Output: `3.14159`, `NaN`, `62.8318`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: B
+
+The `module.js` file exports three entities:
+
+1. `PI` is a named export, exported using the `export` keyword.
+2. `calculateArea` is a named export, exported using the `export` keyword.
+3. `calculateCircumference` is the default export, exported using the `export default` syntax.
+
+In the `main.js` file, we import `PI` and `calculateArea` as named exports using the destructuring assignment syntax. We also import `calculateCircumference` as the default export. The import statements reference the `module.js` file using the relative file path `./module.js`.
+
+The outputs of the `console.log` statements will be:
+
+- `console.log(PI)` will output `3.14159` since we imported the named export `PI`.
+- `console.log(calculateArea(5))` will output `78.53975` since we imported the named export `calculateArea` and called the function with a radius of 5.
+- `console.log(calculateCircumference(5))` will output `62.8318` since we imported the default export `calculateCircumference` and called the function with a radius of 5.
+</p>
+</details>
+
+---
+
+##### 41. Named Import and Export
+
+Consider the following code snippet:
+
+```javascript
+// foo.js
+function foo() {
+  console.log(`Foo`);
+}
+
+export { foo };
+```
+
+What is the correct Syntax to import the function `foo`?
+
+Options:
+
+- A. `import foo from "./foo"`
+- B. `import foo as FooFunction from "./foo"`
+- C. `import { foo } from "./foo"`
+- D. `import { foo } from "./bar"`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: C
+
+Named exports are imported into different files with braces and must be imported with the name of the object, function or variable that was exported.
+In this example, a function with the name `foo` is exported from the file `foo.js`. Accordingly, the correct expression is: `import { foo } from "./foo"`.
+
+</p>
+</details>
+
+##### 42. Default Import Export (Level: Medium)
+
+In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
+
+- A: import default as myAlias from 'module';
+- B: import myAlias from 'module';
+- C: import { default as myAlias } from 'module';
+- D: Both option B and C
+
+<details><summary><b>Answer</b></summary>
+<p>
+ 
+#### Answer:  D: Both option B and C.
+  
+Explanation: Both option B and C are valid syntaxes for importing a default export from a module and assigning it an alias. The difference between the two syntaxes is that option B does not use the { default as myAlias } syntax. This means that the default export will be imported under the name myAlias, rather than the name default.
+  
+Here is an example of how to use the option B syntax:{import myAlias from 'module';},This will import the default export from the module module and assign it the name myAlias. You can then use the myAlias variable to access the default export from the module module.
+Here is an example of how to use the option C syntax:{import { default as myAlias } from 'module';},This will import the default export from the module module and assign it the alias myAlias. You can then use the myAlias alias to access the default export from the module module.
+
+ The choice of which syntax to use is up to you. The option B syntax is simpler, but it can lead to collisions if there is already a variable named myAlias in the current scope. The option C syntax is more verbose, but it avoids collisions.
+
+</p>
+</details>
