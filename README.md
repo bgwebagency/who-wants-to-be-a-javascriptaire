@@ -11,7 +11,7 @@ Feel free to reach us on our social platforms! 😊 <br />
 
 🙏 Support
 
-Don't forget to leave a star ⭐️
+Please ⭐️ star this project and share it with others to show your support. [Follow me](https://github.com/kirandash) ❤️ for updates on future projecs and tutorials!
 
 ---
 
