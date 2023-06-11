@@ -19,7 +19,7 @@ Please ⭐️ star this project and share it with others to show your support. [
 
 ## Table of Contents
 
-[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F) - [Date and Time](#31-date-in-javascript) - [Object Oriented JavaScript](#34-object-literals-in-javascript)
+[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F) - [Date and Time](#31-date-in-javascript) - [Object Oriented JavaScript](#34-object-literals-in-javascript) - [Modules](#40-javascript-modules-import-and-export-in-es6)
 
 ---
 
