@@ -1,1 +1,1 @@
-console.log(isFinite(Infinity), isNaN(Infinity));
+console.log(isFinite(Infinity), isNaN(Infinity))

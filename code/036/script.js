@@ -1,9 +1,9 @@
 function greet(name) {
-  console.log(`Hello, ${name}! Welcome to ${this.location}.`)
+	console.log(`Hello, ${name}! Welcome to ${this.location}.`)
 }
 
 const person = {
-  location: 'New York',
+	location: 'New York',
 }
 
 greet.call(person, 'John')

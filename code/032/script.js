@@ -3,9 +3,9 @@ date.setMinutes(10)
 date.setUTCDate(5)
 
 console.log(
-  'Minutes:' + date.getMinutes() + ',',
-  '',
-  'Year:' + date.getFullYear() + ',',
-  '',
-  'UTCDate:' + date.getUTCDate()
+	'Minutes:' + date.getMinutes() + ',',
+	'',
+	'Year:' + date.getFullYear() + ',',
+	'',
+	'UTCDate:' + date.getUTCDate(),
 )

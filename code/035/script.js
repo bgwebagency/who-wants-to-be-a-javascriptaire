@@ -1,9 +1,9 @@
 function User(username) {
-  this.username = username
+	this.username = username
 
-  this.updateUsername = (newName) => {
-    this.username = newName
-  }
+	this.updateUsername = newName => {
+		this.username = newName
+	}
 }
 
 const user1 = new User('kirandash')
