@@ -1,19 +1,20 @@
 {
-  "name": "who-wants-to-be-a-javascriptaire",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --write \"**/*.js\"",
-    "check-format": "prettier --list-different \"**/*.js\"",
-    "format": "npm run prettier"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8"
-  }
+	"name": "who-wants-to-be-a-javascriptaire",
+	"version": "1.0.0",
+	"description": "<div align=\"center\">",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prettier": "prettier --write \"**/*.js\"",
+		"check-format": "prettier --list-different \"**/*.js\"",
+		"format": "npm run prettier"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"husky": "^8.0.3",
+		"prettier": "^2.8.8",
+		"pretty-quick": "3.1.3"
+	}
 }
