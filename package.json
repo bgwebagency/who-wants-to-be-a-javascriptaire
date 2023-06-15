@@ -1,7 +1,7 @@
 {
 	"name": "who-wants-to-be-a-javascriptaire",
 	"version": "1.0.0",
-	"description": "<div align=\"center\">",
+	"description": "JavaScript multiple choice questions with answers and video explanation to help you with Frontend/Web coding interviews",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
