@@ -9,6 +9,11 @@
 		"check-format": "prettier --list-different \"**/*.js\"",
 		"format": "npm run prettier"
 	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run check-format"
+		}
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
