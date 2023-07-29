@@ -20,6 +20,7 @@ Please ⭐️ star this project and share it with others to show your support. [
 ## Table of Contents
 
 [Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F) - [Date and Time](#31-date-in-javascript) - [Object Oriented JavaScript](#34-object-literals-in-javascript) - [Modules](#40-javascript-modules-import-and-export-in-es6)
+[43. JavaScript JSON](#43-javascript-json-level-low)
 
 ---
 
@@ -1623,6 +1624,51 @@ Here is an example of how to use the option C syntax:{import { default as myAlia
  The choice of which syntax to use is up to you. The option B syntax is simpler, but it can lead to collisions if there is already a variable named myAlias in the current scope. The option C syntax is more verbose, but it avoids collisions.
 
 </p>
+</details>
+
+
+##### 43. JavaScript JSON (Level: Medium)
+
+Which method is used to convert a JavaScript object to a JSON string while preserving data types like Dates and RegEx?
+
+- A: JSON.stringify()
+- B: JSON.stringify() with a custom replacer function
+- C: JSON.toTypedString()
+- D: There is no built-in method; you need to manually convert data types before using JSON.stringify()
+
+
+
+<details><summary><b>Answer</b></summary>
+<p>
+ 
+#### Answer: B JSON.stringify() with a custom replacer function.
+
+
+  
+Explanation: The JSON.stringify() method can be used to convert a JavaScript object to a JSON string. However, by default, it will not preserve data types like Dates and RegEx. To preserve these data types, you can use a custom replacer function. The replacer function takes an object as input and returns a new object with the modified values.
+
+The code below would show you how to use a custom replacer function to preserve data types:
+
+</p>
+
+```js
+function replacer(key, value) {
+  if (typeof value === 'Date') {
+    return value.toJSON();
+  } else if (typeof value === 'RegExp') {
+    return value.toString();
+  } else {
+    return value;
+  }
+}
+
+const object = {
+  date: new Date(),
+  regex: /some regex/,
+};
+
+const jsonString = JSON.stringify(object, replacer);
+```
 </details>
 
 ---
