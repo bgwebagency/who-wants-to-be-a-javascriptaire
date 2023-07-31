@@ -32,7 +32,7 @@ tutorials!
 [Date and Time](#31-date-in-javascript) -
 [Object Oriented JavaScript](#34-object-literals-in-javascript) -
 [Modules](#40-javascript-modules-import-and-export-in-es6) -
-[Miscellaneous](#misc-001-javascript-json-level-medium)
+[Miscellaneous](#misc-1-javascript-json-level-medium)
 
 ---
 
@@ -1886,7 +1886,7 @@ collisions.
 
 ---
 
-###### Misc 001. JavaScript JSON (Level: Medium)
+###### Misc 1. JavaScript JSON (Level: Medium)
 
 Which method is used to convert a JavaScript object to a JSON string while
 preserving data types like Dates and RegEx?
