@@ -36,7 +36,7 @@ tutorials!
 
 ---
 
-###### # 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
+###### 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
 ```javascript
 console.log(new Date(2023, 1, 31))
@@ -69,7 +69,7 @@ making the result to be 3rd March 2023.
 
 ---
 
-###### # 2. What will this code output? [▶️](https://www.youtube.com/shorts/s6khiRq6EoE)
+###### 2. What will this code output? [▶️](https://www.youtube.com/shorts/s6khiRq6EoE)
 
 ```javascript
 var username = 'kirandash'
@@ -98,7 +98,7 @@ But we can not declare the same variable multiple times using `let` or `const`
 
 ---
 
-###### # 3. What will this code output? [▶️](https://www.youtube.com/shorts/l07LPzBQqTM)
+###### 3. What will this code output? [▶️](https://www.youtube.com/shorts/l07LPzBQqTM)
 
 ```javascript
 const user = {
@@ -138,7 +138,7 @@ To fix this issue, we should change the arrow function to a normal function.
 
 ---
 
-###### # 4. What will this code output? [▶️](https://www.youtube.com/shorts/CL53e5FucAM)
+###### 4. What will this code output? [▶️](https://www.youtube.com/shorts/CL53e5FucAM)
 
 ```javascript
 const len1 = 'kiran'.length
@@ -171,7 +171,7 @@ The string length for `kiran` returns `5` because in a string each character is
 
 ---
 
-###### # 5. Difference between undefined and null [▶️](https://www.youtube.com/shorts/tQwec4ELIg8)
+###### 5. Difference between undefined and null [▶️](https://www.youtube.com/shorts/tQwec4ELIg8)
 
 ```javascript
 console.log(undefined == null, undefined === null)
@@ -211,7 +211,7 @@ a variable has no value assigned to it.
 
 ---
 
-###### # 6. Rest Operator [▶️](https://www.youtube.com/shorts/7jLCMwhe2VA)
+###### 6. Rest Operator [▶️](https://www.youtube.com/shorts/7jLCMwhe2VA)
 
 ```javascript
 function getFruits(x, ...multi, y) {
@@ -243,7 +243,7 @@ work.
 
 ---
 
-###### # 7. Infinity and -Infinity [▶️](https://youtube.com/shorts/J3-ab21VMKA)
+###### 7. Infinity and -Infinity [▶️](https://youtube.com/shorts/J3-ab21VMKA)
 
 ```javascript
 let x = Number.NEGATIVE_INFINITY
@@ -283,7 +283,7 @@ Number.POSITIVE_INFINITY.
 
 ---
 
-###### # 8. isNaN() function [▶️](https://youtube.com/shorts/IyQ5Gr1jtQI)
+###### 8. isNaN() function [▶️](https://youtube.com/shorts/IyQ5Gr1jtQI)
 
 ```javascript
 console.log('BG Web Agency' === NaN, isNaN('BG Web Agency'))
@@ -316,7 +316,7 @@ if it cannot be converted to a number.
 
 ---
 
-###### # 9. isFinite() function [▶️](https://youtube.com/shorts/8P0VB4DQFWw)
+###### 9. isFinite() function [▶️](https://youtube.com/shorts/8P0VB4DQFWw)
 
 ```javascript
 console.log(isFinite(Infinity), isNaN(Infinity))
@@ -358,7 +358,7 @@ want to validate if a number is finite
 
 ---
 
-###### # 10. Arrow function [▶️](https://youtube.com/shorts/P8zFS3w-wzw)
+###### 10. Arrow function [▶️](https://youtube.com/shorts/P8zFS3w-wzw)
 
 ```javascript
 const user = {
@@ -410,7 +410,7 @@ global object, the function returns undefined.
 
 ---
 
-###### # 11. Closure [▶️](https://youtube.com/shorts/PCc7icrQw8Y)
+###### 11. Closure [▶️](https://youtube.com/shorts/PCc7icrQw8Y)
 
 ```javascript
 for (var i = 0; i < 3; i++) {
@@ -457,7 +457,7 @@ each iteration of the loop.
 
 ---
 
-###### # 12. Curry (Level: Hard) [▶️](https://youtu.be/KYIJVlbevkg)
+###### 12. Curry (Level: Hard) [▶️](https://youtu.be/KYIJVlbevkg)
 
 ```javascript
 function add(x) {
@@ -514,7 +514,7 @@ recursively with the next argument.
 
 ---
 
-###### # 13. Curry (Level: Easy) [▶️](https://youtu.be/0FLxIj0TRgU)
+###### 13. Curry (Level: Easy) [▶️](https://youtu.be/0FLxIj0TRgU)
 
 ```javascript
 function multiply(x) {
@@ -557,7 +557,7 @@ returns another function that can be partially applied with some arguments.
 
 ---
 
-###### # 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
+###### 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
 
 Which of the following statements is true about the `next()` method of an
 iterator in JavaScript?
@@ -598,7 +598,7 @@ large datasets, or while implementing custom data structures
 
 ---
 
-###### # 15. Generator Functions [▶️](https://youtu.be/4fIKcIMo7w4)
+###### 15. Generator Functions [▶️](https://youtu.be/4fIKcIMo7w4)
 
 ```javascript
 function* counter() {
@@ -649,7 +649,7 @@ their execution, and yield multiple values over time.
 
 ---
 
-###### # 16. Garbage Collection, Mark and Sweep Algorithm [▶️](https://youtu.be/QCmqefzwWlg)
+###### 16. Garbage Collection, Mark and Sweep Algorithm [▶️](https://youtu.be/QCmqefzwWlg)
 
 Which of the following scenarios could potentially cause a memory leak in
 JavaScript?
@@ -687,7 +687,7 @@ is not marked as in use.
 
 ---
 
-###### # 17. try, catch, finally [▶️](https://youtu.be/uPhf3OjPwSU)
+###### 17. try, catch, finally [▶️](https://youtu.be/uPhf3OjPwSU)
 
 ```javascript
 function getData() {
@@ -763,7 +763,7 @@ errors.
 
 ---
 
-###### # 18. Array and Traversal in array [▶️](https://youtu.be/Mefj0GDslts)
+###### 18. Array and Traversal in array [▶️](https://youtu.be/Mefj0GDslts)
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
@@ -813,7 +813,7 @@ In general, `for of` is recommended over `for in` or `forEach`
 
 ---
 
-###### # 19. Array Manipulation: Understanding array.push() Method in JavaScript [▶️](https://www.youtube.com/shorts/ZkaIxib4IxI)
+###### 19. Array Manipulation: Understanding array.push() Method in JavaScript [▶️](https://www.youtube.com/shorts/ZkaIxib4IxI)
 
 ```javascript
 let arr = [1, 2, 3, 4]
@@ -849,7 +849,7 @@ added to the end of the array.
 
 ---
 
-###### # 20. Array Manipulation: Understanding array.unshift() Method in JavaScript
+###### 20. Array Manipulation: Understanding array.unshift() Method in JavaScript
 
 ```javascript
 let arr = [3, 5, 7, 9]
