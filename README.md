@@ -36,7 +36,7 @@ tutorials!
 
 ---
 
-###### 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
+###### # 1. What will this code output? [▶️](https://www.youtube.com/shorts/Uysa8_Aa5Sg)
 
 ```javascript
 console.log(new Date(2023, 1, 31))
@@ -69,7 +69,7 @@ making the result to be 3rd March 2023.
 
 ---
 
-###### 2. What will this code output? [▶️](https://www.youtube.com/shorts/s6khiRq6EoE)
+###### # 2. What will this code output? [▶️](https://www.youtube.com/shorts/s6khiRq6EoE)
 
 ```javascript
 var username = 'kirandash'
@@ -98,7 +98,7 @@ But we can not declare the same variable multiple times using `let` or `const`
 
 ---
 
-###### 3. What will this code output? [▶️](https://www.youtube.com/shorts/l07LPzBQqTM)
+###### # 3. What will this code output? [▶️](https://www.youtube.com/shorts/l07LPzBQqTM)
 
 ```javascript
 const user = {
@@ -138,7 +138,7 @@ To fix this issue, we should change the arrow function to a normal function.
 
 ---
 
-###### 4. What will this code output? [▶️](https://www.youtube.com/shorts/CL53e5FucAM)
+###### # 4. What will this code output? [▶️](https://www.youtube.com/shorts/CL53e5FucAM)
 
 ```javascript
 const len1 = 'kiran'.length
@@ -171,7 +171,7 @@ The string length for `kiran` returns `5` because in a string each character is
 
 ---
 
-###### 5. Difference between undefined and null [▶️](https://www.youtube.com/shorts/tQwec4ELIg8)
+###### # 5. Difference between undefined and null [▶️](https://www.youtube.com/shorts/tQwec4ELIg8)
 
 ```javascript
 console.log(undefined == null, undefined === null)
@@ -211,7 +211,7 @@ a variable has no value assigned to it.
 
 ---
 
-###### 6. Rest Operator [▶️](https://www.youtube.com/shorts/7jLCMwhe2VA)
+###### # 6. Rest Operator [▶️](https://www.youtube.com/shorts/7jLCMwhe2VA)
 
 ```javascript
 function getFruits(x, ...multi, y) {
@@ -243,7 +243,7 @@ work.
 
 ---
 
-###### 7. Infinity and -Infinity [▶️](https://youtube.com/shorts/J3-ab21VMKA)
+###### # 7. Infinity and -Infinity [▶️](https://youtube.com/shorts/J3-ab21VMKA)
 
 ```javascript
 let x = Number.NEGATIVE_INFINITY
@@ -283,7 +283,7 @@ Number.POSITIVE_INFINITY.
 
 ---
 
-###### 8. isNaN() function [▶️](https://youtube.com/shorts/IyQ5Gr1jtQI)
+###### # 8. isNaN() function [▶️](https://youtube.com/shorts/IyQ5Gr1jtQI)
 
 ```javascript
 console.log('BG Web Agency' === NaN, isNaN('BG Web Agency'))
@@ -316,7 +316,7 @@ if it cannot be converted to a number.
 
 ---
 
-###### 9. isFinite() function [▶️](https://youtube.com/shorts/8P0VB4DQFWw)
+###### # 9. isFinite() function [▶️](https://youtube.com/shorts/8P0VB4DQFWw)
 
 ```javascript
 console.log(isFinite(Infinity), isNaN(Infinity))
@@ -358,7 +358,7 @@ want to validate if a number is finite
 
 ---
 
-###### 10. Arrow function [▶️](https://youtube.com/shorts/P8zFS3w-wzw)
+###### # 10. Arrow function [▶️](https://youtube.com/shorts/P8zFS3w-wzw)
 
 ```javascript
 const user = {
@@ -410,7 +410,7 @@ global object, the function returns undefined.
 
 ---
 
-###### 11. Closure [▶️](https://youtube.com/shorts/PCc7icrQw8Y)
+###### # 11. Closure [▶️](https://youtube.com/shorts/PCc7icrQw8Y)
 
 ```javascript
 for (var i = 0; i < 3; i++) {
@@ -457,7 +457,7 @@ each iteration of the loop.
 
 ---
 
-###### 12. Curry (Level: Hard) [▶️](https://youtu.be/KYIJVlbevkg)
+###### # 12. Curry (Level: Hard) [▶️](https://youtu.be/KYIJVlbevkg)
 
 ```javascript
 function add(x) {
@@ -514,7 +514,7 @@ recursively with the next argument.
 
 ---
 
-###### 13. Curry (Level: Easy) [▶️](https://youtu.be/0FLxIj0TRgU)
+###### # 13. Curry (Level: Easy) [▶️](https://youtu.be/0FLxIj0TRgU)
 
 ```javascript
 function multiply(x) {
@@ -557,7 +557,7 @@ returns another function that can be partially applied with some arguments.
 
 ---
 
-###### 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
+###### # 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
 
 Which of the following statements is true about the `next()` method of an
 iterator in JavaScript?
@@ -598,7 +598,7 @@ large datasets, or while implementing custom data structures
 
 ---
 
-###### 15. Generator Functions [▶️](https://youtu.be/4fIKcIMo7w4)
+###### # 15. Generator Functions [▶️](https://youtu.be/4fIKcIMo7w4)
 
 ```javascript
 function* counter() {
@@ -649,7 +649,7 @@ their execution, and yield multiple values over time.
 
 ---
 
-###### 16. Garbage Collection, Mark and Sweep Algorithm [▶️](https://youtu.be/QCmqefzwWlg)
+###### # 16. Garbage Collection, Mark and Sweep Algorithm [▶️](https://youtu.be/QCmqefzwWlg)
 
 Which of the following scenarios could potentially cause a memory leak in
 JavaScript?
@@ -687,7 +687,7 @@ is not marked as in use.
 
 ---
 
-###### 17. try, catch, finally [▶️](https://youtu.be/uPhf3OjPwSU)
+###### # 17. try, catch, finally [▶️](https://youtu.be/uPhf3OjPwSU)
 
 ```javascript
 function getData() {
@@ -763,7 +763,7 @@ errors.
 
 ---
 
-###### 18. Array and Traversal in array [▶️](https://youtu.be/Mefj0GDslts)
+###### # 18. Array and Traversal in array [▶️](https://youtu.be/Mefj0GDslts)
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
@@ -813,7 +813,7 @@ In general, `for of` is recommended over `for in` or `forEach`
 
 ---
 
-###### 19. Array Manipulation: Understanding array.push() Method in JavaScript [▶️](https://www.youtube.com/shorts/ZkaIxib4IxI)
+###### # 19. Array Manipulation: Understanding array.push() Method in JavaScript [▶️](https://www.youtube.com/shorts/ZkaIxib4IxI)
 
 ```javascript
 let arr = [1, 2, 3, 4]
@@ -849,7 +849,7 @@ added to the end of the array.
 
 ---
 
-##### 20. Array Manipulation: Understanding array.unshift() Method in JavaScript
+###### # 20. Array Manipulation: Understanding array.unshift() Method in JavaScript
 
 ```javascript
 let arr = [3, 5, 7, 9]
@@ -886,7 +886,7 @@ right.
 
 ---
 
-##### 21. Array Manipulation: Understanding array.pop() Method in JavaScript
+###### 21. Array Manipulation: Understanding array.pop() Method in JavaScript
 
 ```javascript
 const myArray = [1, 2, 3, 4, 5]
@@ -918,7 +918,7 @@ returns it.
 
 ---
 
-##### 22. Array Manipulation: Understanding array.shift() Method in JavaScript
+###### 22. Array Manipulation: Understanding array.shift() Method in JavaScript
 
 ```javascript
 const arr = [10, 20, 30, 40, 50]
@@ -954,7 +954,7 @@ which is not accurate. Option D is slightly confusing as it states that
 
 ---
 
-##### 23. Array Manipulation: Understanding array.splice() Method in JavaScript
+###### 23. Array Manipulation: Understanding array.splice() Method in JavaScript
 
 ```javascript
 let arr = [1, 2, 3, 4, 5]
@@ -990,7 +990,7 @@ as it mentions the incorrect elements that are removed from the array.
 
 ---
 
-##### 24. JavaScript Array Search Methods - Array.indexOf(), Array.lastIndexOf(), and Array.includes()
+###### 24. JavaScript Array Search Methods - Array.indexOf(), Array.lastIndexOf(), and Array.includes()
 
 ```javascript
 const fruits = ['apple', 'banana', 'orange', 'grape', 'apple', 'kiwi']
@@ -1029,7 +1029,7 @@ On the other hand, the `Array.includes()` method checks if the specified value
 
 ---
 
-##### 25. JavaScript Advanced Array Search Methods - Array.find(), Array.findIndex(), and Array.filter()
+###### 25. JavaScript Advanced Array Search Methods - Array.find(), Array.findIndex(), and Array.filter()
 
 ```javascript
 function isDivisibleBy7(num) {
@@ -1087,7 +1087,7 @@ returns 0.
 
 ---
 
-##### 26. Array.map() Method in JavaScript
+###### 26. Array.map() Method in JavaScript
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5]
@@ -1118,7 +1118,7 @@ the numbers array by 2, resulting in a new array `[2, 4, 6, 8, 10]`.
 
 ---
 
-##### 27. Array.reduce() Method in JavaScript
+###### 27. Array.reduce() Method in JavaScript
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5]
@@ -1161,7 +1161,7 @@ is the sum of all the numbers in the array, that is 15.
 
 ---
 
-##### 28. Array.reduceRight() Method in JavaScript
+###### 28. Array.reduceRight() Method in JavaScript
 
 ```javascript
 const arr = [1, 2, 3, 4]
@@ -1214,7 +1214,7 @@ is A.
 
 ---
 
-##### 29. Array.sort() Method in JavaScript
+###### 29. Array.sort() Method in JavaScript
 
 ```javascript
 const arr = ['Centauri', 3.14159, 'canine', 11235, undefined]
@@ -1251,7 +1251,7 @@ Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri',
 
 ---
 
-##### 30. Destructuring an array in JavaScript
+###### 30. Destructuring an array in JavaScript
 
 ```javascript
 let numbers = [1, 2, 3, undefined, 6, 7, 8, 9]
@@ -1300,7 +1300,7 @@ Therefore, the final result is: `1 3 2 [ 6, 7, 8, 9 ]`, which is option B.
 
 ---
 
-##### 31. Date() in JavaScript
+###### 31. Date() in JavaScript
 
 ```javascript
 const date1 = new Date()
@@ -1350,7 +1350,7 @@ ISO 8601 standard. It consists of the following components:
 
 ---
 
-##### 32. Date methods in JavaScript
+###### 32. Date methods in JavaScript
 
 ```javascript
 const date = new Date('Mart 15, 1975 23:15:30')
@@ -1400,7 +1400,7 @@ The `getFullYear()` method returns the unchanged year, which is 1975.
 
 ---
 
-##### 33. Time Methods in Javascript
+###### 33. Time Methods in Javascript
 
 ```javascript
 const date1 = new Date('2023-5-1')
@@ -1444,7 +1444,7 @@ value to an integer, and the result is logged to the console along with the
 
 ---
 
-##### 34. Object Literals in Javascript
+###### 34. Object Literals in Javascript
 
 ```javascript
 let person = {
@@ -1494,7 +1494,7 @@ notation, which outputs the string "Hello, my name is John" to the console.
 
 ---
 
-##### 35. this Object
+###### 35. this Object
 
 ```javascript
 function User(username) {
@@ -1544,7 +1544,7 @@ bgwebagency-app'.
 
 ---
 
-##### 36. call(), apply() and bind() Functions Of Javascript
+###### 36. call(), apply() and bind() Functions Of Javascript
 
 ```javascript
 function greet(name) {
@@ -1594,7 +1594,7 @@ invoke a function with a specific context and arguments
 
 ---
 
-##### 37. class, class expression and static members
+###### 37. class, class expression and static members
 
 ```javascript
 class Animal {
@@ -1643,7 +1643,7 @@ instances.
 
 ---
 
-##### 38. for Inheritance, Subclassing and Extending built in class (Level: Hard)
+###### 38. for Inheritance, Subclassing and Extending built in class (Level: Hard)
 
 ```javascript
 function Animal(name) {
@@ -1720,7 +1720,7 @@ additional functionality.
 
 ---
 
-##### 39. Destructuring Object Literal
+###### 39. Destructuring Object Literal
 
 ```javascript
 const person = {
@@ -1755,7 +1755,7 @@ In the code above, we have an object literal called `person` with properties `na
 
 ---
 
-##### 40. JavaScript Modules, Import, and Export in ES6
+###### 40. JavaScript Modules, Import, and Export in ES6
 
 Consider the following code snippet:
 
@@ -1819,7 +1819,7 @@ with a radius of 5.
 
 ---
 
-##### 41. Named Import and Export
+###### 41. Named Import and Export
 
 Consider the following code snippet:
 
@@ -1856,7 +1856,7 @@ Accordingly, the correct expression is: `import { foo } from "./foo"`.
 
 ---
 
-##### 42. Default Import Export (Level: Medium)
+###### 42. Default Import Export (Level: Medium)
 
 In JavaScript, when importing a default export from a module, which syntax
 correctly assigns an alias "myAlias" to the default import?
@@ -1886,7 +1886,7 @@ collisions.
 
 ---
 
-##### Misc 001. JavaScript JSON (Level: Medium)
+###### Misc 001. JavaScript JSON (Level: Medium)
 
 Which method is used to convert a JavaScript object to a JSON string while
 preserving data types like Dates and RegEx?
