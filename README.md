@@ -1884,6 +1884,8 @@ collisions.
 </p>
 </details>
 
+---
+
 ##### Misc 001. JavaScript JSON (Level: Medium)
 
 Which method is used to convert a JavaScript object to a JSON string while
