@@ -2,16 +2,24 @@
   
   <h1>Who Wants to be a JavaScriptaire?</h1>
 
-Fun way to learn JavaScript for your Frontend/Web coding interviews.
-All the questions are answered here in text and also have a video on our YouTube channel.
-Click the ▶️ icon next to the questions if you prefer to watch the video explanation.</span>
+Fun way to learn JavaScript for your Frontend/Web coding interviews. All the
+questions are answered here in text and also have a video on our YouTube
+channel. Click the ▶️ icon next to the questions if you prefer to watch the
+video explanation.</span>
 
 Feel free to reach us on our social platforms! 😊 <br />
-<a href="https://discord.com/invite/62VR3MMCVm">Discord</a> || <a href="https://www.instagram.com/bgwebagency">Instagram</a> || <a href="https://www.twitter.com/kirankdash">Twitter</a> || <a href="https://www.tiktok.com/@bgwebagency">TikTok</a> || <a href="https://www.bgwebagency.in">Blog</a> || <a href="https://www.facebook.com/bgwebagency">Facebook</a>
+<a href="https://discord.com/invite/62VR3MMCVm">Discord</a> ||
+<a href="https://www.instagram.com/bgwebagency">Instagram</a> ||
+<a href="https://www.twitter.com/kirankdash">Twitter</a> ||
+<a href="https://www.tiktok.com/@bgwebagency">TikTok</a> ||
+<a href="https://www.bgwebagency.in">Blog</a> ||
+<a href="https://www.facebook.com/bgwebagency">Facebook</a>
 
 🙏 Support
 
-Please ⭐️ star this project and share it with others to show your support. [Follow me](https://github.com/kirandash) ❤️ for updates on future projects and tutorials!
+Please ⭐️ star this project and share it with others to show your support.
+[Follow me](https://github.com/kirandash) ❤️ for updates on future projects and
+tutorials!
 
 ---
 
@@ -19,8 +27,12 @@ Please ⭐️ star this project and share it with others to show your support. [
 
 ## Table of Contents
 
-[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) - [Arrays](#18-array-and-traversal-in-array-%EF%B8%8F) - [Date and Time](#31-date-in-javascript) - [Object Oriented JavaScript](#34-object-literals-in-javascript) - [Modules](#40-javascript-modules-import-and-export-in-es6)
-[43. JavaScript JSON](#43-javascript-json-level-low)
+[Language Basics](#1-what-will-this-code-output-%EF%B8%8F) -
+[Arrays](#18-array-and-traversal-in-array-%EF%B8%8F) -
+[Date and Time](#31-date-in-javascript) -
+[Object Oriented JavaScript](#34-object-literals-in-javascript) -
+[Modules](#40-javascript-modules-import-and-export-in-es6) -
+[Miscellaneous](#misc-001-javascript-json-level-medium)
 
 ---
 
@@ -40,13 +52,17 @@ console.log(new Date(2023, 1, 31))
 
 #### Answer: C
 
-In JavaScript, while constructing dates using Date objects months are 0 based. Which means 0 is for January and 1 is for February.
+In JavaScript, while constructing dates using Date objects months are 0 based.
+Which means 0 is for January and 1 is for February.
 
-So, in this case we are asking JavaScript to set a date of 2023 February 31st which does not exist.
+So, in this case we are asking JavaScript to set a date of 2023 February 31st
+which does not exist.
 
-But instead of throwing error JavaScript will overflow it to the next month which is March.
+But instead of throwing error JavaScript will overflow it to the next month
+which is March.
 
-And since February in 2023 has only 28 days, the code will overflow by 3 days making the result to be 3rd March 2023.
+And since February in 2023 has only 28 days, the code will overflow by 3 days
+making the result to be 3rd March 2023.
 
 </p>
 </details>
@@ -72,7 +88,8 @@ console.log(username)
 
 #### Answer: A
 
-We can declare the same variable multiple times using the `var` keyword. And the variable will hold the value which it was assigned in the end.
+We can declare the same variable multiple times using the `var` keyword. And the
+variable will hold the value which it was assigned in the end.
 
 But we can not declare the same variable multiple times using `let` or `const`
 
@@ -85,10 +102,10 @@ But we can not declare the same variable multiple times using `let` or `const`
 
 ```javascript
 const user = {
-  username: 'kirandash',
-  updateUsername: (newName) => {
-    this.username = newName
-  },
+	username: 'kirandash',
+	updateUsername: newName => {
+		this.username = newName
+	},
 }
 
 user.updateUsername('bgwebagency')
@@ -105,11 +122,14 @@ console.log(user.username)
 
 #### Answer: C
 
-Because the `updateUsername` function is not working properly and is failing to update the `username` of the `user`.
+Because the `updateUsername` function is not working properly and is failing to
+update the `username` of the `user`.
 
-The `updateUsername` function in user `object` is an arrow function, and is not bound to the `user` object.
+The `updateUsername` function in user `object` is an arrow function, and is not
+bound to the `user` object.
 
-So, the `this` keyword inside updateUsername function is not referring to the `user` object, but refers to the global scope.
+So, the `this` keyword inside updateUsername function is not referring to the
+`user` object, but refers to the global scope.
 
 To fix this issue, we should change the arrow function to a normal function.
 
@@ -137,11 +157,14 @@ console.log(len1, len2)
 
 #### Answer: A
 
-In JavaScript, the string length property returns the number of bytes and not the number of characters like we expect.
+In JavaScript, the string length property returns the number of bytes and not
+the number of characters like we expect.
 
-An emoji is a unicode character which is encoded in two bytes. Therefore the answer is 2 for this question.
+An emoji is a unicode character which is encoded in two bytes. Therefore the
+answer is 2 for this question.
 
-The string length for `kiran` returns `5` because in a string each character is 1 byte.
+The string length for `kiran` returns `5` because in a string each character is
+1 byte.
 
 </p>
 </details>
@@ -166,15 +189,22 @@ console.log(undefined == null, undefined === null)
 
 First let me explain the difference between equal and strict equal operator.
 
-The equal operator only checks if both the values are equal. The strict equal operator checks if both value and type are equal.
+The equal operator only checks if both the values are equal. The strict equal
+operator checks if both value and type are equal.
 
-So in this code, the first statement `undefined == null` returns `true` since both `undefined` and `null` have the same value which is empty.
+So in this code, the first statement `undefined == null` returns `true` since
+both `undefined` and `null` have the same value which is empty.
 
-But the second statement `undefined === null` returns `false`. Since `typeof undefined` is `undefined`, whereas `typeof null` is an `object`.
+But the second statement `undefined === null` returns `false`. Since
+`typeof undefined` is `undefined`, whereas `typeof null` is an `object`.
 
-You might be wondering, why `typeof null` is an `object` when `null` is basically a primitive data type. This basically is a mistake in JavaScript since the beginning.
+You might be wondering, why `typeof null` is an `object` when `null` is
+basically a primitive data type. This basically is a mistake in JavaScript since
+the beginning.
 
-Now, one more tip for you: when you want to set an empty value for a variable use `null` instead of `undefined`. Since `undefined` is mainly used to check if a variable has no value assigned to it.
+Now, one more tip for you: when you want to set an empty value for a variable
+use `null` instead of `undefined`. Since `undefined` is mainly used to check if
+a variable has no value assigned to it.
 
 </p>
 </details>
@@ -202,9 +232,11 @@ Rest operators were added as a part of ES6 feature.
 
 It takes all the arguments passed to a function and puts it in an array.
 
-If multiple arguments are passed to a function then rest operator must come at the end. That's why this code snippet will throw an error.
+If multiple arguments are passed to a function then rest operator must come at
+the end. That's why this code snippet will throw an error.
 
-To fix this issue, please move the rest operator to the end and then it should work.
+To fix this issue, please move the rest operator to the end and then it should
+work.
 
 </p>
 </details>
@@ -230,15 +262,21 @@ console.log(z)
 
 #### Answer: C
 
-NEGATIVE_INFINITY and POSITIVE_INFINITY are properties of the Number object in JavaScript that represents the mathematical concept of negative infinity and positive infinity.
+NEGATIVE_INFINITY and POSITIVE_INFINITY are properties of the Number object in
+JavaScript that represents the mathematical concept of negative infinity and
+positive infinity.
 
-When you add Number.NEGATIVE_INFINITY and Number.POSITIVE_INFINITY, the result is NaN.
+When you add Number.NEGATIVE_INFINITY and Number.POSITIVE_INFINITY, the result
+is NaN.
 
-Adding a positive infinite value to a negative infinite value does not result in a meaningful numerical value.
+Adding a positive infinite value to a negative infinite value does not result in
+a meaningful numerical value.
 
 So in this case, z will be NaN.
 
-Note that the code will not throw a TypeError, as JavaScript is able to perform the addition operation between Number.NEGATIVE_INFINITY and Number.POSITIVE_INFINITY.
+Note that the code will not throw a TypeError, as JavaScript is able to perform
+the addition operation between Number.NEGATIVE_INFINITY and
+Number.POSITIVE_INFINITY.
 
 </p>
 </details>
@@ -263,11 +301,15 @@ console.log('BG Web Agency' === NaN, isNaN('BG Web Agency'))
 
 Using ` === NaN` to check if a value is a number will not work.
 
-In JavaScript, `NaN` (Not a Number) is a special value that represents an invalid number.
+In JavaScript, `NaN` (Not a Number) is a special value that represents an
+invalid number.
 
-NaN is not equal to anything, including itself, so the expression `"BG Web Agency" === NaN` will always return `false`.
+NaN is not equal to anything, including itself, so the expression
+`"BG Web Agency" === NaN` will always return `false`.
 
-To check if a value is a number in JavaScript, you can use the `isNaN()` function. This function returns `true` if the argument passed to it is `NaN`, or if it cannot be converted to a number.
+To check if a value is a number in JavaScript, you can use the `isNaN()`
+function. This function returns `true` if the argument passed to it is `NaN`, or
+if it cannot be converted to a number.
 
 </p>
 </details>
@@ -290,19 +332,26 @@ console.log(isFinite(Infinity), isNaN(Infinity))
 
 #### Answer: A
 
-The `isFinite()` function is used to determine whether a given value is a finite number.
+The `isFinite()` function is used to determine whether a given value is a finite
+number.
 
-It returns false if the value is NaN, Infinity, or -Infinity, and true if the value is a finite number.
+It returns false if the value is NaN, Infinity, or -Infinity, and true if the
+value is a finite number.
 
-So, in this example `isFinite(Infinity)` will return false because Infinity is not a finite number.
+So, in this example `isFinite(Infinity)` will return false because Infinity is
+not a finite number.
 
-On the other hand, the isNaN() function is used to determine whether a given value is not a number (NaN).
+On the other hand, the isNaN() function is used to determine whether a given
+value is not a number (NaN).
 
-It returns true if the value is NaN, and false if the value is a number or any other data type.
+It returns true if the value is NaN, and false if the value is a number or any
+other data type.
 
-So, in this example `isNaN(Infinity)` will also return false because Infinity is not NaN.
+So, in this example `isNaN(Infinity)` will also return false because Infinity is
+not NaN.
 
-Therefore always use `isFinite` function instead of `isNaN` function when you want to validate if a number is finite
+Therefore always use `isFinite` function instead of `isNaN` function when you
+want to validate if a number is finite
 
 </p>
 </details>
@@ -313,14 +362,14 @@ Therefore always use `isFinite` function instead of `isNaN` function when you wa
 
 ```javascript
 const user = {
-  name: 'John',
-  age: 30,
-  getName: () => {
-    return this.name
-  },
-  getAge: function () {
-    return this.age
-  },
+	name: 'John',
+	age: 30,
+	getName: () => {
+		return this.name
+	},
+	getAge: function () {
+		return this.age
+	},
 }
 
 const getName = user.getName
@@ -340,13 +389,21 @@ console.log(getAge())
 
 #### Answer: A
 
-The `getName` arrow function uses `this` keyword to refer to the object's name property, but because arrow functions have a lexical `this` binding, the value of `this` keyword inside the arrow function will be the global object which is `window` in a browser, or `global` in Node.js.
+The `getName` arrow function uses `this` keyword to refer to the object's name
+property, but because arrow functions have a lexical `this` binding, the value
+of `this` keyword inside the arrow function will be the global object which is
+`window` in a browser, or `global` in Node.js.
 
-Since there is no name property on the `global` object, the function returns `undefined`.
+Since there is no name property on the `global` object, the function returns
+`undefined`.
 
-The `getAge` function uses a regular function expression and correctly refers to the age property of the `user` object using `this` keyword.
+The `getAge` function uses a regular function expression and correctly refers to
+the age property of the `user` object using `this` keyword.
 
-But when `getAge` is assigned to the `getAge` variable, it loses the reference to the `user` object, so when the function is called using `getAge()`, this will refer to the global object again, and since there is no age property on the global object, the function returns undefined.
+But when `getAge` is assigned to the `getAge` variable, it loses the reference
+to the `user` object, so when the function is called using `getAge()`, this will
+refer to the global object again, and since there is no age property on the
+global object, the function returns undefined.
 
 </p>
 </details>
@@ -357,9 +414,9 @@ But when `getAge` is assigned to the `getAge` variable, it loses the reference t
 
 ```javascript
 for (var i = 0; i < 3; i++) {
-  setTimeout(function () {
-    console.log(i)
-  }, 0)
+	setTimeout(function () {
+		console.log(i)
+	}, 0)
 }
 ```
 
@@ -373,19 +430,27 @@ for (var i = 0; i < 3; i++) {
 
 #### Answer: B
 
-A closure is a function that retains access to variables in its outer scope, even after the outer function has returned.
+A closure is a function that retains access to variables in its outer scope,
+even after the outer function has returned.
 
-In this example, the answer is B, because the setTimeout function is asynchronous and does not execute immediately.
+In this example, the answer is B, because the setTimeout function is
+asynchronous and does not execute immediately.
 
-By the time the callback function passed to setTimeout is executed, the loop has already completed and the i variable has a value of 3.
+By the time the callback function passed to setTimeout is executed, the loop has
+already completed and the i variable has a value of 3.
 
-Therefore, each call to console.log(i) inside the callback function will print 3.
+Therefore, each call to console.log(i) inside the callback function will
+print 3.
 
-To solve this problem and print 0, 1, 2, we can use an IIFE (Immediately Invoked Function Expression) to create a new scope for each iteration of the loop.
+To solve this problem and print 0, 1, 2, we can use an IIFE (Immediately Invoked
+Function Expression) to create a new scope for each iteration of the loop.
 
-This creates a new variable j inside each IIFE, with its own copy of the current value of i at that iteration of the loop.
+This creates a new variable j inside each IIFE, with its own copy of the current
+value of i at that iteration of the loop.
 
-When the callback function passed to setTimeout is executed, it has access to the j variable in its closure, which has the expected value of 0, 1, or 2 for each iteration of the loop.
+When the callback function passed to setTimeout is executed, it has access to
+the j variable in its closure, which has the expected value of 0, 1, or 2 for
+each iteration of the loop.
 
 </p>
 </details>
@@ -396,14 +461,14 @@ When the callback function passed to setTimeout is executed, it has access to th
 
 ```javascript
 function add(x) {
-  return function (y) {
-    if (y !== undefined) {
-      x += y
-      return arguments.callee
-    } else {
-      return x
-    }
-  }
+	return function (y) {
+		if (y !== undefined) {
+			x += y
+			return arguments.callee
+		} else {
+			return x
+		}
+	}
 }
 
 console.log(add(1)(2)(3)())
@@ -419,21 +484,30 @@ console.log(add(1)(2)(3)())
 
 #### Answer: A
 
-The correct answer is A. The code defines a add function that takes a single argument x and returns another function that takes a single argument y.
+The correct answer is A. The code defines a add function that takes a single
+argument x and returns another function that takes a single argument y.
 
-This inner function checks if y is defined. If it is defined, it adds y to x and returns a reference to itself using the arguments.callee property, which allows the function to be called recursively with the next argument.
+This inner function checks if y is defined. If it is defined, it adds y to x and
+returns a reference to itself using the arguments.callee property, which allows
+the function to be called recursively with the next argument.
 
 If y is not defined, it returns the current value of x.
 
-Then, the code calls add(1)(2)(3)(). This first calls add(1) with 1 as its argument, which returns a function that takes a single argument y.
+Then, the code calls add(1)(2)(3)(). This first calls add(1) with 1 as its
+argument, which returns a function that takes a single argument y.
 
-Then, it calls this function with 2 as its argument, which adds 2 to 1 and returns a reference to the function.
+Then, it calls this function with 2 as its argument, which adds 2 to 1 and
+returns a reference to the function.
 
-Finally, it calls this function with 3 as its argument, which adds 3 to 3 and returns a reference to the function.
+Finally, it calls this function with 3 as its argument, which adds 3 to 3 and
+returns a reference to the function.
 
-Since no argument is passed in the last call, it returns the current value of x, which is 6.
+Since no argument is passed in the last call, it returns the current value of x,
+which is 6.
 
-This code demonstrates a more complex example of currying in JavaScript, where the curried function returns a reference to itself, allowing it to be called recursively with the next argument.
+This code demonstrates a more complex example of currying in JavaScript, where
+the curried function returns a reference to itself, allowing it to be called
+recursively with the next argument.
 
 </p>
 </details>
@@ -444,9 +518,9 @@ This code demonstrates a more complex example of currying in JavaScript, where t
 
 ```javascript
 function multiply(x) {
-  return function (y) {
-    return x * y
-  }
+	return function (y) {
+		return x * y
+	}
 }
 
 const double = multiply(2)
@@ -464,13 +538,19 @@ console.log(double(5))
 
 #### Answer: B
 
-The correct answer is B. The code defines a multiply function that takes a single argument x and returns another function that takes a single argument y. This inner function multiplies x and y and returns the result.
+The correct answer is B. The code defines a multiply function that takes a
+single argument x and returns another function that takes a single argument y.
+This inner function multiplies x and y and returns the result.
 
-Then, the code creates a new function double by calling multiply with 2 as its argument. The double function is now a curried function that can be called with a single argument to double its value.
+Then, the code creates a new function double by calling multiply with 2 as its
+argument. The double function is now a curried function that can be called with
+a single argument to double its value.
 
-Finally, the code calls double with 5 as its argument, which results in 10 being logged to the console.
+Finally, the code calls double with 5 as its argument, which results in 10 being
+logged to the console.
 
-This code demonstrates the concept of currying in JavaScript, where a function returns another function that can be partially applied with some arguments.
+This code demonstrates the concept of currying in JavaScript, where a function
+returns another function that can be partially applied with some arguments.
 
 </p>
 </details>
@@ -479,11 +559,14 @@ This code demonstrates the concept of currying in JavaScript, where a function r
 
 ###### 14. Iterables and Iterators (Level: Hard) [▶️](https://youtu.be/-yZ53Cmltg0)
 
-Which of the following statements is true about the `next()` method of an iterator in JavaScript?
+Which of the following statements is true about the `next()` method of an
+iterator in JavaScript?
 
 - A: The next() method returns an object with properties value and done.
-- B: The next() method returns a boolean value indicating whether there are more items to iterate over.
-- C: The next() method is used to define how to access the next item in the iterable.
+- B: The next() method returns a boolean value indicating whether there are more
+  items to iterate over.
+- C: The next() method is used to define how to access the next item in the
+  iterable.
 - D: The next() method is not used in JavaScript iterators.
 
 <details><summary><b>Answer</b></summary>
@@ -493,15 +576,22 @@ Which of the following statements is true about the `next()` method of an iterat
 
 The correct answer is A.
 
-In JavaScript, an iterable is an object that defines a sequence and can be iterated over using a loop.
+In JavaScript, an iterable is an object that defines a sequence and can be
+iterated over using a loop.
 
-An iterator is an object that knows how to access the elements of an iterable one at a time.
+An iterator is an object that knows how to access the elements of an iterable
+one at a time.
 
-An iterable object has a method with the key `Symbol.iterator`, which returns an iterator object.
+An iterable object has a method with the key `Symbol.iterator`, which returns an
+iterator object.
 
-The iterator object has a `next()` method, which returns an object with two properties: `value`, which is the next element in the sequence, and `done`, which is a boolean indicating whether the iterator has reached the end of the sequence.
+The iterator object has a `next()` method, which returns an object with two
+properties: `value`, which is the next element in the sequence, and `done`,
+which is a boolean indicating whether the iterator has reached the end of the
+sequence.
 
-Iterables are commonly used in many real-time applications while working with large datasets, or while implementing custom data structures
+Iterables are commonly used in many real-time applications while working with
+large datasets, or while implementing custom data structures
 
 </p>
 </details>
@@ -512,10 +602,10 @@ Iterables are commonly used in many real-time applications while working with la
 
 ```javascript
 function* counter() {
-  let i = 0
-  while (true) {
-    yield i++
-  }
+	let i = 0
+	while (true) {
+		yield i++
+	}
 }
 
 const gen = counter()
@@ -539,15 +629,20 @@ What does the above code snippet output?
 
 The correct answer is D.
 
-The `counter` function is a generator function that creates an infinite loop that yields incrementing values of `i`.
+The `counter` function is a generator function that creates an infinite loop
+that yields incrementing values of `i`.
 
-The `gen` variable is set to the generator function, and each call to `gen.next()` returns an object with the value property set to the next yielded value.
+The `gen` variable is set to the generator function, and each call to
+`gen.next()` returns an object with the value property set to the next yielded
+value.
 
 The `console.log` statements then print the values returned by `gen.next()`.
 
-A generator function is a special type of function that can be used to control the iteration over a sequence of values.
+A generator function is a special type of function that can be used to control
+the iteration over a sequence of values.
 
-Unlike traditional functions, generator functions allow you to pause and resume their execution, and yield multiple values over time.
+Unlike traditional functions, generator functions allow you to pause and resume
+their execution, and yield multiple values over time.
 
 </p>
 </details>
@@ -556,7 +651,8 @@ Unlike traditional functions, generator functions allow you to pause and resume 
 
 ###### 16. Garbage Collection, Mark and Sweep Algorithm [▶️](https://youtu.be/QCmqefzwWlg)
 
-Which of the following scenarios could potentially cause a memory leak in JavaScript?
+Which of the following scenarios could potentially cause a memory leak in
+JavaScript?
 
 - A: Using the Array.from() method to convert a large array into a new array.
 - B: Creating a circular reference between two objects that are still in use.
@@ -568,17 +664,23 @@ Which of the following scenarios could potentially cause a memory leak in JavaSc
 
 #### Answer: B
 
-Circular references occur when two or more objects reference each other, creating a loop that prevents the objects from being garbage collected.
+Circular references occur when two or more objects reference each other,
+creating a loop that prevents the objects from being garbage collected.
 
-This can cause a memory leak if the objects are no longer needed but cannot be freed because of the circular reference.
+This can cause a memory leak if the objects are no longer needed but cannot be
+freed because of the circular reference.
 
 Options A, C, and D do not typically cause memory leaks in JavaScript.
 
-Garbage collection is the process of automatically freeing up memory that is no longer being used by a program.
+Garbage collection is the process of automatically freeing up memory that is no
+longer being used by a program.
 
-In JavaScript, the mark and sweep algorithm is commonly used for garbage collection.
+In JavaScript, the mark and sweep algorithm is commonly used for garbage
+collection.
 
-This algorithm works by first marking all objects in memory that are still being referenced by the program, then sweeping through and freeing up any memory that is not marked as in use.
+This algorithm works by first marking all objects in memory that are still being
+referenced by the program, then sweeping through and freeing up any memory that
+is not marked as in use.
 
 </p>
 </details>
@@ -589,43 +691,39 @@ This algorithm works by first marking all objects in memory that are still being
 
 ```javascript
 function getData() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Data retrieved successfully')
-    }, 1000)
-  })
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('Data retrieved successfully')
+		}, 1000)
+	})
 }
 
 async function main() {
-  try {
-    const data = await getData()
-    console.log(data)
-    throw new Error('Something went wrong')
-  } catch (err) {
-    console.log('Caught an error:', err.message)
-    return 'Error occurred'
-  } finally {
-    console.log('Finally block executed.')
-    return 'Finally block value'
-  }
+	try {
+		const data = await getData()
+		console.log(data)
+		throw new Error('Something went wrong')
+	} catch (err) {
+		console.log('Caught an error:', err.message)
+		return 'Error occurred'
+	} finally {
+		console.log('Finally block executed.')
+		return 'Finally block value'
+	}
 }
 
 ;(async () => {
-  console.log(await main())
+	console.log(await main())
 })()
 ```
 
 What does the above code snippet output?
 
-- A: "Data retrieved successfully",
-  "Caught an error: Something went wrong",
+- A: "Data retrieved successfully", "Caught an error: Something went wrong",
   "Finally block executed."
-- B: "Data retrieved successfully",
-  "Caught an error: Something went wrong".
-- C: "Data retrieved successfully",
-  "Caught an error: Something went wrong",
-  "Finally block executed.",
-  "Finally block value"
+- B: "Data retrieved successfully", "Caught an error: Something went wrong".
+- C: "Data retrieved successfully", "Caught an error: Something went wrong",
+  "Finally block executed.", "Finally block value"
 - D: "Caught an error: Something went wrong", "Finally block executed."
 - E: "Finally block executed.", "Finally block value".
 
@@ -634,21 +732,31 @@ What does the above code snippet output?
 
 #### Answer: C
 
-When the code is executed, the main() function is called, which is an async function that uses await to get data from the `getData()` function.
+When the code is executed, the main() function is called, which is an async
+function that uses await to get data from the `getData()` function.
 
-Once the data is retrieved, the `console.log(data)` statement logs "Data retrieved successfully" to the console.
+Once the data is retrieved, the `console.log(data)` statement logs "Data
+retrieved successfully" to the console.
 
-After that, the `throw new Error("Something went wrong")` statement throws an error.
+After that, the `throw new Error("Something went wrong")` statement throws an
+error.
 
-The `catch` block catches the error and logs `"Caught an error: Something went wrong"` to the console, and then returns the string `"Error occurred"`.
+The `catch` block catches the error and logs
+`"Caught an error: Something went wrong"` to the console, and then returns the
+string `"Error occurred"`.
 
-Finally, the finally block is executed and logs `"Finally block executed."` to the console, and then returns the string `"Finally block value"`.
+Finally, the finally block is executed and logs `"Finally block executed."` to
+the console, and then returns the string `"Finally block value"`.
 
-When the `main()` function is called, it returns a promise because it is an async function. Since the `finally` block also returns a value, that value will be the final resolved value of the promise.
+When the `main()` function is called, it returns a promise because it is an
+async function. Since the `finally` block also returns a value, that value will
+be the final resolved value of the promise.
 
-Therefore, when `console.log(main())` is called, `"Finally block executed."` and `"Finally block value"` will be logged to the console.
+Therefore, when `console.log(main())` is called, `"Finally block executed."` and
+`"Finally block value"` will be logged to the console.
 
-Try, catch, and finally are keywords used in JavaScript to handle runtime errors.
+Try, catch, and finally are keywords used in JavaScript to handle runtime
+errors.
 
 </p>
 </details>
@@ -687,9 +795,12 @@ What does the above code snippet output?
 
 #### Answer: B
 
-Because `break` statement is not valid inside the callback function passed to `forEach`.
+Because `break` statement is not valid inside the callback function passed to
+`forEach`.
 
-`forEach` does not support early termination using the `break` statement. Therefore, an error is thrown: `"Uncaught SyntaxError: Illegal break statement".`
+`forEach` does not support early termination using the `break` statement.
+Therefore, an error is thrown:
+`"Uncaught SyntaxError: Illegal break statement".`
 
 In case of for of loop, `break` statement is allowed.
 
@@ -722,11 +833,16 @@ What does the above code snippet output?
 
 #### Answer: A
 
-The `array.push()` method in JavaScript adds one or more elements to the end of an array and returns the new length of the array.
+The `array.push()` method in JavaScript adds one or more elements to the end of
+an array and returns the new length of the array.
 
-In the given code, `arr` is an array with the values `[1, 2, 3, 4]`. The `push()` method is called with the argument 5, which adds `5` to the end of the `arr` array.
+In the given code, `arr` is an array with the values `[1, 2, 3, 4]`. The
+`push()` method is called with the argument 5, which adds `5` to the end of the
+`arr` array.
 
-The `push()` method returns the new length of the array after the addition of the element(s). In this case, the new length of arr will be 5 because `5` is added to the end of the array.
+The `push()` method returns the new length of the array after the addition of
+the element(s). In this case, the new length of arr will be 5 because `5` is
+added to the end of the array.
 
 </p>
 </details>
@@ -753,11 +869,17 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The `array.unshift()` method in JavaScript adds one or more elements to the beginning of an array and returns the new length of the array.
+The `array.unshift()` method in JavaScript adds one or more elements to the
+beginning of an array and returns the new length of the array.
 
-In the given code, `arr` is an array with the values `[3, 5, 7, 9]`. The `unshift()` method is called with the arguments 1 and 2, which adds 1 and 2 to the beginning of the `arr` array.
+In the given code, `arr` is an array with the values `[3, 5, 7, 9]`. The
+`unshift()` method is called with the arguments 1 and 2, which adds 1 and 2 to
+the beginning of the `arr` array.
 
-The `unshift()` method returns the new length of the array after the addition of the element(s). In this case, the new length of `arr` will be 6 because 1 and 2 are added to the beginning of the array, shifting the existing elements to the right.
+The `unshift()` method returns the new length of the array after the addition of
+the element(s). In this case, the new length of `arr` will be 6 because 1 and 2
+are added to the beginning of the array, shifting the existing elements to the
+right.
 
 </p>
 </details>
@@ -784,9 +906,12 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The `Array.pop()` method in JavaScript removes the last element from an array and returns that element.
+The `Array.pop()` method in JavaScript removes the last element from an array
+and returns that element.
 
-In this case, `myArray` is an array with elements `[1, 2, 3, 4, 5]`, and `myArray.pop()` is called, which removes the element 5 from the array and returns it.
+In this case, `myArray` is an array with elements `[1, 2, 3, 4, 5]`, and
+`myArray.pop()` is called, which removes the element 5 from the array and
+returns it.
 
 </p>
 </details>
@@ -813,9 +938,16 @@ What does the above code snippet output?
 
 #### Answer: A
 
-The `Array.shift()` method removes the first element from the `arr` array, which is `10`, and returns it. The resulting `arr` array will then be `[20, 30, 40, 50]`.
+The `Array.shift()` method removes the first element from the `arr` array, which
+is `10`, and returns it. The resulting `arr` array will then be
+`[20, 30, 40, 50]`.
 
-So, option A is the correct answer as it reflects the correct value of `removedElement` and the updated state of `arr` after `Array.shift()` is called. Option B is incorrect as it states that `removedElement` will be 50, which is not true. Option C is also incorrect as it state that `arr` remains unchanged, which is not accurate. Option D is slightly confusing as it states that `Array.shift()` returns the array, which is not true.
+So, option A is the correct answer as it reflects the correct value of
+`removedElement` and the updated state of `arr` after `Array.shift()` is called.
+Option B is incorrect as it states that `removedElement` will be 50, which is
+not true. Option C is also incorrect as it state that `arr` remains unchanged,
+which is not accurate. Option D is slightly confusing as it states that
+`Array.shift()` returns the array, which is not true.
 
 </p>
 </details>
@@ -842,9 +974,16 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The `Array.splice()` method is used to modify an array by adding, removing, or replacing elements.
+The `Array.splice()` method is used to modify an array by adding, removing, or
+replacing elements.
 
-In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts from index 1 (removing 2 elements) and inserts the elements `a` and `b` in their place. The elements that are removed (i.e., 2 and 3) are returned and assigned to the variable removed. After execution, removed will be `[2, 3]` and `arr` will be `[1, 'a', 'b', 4, 5]`. Option C is incorrect as it includes the inserted elements in the removed array, which is not accurate. Option D is also incorrect as it mentions the incorrect elements that are removed from the array.
+In this case, the code snippet uses `arr.splice(1, 2, 'a', 'b')`, which starts
+from index 1 (removing 2 elements) and inserts the elements `a` and `b` in their
+place. The elements that are removed (i.e., 2 and 3) are returned and assigned
+to the variable removed. After execution, removed will be `[2, 3]` and `arr`
+will be `[1, 'a', 'b', 4, 5]`. Option C is incorrect as it includes the inserted
+elements in the removed array, which is not accurate. Option D is also incorrect
+as it mentions the incorrect elements that are removed from the array.
 
 </p>
 </details>
@@ -873,13 +1012,17 @@ What does the above code snippet output?
 
 #### Answer: A
 
-The `Array.indexOf()` method searches for the index of the first occurrence of the specified value in the array fruits.
-In this case, "orange" is found at index 2, so `index` will be 2.
+The `Array.indexOf()` method searches for the index of the first occurrence of
+the specified value in the array fruits. In this case, "orange" is found at
+index 2, so `index` will be 2.
 
-The `Array.lastIndexOf()` method searches for the index of the last occurrence of the specified value in the array fruits.
-In this case, "apple" appears twice in the array and its last occurrence is at index 4, so `lastIndex` will be 4.
+The `Array.lastIndexOf()` method searches for the index of the last occurrence
+of the specified value in the array fruits. In this case, "apple" appears twice
+in the array and its last occurrence is at index 4, so `lastIndex` will be 4.
 
-On the other hand, the `Array.includes()` method checks if the specified value "grape" exists in the array fruits, and since "grape" is present in the array, `result` will be true.
+On the other hand, the `Array.includes()` method checks if the specified value
+"grape" exists in the array fruits, and since "grape" is present in the array,
+`result` will be true.
 
 </p>
 </details>
@@ -890,21 +1033,21 @@ On the other hand, the `Array.includes()` method checks if the specified value "
 
 ```javascript
 function isDivisibleBy7(num) {
-  return num % 7 == 0
+	return num % 7 == 0
 }
 
 const nums = [28, 7, 3, 29, 15, 1, 2, 23]
 const filterResult = nums.filter(isDivisibleBy7)
-const findResult = nums.find((num) => num < 10)
-const findIndexResult = nums.findIndex((num) => num / 2 == 14)
+const findResult = nums.find(num => num < 10)
+const findIndexResult = nums.findIndex(num => num / 2 == 14)
 
 console.log(
-  'filterResult:',
-  filterResult,
-  'findResult:',
-  findResult,
-  'findIndexResult:',
-  findIndexResult
+	'filterResult:',
+	filterResult,
+	'findResult:',
+	findResult,
+	'findIndexResult:',
+	findIndexResult,
 )
 ```
 
@@ -920,14 +1063,24 @@ What does the above code snippet output?
 
 #### Answer: D
 
-The `Array.filter()` method returns an array containing all elements for which the function passed to it returns true.
-In this case, the function `isDivisibleBy7` returns true for any number that is divisible by 7. In the `nums` array, 7 and 28 are divisible by 7, so `nums.filter(isDivisibleBy7)` returns [28, 7].
+The `Array.filter()` method returns an array containing all elements for which
+the function passed to it returns true. In this case, the function
+`isDivisibleBy7` returns true for any number that is divisible by 7. In the
+`nums` array, 7 and 28 are divisible by 7, so `nums.filter(isDivisibleBy7)`
+returns [28, 7].
 
-The `Array.find()` method returns the first element in the array for which the function passed to it returns true.
-In this case, the function passed to it returns true for any number less than 10. There are multiple numbers in `nums` that are less than 10, but since `Array.find()` only returns the first for which it is true, `nums.find((num) => num < 10)` returns 7.
+The `Array.find()` method returns the first element in the array for which the
+function passed to it returns true. In this case, the function passed to it
+returns true for any number less than 10. There are multiple numbers in `nums`
+that are less than 10, but since `Array.find()` only returns the first for which
+it is true, `nums.find((num) => num < 10)` returns 7.
 
-The `Array.findIndex()` method is similar to the `Array.find()` method, but returns the index of the first element in the array for which the function passed to it returns true, rather than the element itself.
-In this case, the function passed to it returns true for 28, since the 28 / 2 == 14. 28 is in the array `nums` and is at index 0, so `nums.find((num) => num / 2 == 14)` returns 0.
+The `Array.findIndex()` method is similar to the `Array.find()` method, but
+returns the index of the first element in the array for which the function
+passed to it returns true, rather than the element itself. In this case, the
+function passed to it returns true for 28, since the 28 / 2 == 14. 28 is in the
+array `nums` and is at index 0, so `nums.find((num) => num / 2 == 14)`
+returns 0.
 
 </p>
 </details>
@@ -938,7 +1091,7 @@ In this case, the function passed to it returns true for 28, since the 28 / 2 ==
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5]
-const doubledNumbers = numbers.map((num) => num * 2)
+const doubledNumbers = numbers.map(num => num * 2)
 console.log(doubledNumbers)
 ```
 
@@ -954,9 +1107,11 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The `Array.map()` method in JavaScript creates a new array by applying a provided function to each element of the original array.
+The `Array.map()` method in JavaScript creates a new array by applying a
+provided function to each element of the original array.
 
-In this case, the provided function `num => num * 2` multiplies each number in the numbers array by 2, resulting in a new array `[2, 4, 6, 8, 10]`.
+In this case, the provided function `num => num * 2` multiplies each number in
+the numbers array by 2, resulting in a new array `[2, 4, 6, 8, 10]`.
 
 </p>
 </details>
@@ -983,13 +1138,23 @@ What does the above code snippet output?
 
 #### Answer: B
 
-`Array.reduce()` takes an array and "reduces" it to a single value by repeatedly applying a function to each element and keeping track of the accumulated result. It's commonly used for tasks such as summing up an array of numbers, finding the maximum value, or concatenating an array of strings into a single string.
+`Array.reduce()` takes an array and "reduces" it to a single value by repeatedly
+applying a function to each element and keeping track of the accumulated result.
+It's commonly used for tasks such as summing up an array of numbers, finding the
+maximum value, or concatenating an array of strings into a single string.
 
-In this case, the reduce() method takes a callback function that is executed for each element of the array. The callback function takes two parameters, `acc` and `val`, which represent the accumulator and the current value of the array, respectively.
+In this case, the reduce() method takes a callback function that is executed for
+each element of the array. The callback function takes two parameters, `acc` and
+`val`, which represent the accumulator and the current value of the array,
+respectively.
 
-Inside the callback function, the current value of the array is added to the accumulator and the result is returned. The `reduce()` method updates the value of the accumulator with each iteration until it has iterated over all the elements of the array.
+Inside the callback function, the current value of the array is added to the
+accumulator and the result is returned. The `reduce()` method updates the value
+of the accumulator with each iteration until it has iterated over all the
+elements of the array.
 
-Finally, the `reduce()` method returns the final value of the accumulator, which is the sum of all the numbers in the array, that is 15.
+Finally, the `reduce()` method returns the final value of the accumulator, which
+is the sum of all the numbers in the array, that is 15.
 
 </p>
 </details>
@@ -1016,19 +1181,33 @@ What does the above code snippet output?
 
 #### Answer: A
 
-The `reduceRight()` method is similar to the `reduce()` method, except that it starts reducing the array from the rightmost element to the leftmost element. The `reduceRight()` method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
+The `reduceRight()` method is similar to the `reduce()` method, except that it
+starts reducing the array from the rightmost element to the leftmost element.
+The `reduceRight()` method applies a function against an accumulator and each
+value of the array (from right-to-left) to reduce it to a single value.
 
-In the given code snippet, the `arr` array contains the values `[1, 2, 3, 4]`. The `reduceRight()` method is called on this array with a callback function that adds the accumulator `acc` with the current element `curr`.
+In the given code snippet, the `arr` array contains the values `[1, 2, 3, 4]`.
+The `reduceRight()` method is called on this array with a callback function that
+adds the accumulator `acc` with the current element `curr`.
 
-In the first iteration, the `curr` value will be `4`, and the acc value will be `undefined`, since no initial value is provided. Therefore, the result of the first iteration will be `4`.
+In the first iteration, the `curr` value will be `4`, and the acc value will be
+`undefined`, since no initial value is provided. Therefore, the result of the
+first iteration will be `4`.
 
-In the second iteration, the `curr` value will be `3`, and the `acc` value will be the result of the previous iteration, which is `4`. Therefore, the result of the second iteration will be `7`.
+In the second iteration, the `curr` value will be `3`, and the `acc` value will
+be the result of the previous iteration, which is `4`. Therefore, the result of
+the second iteration will be `7`.
 
-In the third iteration, the `curr` value will be `2`, and the `acc` value will be the result of the previous iteration, which is `7`. Therefore, the result of the third iteration will be `9`.
+In the third iteration, the `curr` value will be `2`, and the `acc` value will
+be the result of the previous iteration, which is `7`. Therefore, the result of
+the third iteration will be `9`.
 
-In the fourth and final iteration, the `curr` value will be `1`, and the `acc` value will be the result of the previous iteration, which is `9`. Therefore, the result of the fourth iteration will be `10`.
+In the fourth and final iteration, the `curr` value will be `1`, and the `acc`
+value will be the result of the previous iteration, which is `9`. Therefore, the
+result of the fourth iteration will be `10`.
 
-Therefore, the final output of the code will be `10`. Hence, the correct option is A.
+Therefore, the final output of the code will be `10`. Hence, the correct option
+is A.
 
 </p>
 </details>
@@ -1055,13 +1234,17 @@ What does the above code snippet output?
 
 #### Answer: D
 
-By default the `sort()` method sorts elements by character so 11235 comes before 3.14159 because 1 comes before 3.
+By default the `sort()` method sorts elements by character so 11235 comes before
+3.14159 because 1 comes before 3.
 
-Words and letters are sorted alphabetically by ASCII code so "Centauri" which starts with an uppercase C (ASCII code 67) sorts before "canine" which starts with a lowercase c (ASCII code 99).
+Words and letters are sorted alphabetically by ASCII code so "Centauri" which
+starts with an uppercase C (ASCII code 67) sorts before "canine" which starts
+with a lowercase c (ASCII code 99).
 
 Undefined elements always sort to the end of an array.
 
-Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri', 'canine', undefined ] which is option D.
+Thus, the final output of the code will be [ 11235, 3.14159, 'Centauri',
+'canine', undefined ] which is option D.
 
 </p>
 </details>
@@ -1090,17 +1273,25 @@ What does the above code snippet output?
 
 #### Answer: B
 
-With Array Destructuring it is possible to unpack certain values from an array into individual variables. The values we created in the left hand side (`a, b, c, rest`) correspond to the values and the order of the array we assigned in the right hand side (`numbers`).
+With Array Destructuring it is possible to unpack certain values from an array
+into individual variables. The values we created in the left hand side
+(`a, b, c, rest`) correspond to the values and the order of the array we
+assigned in the right hand side (`numbers`).
 
 - The variable `a` corresponds to the first element of the array, which is `1`.
 
-- Since we did not specify a variable for the next value `2`, the value is not taken into account in the evaluation and is skipped.
+- Since we did not specify a variable for the next value `2`, the value is not
+  taken into account in the evaluation and is skipped.
 
 - The variable `b` corresponds to the third element of the array, which is `3`.
 
-- It is possible to set default values for the variables if the element in the array is `undefined`. Since the fourth element in the array is `undefined`, the variable `c` has the default value `2`.
+- It is possible to set default values for the variables if the element in the
+  array is `undefined`. Since the fourth element in the array is `undefined`,
+  the variable `c` has the default value `2`.
 
-- With the spread operator (`...`) we can assign the remaining values of the array to a variable. Since the values `[ 6, 7, 8, 9 ]` are the remaining values of the array, they are assigned to the variable `rest`.
+- With the spread operator (`...`) we can assign the remaining values of the
+  array to a variable. Since the values `[ 6, 7, 8, 9 ]` are the remaining
+  values of the array, they are assigned to the variable `rest`.
 
 Therefore, the final result is: `1 3 2 [ 6, 7, 8, 9 ]`, which is option B.
 
@@ -1130,19 +1321,29 @@ What does the above code snippet output?
 
 #### Answer: B
 
-`new Date()` will return the current date and time followed by the two specified dates in the format "YYYY-MM-DDTHH:MM:SS.sssZ", where "Z" represents the UTC time zone offset.
+`new Date()` will return the current date and time followed by the two specified
+dates in the format "YYYY-MM-DDTHH:MM:SS.sssZ", where "Z" represents the UTC
+time zone offset.
 
-`YYYY-MM-DDTHH:mm:ss.sssZ` is a format used to represent dates and times in the ISO 8601 standard. It consists of the following components:
+`YYYY-MM-DDTHH:mm:ss.sssZ` is a format used to represent dates and times in the
+ISO 8601 standard. It consists of the following components:
 
-- `YYYY`: Four-digit year (0000 to 9999), or as an expanded year with + or - followed by six digits. The sign is required for expanded years. -000000 is explicitly disallowed as a valid year.
-- `MM`: Two-digit month (01 = January, 02 = February, and so on). It defaults to 01.
+- `YYYY`: Four-digit year (0000 to 9999), or as an expanded year with + or -
+  followed by six digits. The sign is required for expanded years. -000000 is
+  explicitly disallowed as a valid year.
+- `MM`: Two-digit month (01 = January, 02 = February, and so on). It defaults
+  to 01.
 - `DD`: Two-digit day of the month (01 to 31)
 - `T`: A separator indicating the start of the time component
-- `HH`: Two-digit hour of the day in 24-hour format (00 to 23). As a special case, 24:00:00 is allowed, and is interpreted as midnight at the beginning of the next day. Defaults to 00.
+- `HH`: Two-digit hour of the day in 24-hour format (00 to 23). As a special
+  case, 24:00:00 is allowed, and is interpreted as midnight at the beginning of
+  the next day. Defaults to 00.
 - `mm`: Two-digit minute of the hour (00 to 59). Defaults to 00.
 - `ss`: Two-digit second of the minute (00 to 59). Defaults to 00.
 - `.sss`: Millisecond component (000 to 999). Defaults to 000.
-- `Z`: A suffix indicating that the time is in UTC (Coordinated Universal Time), with no offset. It can either be the literal character Z (indicating UTC), or + or - followed by HH:mm, the offset in hours and minutes from UTC.
+- `Z`: A suffix indicating that the time is in UTC (Coordinated Universal Time),
+  with no offset. It can either be the literal character Z (indicating UTC),
+  or + or - followed by HH:mm, the offset in hours and minutes from UTC.
 
 </p>
 </details>
@@ -1157,11 +1358,11 @@ date.setMinutes(10)
 date.setUTCDate(5)
 
 console.log(
-  'Minutes:' + date.getMinutes() + ',',
-  '',
-  'Year:' + date.getFullYear() + ',',
-  '',
-  'UTCDate:' + date.getUTCDate()
+	'Minutes:' + date.getMinutes() + ',',
+	'',
+	'Year:' + date.getFullYear() + ',',
+	'',
+	'UTCDate:' + date.getUTCDate(),
 )
 ```
 
@@ -1177,15 +1378,20 @@ What does the above code snippet output?
 
 #### Answer: A
 
-The provided code creates a Date object initialized with the date and time of "March 15, 1975 23:15:30".
+The provided code creates a Date object initialized with the date and time of
+"March 15, 1975 23:15:30".
 
-Then, it modifies the minutes and UTC date of the date object using the `setMinutes()` and `setUTCDate()` methods, respectively.
+Then, it modifies the minutes and UTC date of the date object using the
+`setMinutes()` and `setUTCDate()` methods, respectively.
 
-Finally, it logs the updated values of minutes, year, and UTC date using `console.log()`.
+Finally, it logs the updated values of minutes, year, and UTC date using
+`console.log()`.
 
-After modifying the minutes to 10 using `setMinutes(10)`, the `getMinutes()` method returns the updated value of 10.
+After modifying the minutes to 10 using `setMinutes(10)`, the `getMinutes()`
+method returns the updated value of 10.
 
-After modifying the UTC date to 5 using `setUTCDate(5)`, the `getUTCDate()` method returns the updated value of 5.
+After modifying the UTC date to 5 using `setUTCDate(5)`, the `getUTCDate()`
+method returns the updated value of 5.
 
 The `getFullYear()` method returns the unchanged year, which is 1975.
 
@@ -1216,13 +1422,22 @@ What does the above code snippet output?
 
 #### ANSWER: B
 
-The code calculates the difference in days between the date "2023-5-1" and the next US election date "2024-11-5". It uses the `Date` object to create two dates: `date1` represents May 1, 2023, and `next_us_election` represents November 5, 2024.
+The code calculates the difference in days between the date "2023-5-1" and the
+next US election date "2024-11-5". It uses the `Date` object to create two
+dates: `date1` represents May 1, 2023, and `next_us_election` represents
+November 5, 2024.
 
-The `getTime()` method is used to get the time value in milliseconds for each date. By subtracting the time value of `date1` from `next_us_election`, we get the time difference in milliseconds.
+The `getTime()` method is used to get the time value in milliseconds for each
+date. By subtracting the time value of `date1` from `next_us_election`, we get
+the time difference in milliseconds.
 
-To convert the time difference from milliseconds to days, we divide it by the number of milliseconds in a day (1000 _ 3600 _ 24). The result is stored in the variable `difference_in_days`.
+To convert the time difference from milliseconds to days, we divide it by the
+number of milliseconds in a day (1000 _ 3600 _ 24). The result is stored in the
+variable `difference_in_days`.
 
-Finally, the `parseInt()` function is used to convert the difference_in_days value to an integer, and the result is logged to the console along with the "Days" string. The output will be "554 Days".
+Finally, the `parseInt()` function is used to convert the difference_in_days
+value to an integer, and the result is logged to the console along with the
+"Days" string. The output will be "554 Days".
 
 </p>
 </details>
@@ -1233,17 +1448,17 @@ Finally, the `parseInt()` function is used to convert the difference_in_days val
 
 ```javascript
 let person = {
-  name: 'John',
-  age: 30,
-  hobbies: ['reading', 'traveling', 'cooking'],
-  address: {
-    street: '123 Main St',
-    city: 'New York',
-    state: 'NY',
-  },
-  sayHello: function () {
-    console.log('Hello, my name is ' + this.name)
-  },
+	name: 'John',
+	age: 30,
+	hobbies: ['reading', 'traveling', 'cooking'],
+	address: {
+		street: '123 Main St',
+		city: 'New York',
+		state: 'NY',
+	},
+	sayHello: function () {
+		console.log('Hello, my name is ' + this.name)
+	},
 }
 
 console.log(person.name)
@@ -1264,11 +1479,15 @@ What does the above code snippet output?
 
 #### ANSWER: A
 
-The code defines an object literal `person` with properties such as `name`, `age`, `hobbies`, and `address`, and a method `sayHello`.
+The code defines an object literal `person` with properties such as `name`,
+`age`, `hobbies`, and `address`, and a method `sayHello`.
 
-The `console.log()` statements print the value of `name`, the second element of the `hobbies` array (which is "traveling"), and the value of the `city` property in the `address` object (which is "New York").
+The `console.log()` statements print the value of `name`, the second element of
+the `hobbies` array (which is "traveling"), and the value of the `city` property
+in the `address` object (which is "New York").
 
-Finally, the method `sayHello` is called on the `person` object using dot notation, which outputs the string "Hello, my name is John" to the console.
+Finally, the method `sayHello` is called on the `person` object using dot
+notation, which outputs the string "Hello, my name is John" to the console.
 
 </p>
 </details>
@@ -1279,11 +1498,11 @@ Finally, the method `sayHello` is called on the `person` object using dot notati
 
 ```javascript
 function User(username) {
-  this.username = username
+	this.username = username
 
-  this.updateUsername = (newName) => {
-    this.username = newName
-  }
+	this.updateUsername = newName => {
+		this.username = newName
+	}
 }
 
 const user1 = new User('kirandash')
@@ -1307,11 +1526,18 @@ What does the above code snippet output?
 
 #### Answer: B
 
-The code defines a constructor function `User` that creates `user` objects with a `username` property and an `updateUsername` method. Two `user` objects, `user1` and `user2`, are created with initial usernames 'kirandash' and 'bgwebagency' respectively.
+The code defines a constructor function `User` that creates `user` objects with
+a `username` property and an `updateUsername` method. Two `user` objects,
+`user1` and `user2`, are created with initial usernames 'kirandash' and
+'bgwebagency' respectively.
 
-The `updateUsername` method is called on both `user1` and `user2` objects to update their usernames. `user1`'s username is updated to 'kirandash-website', and `user2`'s username is updated to 'bgwebagency-app'.
+The `updateUsername` method is called on both `user1` and `user2` objects to
+update their usernames. `user1`'s username is updated to 'kirandash-website',
+and `user2`'s username is updated to 'bgwebagency-app'.
 
-Finally, the code logs the concatenation of `user1.username` and `user2.username`, which results in the output 'kirandash-website bgwebagency-app'.
+Finally, the code logs the concatenation of `user1.username` and
+`user2.username`, which results in the output 'kirandash-website
+bgwebagency-app'.
 
 </p>
 </details>
@@ -1322,11 +1548,11 @@ Finally, the code logs the concatenation of `user1.username` and `user2.username
 
 ```javascript
 function greet(name) {
-  console.log(`Hello, ${name}! Welcome to ${this.location}.`)
+	console.log(`Hello, ${name}! Welcome to ${this.location}.`)
 }
 
 const person = {
-  location: 'New York',
+	location: 'New York',
 }
 
 greet.call(person, 'John')
@@ -1337,9 +1563,12 @@ greetPerson('Thomas')
 
 What does the above code snippet output?
 
-- A: Hello, Thomas! Welcome to New York , Hello, Alex! Welcome to New York , Hello, Alex! Welcome to New York.
-- B: Hello, John! Welcome to New York , Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York.
-- C: Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York , Hello, John! Welcome to New York.
+- A: Hello, Thomas! Welcome to New York , Hello, Alex! Welcome to New York ,
+  Hello, Alex! Welcome to New York.
+- B: Hello, John! Welcome to New York , Hello, Alex! Welcome to New York ,
+  Hello, Thomas! Welcome to New York.
+- C: Hello, Alex! Welcome to New York , Hello, Thomas! Welcome to New York ,
+  Hello, John! Welcome to New York.
 - D: None Of The Above
 
 <details><summary><b>Answer</b></summary>
@@ -1347,13 +1576,18 @@ What does the above code snippet output?
 
 #### ANSWER: B
 
-The `call` function is used to invoke the `greet` function with the `person` object as the context (the value of `this`) and `'John'` as the argument.
+The `call` function is used to invoke the `greet` function with the `person`
+object as the context (the value of `this`) and `'John'` as the argument.
 
-The `apply` function is used to invoke the `greet` function with the `person` object as the context (the value of `this`) and an array ['Alex'] as the arguments.
+The `apply` function is used to invoke the `greet` function with the `person`
+object as the context (the value of `this`) and an array ['Alex'] as the
+arguments.
 
-The `bind` function is used to create a new function `greetPerson` with the `person` object as the bound context (the value of `this`).
+The `bind` function is used to create a new function `greetPerson` with the
+`person` object as the bound context (the value of `this`).
 
-In summary, the code demonstrates how `call`, `apply`, and `bind` can be used to invoke a function with a specific context and arguments
+In summary, the code demonstrates how `call`, `apply`, and `bind` can be used to
+invoke a function with a specific context and arguments
 
 </p>
 </details>
@@ -1364,15 +1598,15 @@ In summary, the code demonstrates how `call`, `apply`, and `bind` can be used to
 
 ```javascript
 class Animal {
-  constructor(name) {
-    this.name = name
-  }
-  static makeSound() {
-    console.log('Generic animal sound')
-  }
-  sayName() {
-    console.log(`My name is ${this.name}`)
-  }
+	constructor(name) {
+		this.name = name
+	}
+	static makeSound() {
+		console.log('Generic animal sound')
+	}
+	sayName() {
+		console.log(`My name is ${this.name}`)
+	}
 }
 
 const a1 = new Animal('Lion')
@@ -1395,66 +1629,68 @@ What does the above code snippet output?
 
 #### Answer: A
 
-The static method `makeSound()` is defined on the `Animal` class, and is accessible directly through the class itself, i.e., `Animal.makeSound()`. This will output `"Generic animal sound"` to the console.
+The static method `makeSound()` is defined on the `Animal` class, and is
+accessible directly through the class itself, i.e., `Animal.makeSound()`. This
+will output `"Generic animal sound"` to the console.
 
-However, when we try to call `makeSound()` on an instance of the Animal class `(a1.makeSound() and a2.makeSound())`, we get a TypeError, because static methods can only be accessed through the class itself and not through its instances.
+However, when we try to call `makeSound()` on an instance of the Animal class
+`(a1.makeSound() and a2.makeSound())`, we get a TypeError, because static
+methods can only be accessed through the class itself and not through its
+instances.
 
 </p>
 </details>
 
 ---
 
-##### 38.  for Inheritance, Subclassing and Extending built in class (Level: Hard)
+##### 38. for Inheritance, Subclassing and Extending built in class (Level: Hard)
 
 ```javascript
 function Animal(name) {
-    this.name = name;
-  }
-  
-  Animal.prototype.eat = function() {
-    console.log(this.name + " is eating.");
-  };
-  
+	this.name = name
+}
 
-  function Dog(name) {
-    Animal.call(this, name); 
-  }
-  
-  Dog.prototype = Object.create(Animal.prototype); 
-  Dog.prototype.constructor = Dog; 
-  
-  Dog.prototype.bark = function() {
-    console.log(this.name + " is barking.");
-  };
-  
+Animal.prototype.eat = function () {
+	console.log(this.name + ' is eating.')
+}
 
-  function CustomArray() {
-    Array.call(this);
-  }
-  
-  CustomArray.prototype = Object.create(Array.prototype);
-  CustomArray.prototype.constructor = CustomArray;
-  
-  CustomArray.prototype.sum = function() {
-    return this.reduce((acc, val) => acc + val, 0);
-  };
-  
-  var dog = new Dog("Buddy");
-  dog.eat();
-  dog.bark();
-  
-  var numbers = new CustomArray();
-  numbers.push(1, 2, 3, 4, 5);
-  console.log(numbers.sum()); 
-  
+function Dog(name) {
+	Animal.call(this, name)
+}
+
+Dog.prototype = Object.create(Animal.prototype)
+Dog.prototype.constructor = Dog
+
+Dog.prototype.bark = function () {
+	console.log(this.name + ' is barking.')
+}
+
+function CustomArray() {
+	Array.call(this)
+}
+
+CustomArray.prototype = Object.create(Array.prototype)
+CustomArray.prototype.constructor = CustomArray
+
+CustomArray.prototype.sum = function () {
+	return this.reduce((acc, val) => acc + val, 0)
+}
+
+var dog = new Dog('Buddy')
+dog.eat()
+dog.bark()
+
+var numbers = new CustomArray()
+numbers.push(1, 2, 3, 4, 5)
+console.log(numbers.sum())
 ```
 
 What will be the output of the following code
 
-- A: Buddy is eating  Buddy is barking   15
-- B: Buddy is eating  Buddy is eating    12
-- C: Buddy is barking  Buddy is eating   9
-- D: Buddy is barking  Buddy is barking  10
+- A: Buddy is eating Buddy is barking 15
+- B: Buddy is eating Buddy is eating 12
+- C: Buddy is barking Buddy is eating 9
+- D: Buddy is barking Buddy is barking 10
 
 <details><summary><b>Answer</b></summary>
 <p>
@@ -1463,33 +1699,41 @@ What will be the output of the following code
   
 Explanation: In this example, we have a base class called `Animal` that defines a constructor and an `eat()` method. The subclass `Dog` extends the `Animal` class and adds its own constructor, `bark()` method, and a specific property `breed`.
 
-Furthermore, we extend the built-in `Array` class using the `class` syntax to create a `CustomArray` class. The `CustomArray` class adds a custom method called `sum()` that calculates the sum of the array elements.
+Furthermore, we extend the built-in `Array` class using the `class` syntax to
+create a `CustomArray` class. The `CustomArray` class adds a custom method
+called `sum()` that calculates the sum of the array elements.
 
-In the usage section, we create an instance of `Dog` named `dog` with the name "Buddy" . We can call the inherited `eat()` method from the `Animal` class, the `bark()` method defined in the `Dog` class.
+In the usage section, we create an instance of `Dog` named `dog` with the name
+"Buddy" . We can call the inherited `eat()` method from the `Animal` class, the
+`bark()` method defined in the `Dog` class.
 
-Additionally, we create an instance of `CustomArray` called `numbers` and add some numbers to it. We can call the custom `sum()` method, which is added to the built-in `Array` class through subclassing.
+Additionally, we create an instance of `CustomArray` called `numbers` and add
+some numbers to it. We can call the custom `sum()` method, which is added to the
+built-in `Array` class through subclassing.
 
-This example showcases inheritance, subclassing, and extending a built-in class in JavaScript, illustrating how classes can be extended and customized to add additional functionality.
+This example showcases inheritance, subclassing, and extending a built-in class
+in JavaScript, illustrating how classes can be extended and customized to add
+additional functionality.
 
 </p>
 </details>
 
 ---
-##### 39.  Destructuring Object Literal
+
+##### 39. Destructuring Object Literal
 
 ```javascript
 const person = {
-    name: 'John',
-    age: 30,
-    city: 'New York'
-  };
-  
-  const { name, age, city } = person;
-  
-  console.log(name); 
-  console.log(age); 
-  console.log(city); 
-  
+	name: 'John',
+	age: 30,
+	city: 'New York',
+}
+
+const { name, age, city } = person
+
+console.log(name)
+console.log(age)
+console.log(city)
 ```
 
 What will be the output of the following code
@@ -1520,11 +1764,11 @@ Consider the following code snippet:
 export const PI = 3.14159
 
 export function calculateArea(radius) {
-  return PI * radius * radius
+	return PI * radius * radius
 }
 
 export default function calculateCircumference(radius) {
-  return 2 * PI * radius
+	return 2 * PI * radius
 }
 
 // script.mjs
@@ -1553,15 +1797,23 @@ The `module.js` file exports three entities:
 
 1. `PI` is a named export, exported using the `export` keyword.
 2. `calculateArea` is a named export, exported using the `export` keyword.
-3. `calculateCircumference` is the default export, exported using the `export default` syntax.
+3. `calculateCircumference` is the default export, exported using the
+   `export default` syntax.
 
-In the `main.js` file, we import `PI` and `calculateArea` as named exports using the destructuring assignment syntax. We also import `calculateCircumference` as the default export. The import statements reference the `module.js` file using the relative file path `./module.js`.
+In the `main.js` file, we import `PI` and `calculateArea` as named exports using
+the destructuring assignment syntax. We also import `calculateCircumference` as
+the default export. The import statements reference the `module.js` file using
+the relative file path `./module.js`.
 
 The outputs of the `console.log` statements will be:
 
-- `console.log(PI)` will output `3.14159` since we imported the named export `PI`.
-- `console.log(calculateArea(5))` will output `78.53975` since we imported the named export `calculateArea` and called the function with a radius of 5.
-- `console.log(calculateCircumference(5))` will output `62.8318` since we imported the default export `calculateCircumference` and called the function with a radius of 5.
+- `console.log(PI)` will output `3.14159` since we imported the named export
+  `PI`.
+- `console.log(calculateArea(5))` will output `78.53975` since we imported the
+  named export `calculateArea` and called the function with a radius of 5.
+- `console.log(calculateCircumference(5))` will output `62.8318` since we
+imported the default export `calculateCircumference` and called the function
+with a radius of 5.
 </p>
 </details>
 
@@ -1574,10 +1826,10 @@ Consider the following code snippet:
 ```javascript
 // foo.js
 function foo() {
-  console.log(`Foo`);
+	console.log(`Foo`)
 }
 
-export { foo };
+export { foo }
 ```
 
 What is the correct Syntax to import the function `foo`?
@@ -1594,8 +1846,10 @@ Options:
 
 #### Answer: C
 
-Named exports are imported into different files with braces and must be imported with the name of the object, function or variable that was exported.
-In this example, a function with the name `foo` is exported from the file `foo.js`. Accordingly, the correct expression is: `import { foo } from "./foo"`.
+Named exports are imported into different files with braces and must be imported
+with the name of the object, function or variable that was exported. In this
+example, a function with the name `foo` is exported from the file `foo.js`.
+Accordingly, the correct expression is: `import { foo } from "./foo"`.
 
 </p>
 </details>
@@ -1604,7 +1858,8 @@ In this example, a function with the name `foo` is exported from the file `foo.j
 
 ##### 42. Default Import Export (Level: Medium)
 
-In JavaScript, when importing a default export from a module, which syntax correctly assigns an alias "myAlias" to the default import?
+In JavaScript, when importing a default export from a module, which syntax
+correctly assigns an alias "myAlias" to the default import?
 
 - A: import default as myAlias from 'module';
 - B: import myAlias from 'module';
@@ -1621,54 +1876,60 @@ Explanation: Both option B and C are valid syntaxes for importing a default expo
 Here is an example of how to use the option B syntax:{import myAlias from 'module';},This will import the default export from the module module and assign it the name myAlias. You can then use the myAlias variable to access the default export from the module module.
 Here is an example of how to use the option C syntax:{import { default as myAlias } from 'module';},This will import the default export from the module module and assign it the alias myAlias. You can then use the myAlias alias to access the default export from the module module.
 
- The choice of which syntax to use is up to you. The option B syntax is simpler, but it can lead to collisions if there is already a variable named myAlias in the current scope. The option C syntax is more verbose, but it avoids collisions.
+The choice of which syntax to use is up to you. The option B syntax is simpler,
+but it can lead to collisions if there is already a variable named myAlias in
+the current scope. The option C syntax is more verbose, but it avoids
+collisions.
 
 </p>
 </details>
 
+##### Misc 001. JavaScript JSON (Level: Medium)
 
-##### 43. JavaScript JSON (Level: Medium)
+Which method is used to convert a JavaScript object to a JSON string while
+preserving data types like Dates and RegEx?
 
-Which method is used to convert a JavaScript object to a JSON string while preserving data types like Dates and RegEx?
-
-- A: JSON.stringify()
-- B: JSON.stringify() with a custom replacer function
-- C: JSON.toTypedString()
-- D: There is no built-in method; you need to manually convert data types before using JSON.stringify()
-
-
+- A: `JSON.stringify()`
+- B: `JSON.stringify()` with a custom replacer function
+- C: `JSON.toTypedString()`
+- D: There is no built-in method; you need to manually convert data types before
+  using `JSON.stringify()`
 
 <details><summary><b>Answer</b></summary>
 <p>
  
-#### Answer: B JSON.stringify() with a custom replacer function.
+#### Answer: B `JSON.stringify()` with a custom replacer function.
 
+Explanation: The `JSON.stringify()` method can be used to convert a JavaScript
+object to a `JSON` string. However, by default, it will not preserve data types
+like `Dates` and `RegEx`. To preserve these data types, you can use a custom
+replacer function. The replacer function takes an object as input and returns a
+new object with the modified values.
 
-  
-Explanation: The JSON.stringify() method can be used to convert a JavaScript object to a JSON string. However, by default, it will not preserve data types like Dates and RegEx. To preserve these data types, you can use a custom replacer function. The replacer function takes an object as input and returns a new object with the modified values.
-
-The code below would show you how to use a custom replacer function to preserve data types:
+The code below would show you how to use a custom replacer function to preserve
+data types:
 
 </p>
 
 ```js
 function replacer(key, value) {
-  if (typeof value === 'Date') {
-    return value.toJSON();
-  } else if (typeof value === 'RegExp') {
-    return value.toString();
-  } else {
-    return value;
-  }
+	if (typeof value === 'Date') {
+		return value.toJSON()
+	} else if (typeof value === 'RegExp') {
+		return value.toString()
+	} else {
+		return value
+	}
 }
 
 const object = {
-  date: new Date(),
-  regex: /some regex/,
-};
+	date: new Date(),
+	regex: /some regex/,
+}
 
-const jsonString = JSON.stringify(object, replacer);
+const jsonString = JSON.stringify(object, replacer)
 ```
+
 </details>
 
 ---
